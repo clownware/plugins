@@ -22,6 +22,25 @@ claude plugin marketplace add clownware/plugins
 claude plugin install product-dev@clownware-plugins
 ```
 
+### Connect via settings.json
+
+To register the marketplace and pre-enable the plugin declaratively, add this to `~/.claude/settings.json` (user scope) or a project's `.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "clownware-plugins": {
+      "source": { "source": "github", "repo": "clownware/plugins" }
+    }
+  },
+  "enabledPlugins": {
+    "product-dev@clownware-plugins": true
+  }
+}
+```
+
+`extraKnownMarketplaces` makes the marketplace known; `enabledPlugins` declares intent to use the plugin. This does **not** auto-download — on next launch Claude Code prompts you to install, or run `claude plugin install product-dev@clownware-plugins` (or `/reload-plugins`) to pick it up. Same behavior in CLI, desktop, and Cowork.
+
 > **Private repos:** both this marketplace and the plugin sources are private. Installers need git credentials configured (SSH key, or a `GITHUB_TOKEN` with repo read access). `GITHUB_TOKEN` is also used for auto-updates.
 
 ## How this marketplace works
@@ -38,20 +57,10 @@ Each plugin's version is resolved from its `plugin.json` `version` field (highes
 - To serve a frozen release from the catalog while development continues on `main`, add a `ref` (tag/branch) or `sha` to that plugin's `source`.
 - Do **not** set `version` in both `plugin.json` and the marketplace entry — `plugin.json` silently wins.
 
-## Adding a plugin
+## Documentation
 
-Append an entry to the `plugins` array in `.claude-plugin/marketplace.json`:
+- **[docs/MAINTAINING.md](docs/MAINTAINING.md)** — adding plugins, the release process, version resolution, pinning stable channels, and validation.
 
-```json
-{
-  "name": "my-plugin",
-  "source": {
-    "source": "git-subdir",
-    "url": "https://github.com/clownware/some-repo",
-    "path": "path/to/plugin"
-  },
-  "description": "What it does."
-}
-```
+## License
 
-A small plugin with no standalone home can instead live directly in this repo (e.g. `plugins/my-plugin/`) and point `git-subdir` at this repo's own URL and that path — the pattern Anthropic's [official marketplace](https://github.com/anthropics/claude-plugins-official) uses.
+[Apache-2.0](LICENSE).

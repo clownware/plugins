@@ -1,0 +1,17 @@
+{
+  "name": "clownware-plugins",
+  "owner": {
+    "name": "clownware"
+  },
+  "plugins": [
+    {
+      "name": "product-dev",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/clownware/tool-mcp-ux-prototyping",
+        "path": "plugin"
+      },
+      "description": "AI-assisted product development framework — vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning. Ships 5 commands (/idea, /problem, /spec, /compile, /summary), 4 skills, and a tech-spec-writer subagent."
+    }
+  ]
+}

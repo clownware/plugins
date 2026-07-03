@@ -1,0 +1,82 @@
+name: Validate marketplace
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - ".claude-plugin/marketplace.json"
+      - ".github/workflows/validate.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate .claude-plugin/marketplace.json
+        run: |
+          python3 - <<'PY'
+          import json, sys, re
+
+          path = ".claude-plugin/marketplace.json"
+          try:
+              with open(path) as f:
+                  mp = json.load(f)
+          except FileNotFoundError:
+              sys.exit(f"FAIL: {path} not found")
+          except json.JSONDecodeError as e:
+              sys.exit(f"FAIL: {path} is not valid JSON — {e}")
+
+          errors = []
+
+          # Top-level required fields
+          if not isinstance(mp.get("name"), str) or not mp["name"]:
+              errors.append("top-level 'name' must be a non-empty string")
+          if not re.fullmatch(r"[a-z0-9-]+", mp.get("name", "")):
+              errors.append("'name' should be kebab-case (a-z, 0-9, -)")
+          owner = mp.get("owner")
+          if not isinstance(owner, dict) or not owner.get("name"):
+              errors.append("'owner.name' is required")
+          plugins = mp.get("plugins")
+          if not isinstance(plugins, list) or not plugins:
+              errors.append("'plugins' must be a non-empty array")
+              plugins = []
+
+          seen = set()
+          valid_source_types = {"git-subdir", "github", "url", "npm"}
+          for i, p in enumerate(plugins):
+              tag = p.get("name", f"[index {i}]")
+              if not p.get("name"):
+                  errors.append(f"plugin {tag}: missing 'name'")
+              if p.get("name") in seen:
+                  errors.append(f"plugin {tag}: duplicate name")
+              seen.add(p.get("name"))
+
+              src = p.get("source")
+              if isinstance(src, str):
+                  # relative path form — must stay in-repo
+                  if not src.startswith("./") and not src.startswith("../"):
+                      errors.append(f"plugin {tag}: string source must be a relative path")
+              elif isinstance(src, dict):
+                  st = src.get("source")
+                  if st not in valid_source_types:
+                      errors.append(f"plugin {tag}: source.source '{st}' not one of {sorted(valid_source_types)}")
+                  if st == "git-subdir" and (not src.get("url") or not src.get("path")):
+                      errors.append(f"plugin {tag}: git-subdir requires 'url' and 'path'")
+                  if st == "github" and not src.get("repo"):
+                      errors.append(f"plugin {tag}: github source requires 'repo'")
+                  if st == "url" and not src.get("url"):
+                      errors.append(f"plugin {tag}: url source requires 'url'")
+                  if st == "npm" and not src.get("package"):
+                      errors.append(f"plugin {tag}: npm source requires 'package'")
+              else:
+                  errors.append(f"plugin {tag}: missing or invalid 'source'")
+
+          if errors:
+              print("marketplace.json validation FAILED:")
+              for e in errors:
+                  print(f"  - {e}")
+              sys.exit(1)
+          print(f"OK: '{mp['name']}' — {len(plugins)} plugin(s) valid")
+          PY

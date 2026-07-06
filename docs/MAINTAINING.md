@@ -1,13 +1,13 @@
 # Maintaining this marketplace
 
-This repo is a **thin catalog**. It contains `.claude-plugin/marketplace.json` (a list of pointers) and nothing else that plugins depend on. Plugin code lives in each plugin's own source repository and is pulled at install time via a `git-subdir` source. Read this before adding a plugin or cutting a release.
+This repo is the catalog (`.claude-plugin/marketplace.json`) plus the home for **universal plugins that have no project of their own** (under `plugins/`). Plugins coupled to a specific project live in that project's repository and are pulled at install time via a `git-subdir` source. Read this before adding a plugin or cutting a release.
 
 ## Mental model
 
-- The catalog **references** plugins; it never **contains** them.
-- Installing a plugin sparse-clones only its `path` from its source repo.
-- Releasing a plugin **does not touch this repo** — you bump the version in the plugin's own `plugin.json`.
-- This repo changes only when you **add/remove a plugin** or **re-pin** a plugin's `ref`/`sha`.
+- **Project-coupled plugins** (developed alongside a project, e.g. product-dev) are **referenced** by `git-subdir`; installing sparse-clones only the plugin's `path` from its source repo.
+- **Universal plugins** (no home project, e.g. code-tools, astro-tools) are **contained** in this repo under `plugins/<name>/` and referenced by relative path.
+- Releasing an externally-hosted plugin **does not touch this repo** — you bump the version in the plugin's own `plugin.json`. Releasing an in-repo plugin is a version-bump commit here.
+- Beyond that, this repo changes only when you **add/remove a plugin** or **re-pin** a plugin's `ref`/`sha`.
 
 ## Adding a plugin
 

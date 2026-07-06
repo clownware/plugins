@@ -12,6 +12,16 @@
         "path": "plugin"
       },
       "description": "AI-assisted product development framework — vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning. Ships 5 commands (/idea, /problem, /spec, /compile, /summary), 4 skills, and a tech-spec-writer subagent."
+    },
+    {
+      "name": "clownware-code-tools",
+      "source": "./plugins/code-tools",
+      "description": "Universal dev workflow skills — ADR authoring, PR descriptions, root-cause debugging, and test scaffolding — that probe the repo they run in and degrade gracefully."
+    },
+    {
+      "name": "clownware-astro-tools",
+      "source": "./plugins/astro-tools",
+      "description": "Astro + Preact stack skills — component scaffolding and template-aware PR descriptions — following astro-performance-starter conventions with fallbacks for other Astro projects."
     }
   ]
 }

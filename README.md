@@ -1,24 +1,28 @@
 # clownware plugins
 
-A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces). This repo is a **thin catalog** — it holds pointers to plugins, not the plugin code itself. Each plugin is referenced at its source repository via a `git-subdir` source, so installing a plugin sparse-clones only that plugin's directory.
+A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces). Plugins tied to a specific project are developed in that project's repository and referenced here via a `git-subdir` source; universal plugins with no home project live directly in this repo under [`plugins/`](plugins/) and are referenced by relative path.
 
 ## Available plugins
 
 | Plugin | Description | Source |
 |--------|-------------|--------|
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`tool-mcp-ux-prototyping/plugin`](https://github.com/clownware/tool-mcp-ux-prototyping/tree/main/plugin) |
+| `clownware-code-tools` | Universal dev workflow skills: ADR authoring, PR descriptions, root-cause debugging, test scaffolding. | [`plugins/code-tools`](plugins/code-tools) |
+| `clownware-astro-tools` | Astro + Preact stack skills: component scaffolding and template-aware PR descriptions. | [`plugins/astro-tools`](plugins/astro-tools) |
 
 ## Install
 
 ```
 /plugin marketplace add clownware/plugins
-/plugin install product-dev@clownware-plugins
+/plugin install clownware-code-tools@clownware-plugins
 ```
 
 Or non-interactively:
 
 ```bash
 claude plugin marketplace add clownware/plugins
+claude plugin install clownware-code-tools@clownware-plugins
+claude plugin install clownware-astro-tools@clownware-plugins
 claude plugin install product-dev@clownware-plugins
 ```
 
@@ -45,9 +49,10 @@ To register the marketplace and pre-enable the plugin declaratively, add this to
 
 ## How this marketplace works
 
-- **The catalog is just `.claude-plugin/marketplace.json`.** No plugin code lives here.
-- **Plugins are developed in their own repositories** and referenced by `git-subdir` (repo URL + subdirectory path). product-dev, for example, is developed in `tool-mcp-ux-prototyping` and lives in that repo's `plugin/` folder.
-- **Releasing a plugin does not touch this repo.** Bump the `version` field in the plugin's own `plugin.json` — followers receive the update on their next `/plugin update`. This catalog changes only when adding/removing a plugin or pinning a different `ref`.
+- **The catalog is `.claude-plugin/marketplace.json`.** It lists every plugin and where its code lives.
+- **Project-coupled plugins are developed in their own repositories** and referenced by `git-subdir` (repo URL + subdirectory path). product-dev, for example, is developed in `tool-mcp-ux-prototyping` and lives in that repo's `plugin/` folder.
+- **Universal plugins with no home project live in this repo** under `plugins/<name>/` and are referenced by relative path. code-tools and astro-tools are hosted this way.
+- **Releasing an externally-hosted plugin does not touch this repo.** Bump the `version` field in the plugin's own `plugin.json` — followers receive the update on their next `/plugin update`. For in-repo plugins, the version bump is a commit here.
 
 ## Versioning
 

@@ -1,0 +1,8 @@
+{
+  "name": "clownware-code-tools",
+  "description": "Universal dev workflow skills: ADR authoring, PR descriptions, root-cause debugging, and test scaffolding. Each skill probes the repo it runs in and degrades gracefully.",
+  "version": "0.1.0",
+  "author": {
+    "name": "clownware"
+  }
+}

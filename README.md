@@ -7,7 +7,7 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 | Plugin | Description | Source |
 |--------|-------------|--------|
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`tool-mcp-ux-prototyping/plugin`](https://github.com/clownware/tool-mcp-ux-prototyping/tree/main/plugin) |
-| `clownware-code-tools` | Universal dev workflow skills: architecture auditing, skill auditing, ADR authoring, PR descriptions, root-cause debugging, test scaffolding. | [`plugins/code-tools`](plugins/code-tools) |
+| `clownware-code-tools` | Universal dev workflow skills: architecture auditing, test-suite auditing, skill auditing, ADR authoring, PR descriptions, root-cause debugging, test scaffolding. | [`plugins/code-tools`](plugins/code-tools) |
 | `clownware-astro-tools` | Astro + Preact stack skills: component scaffolding and template-aware PR descriptions. | [`plugins/astro-tools`](plugins/astro-tools) |
 
 ## Install

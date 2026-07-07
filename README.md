@@ -15,16 +15,16 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 
 ```
 /plugin marketplace add clownware/plugins
-/plugin install clownware-code-tools@clownware-plugins
+/plugin install clownware-code-tools@clownware
 ```
 
 Or non-interactively:
 
 ```bash
 claude plugin marketplace add clownware/plugins
-claude plugin install clownware-code-tools@clownware-plugins
-claude plugin install clownware-astro-tools@clownware-plugins
-claude plugin install product-dev@clownware-plugins
+claude plugin install clownware-code-tools@clownware
+claude plugin install clownware-astro-tools@clownware
+claude plugin install product-dev@clownware
 ```
 
 ### Connect via settings.json
@@ -34,17 +34,17 @@ To register the marketplace and pre-enable the plugin declaratively, add this to
 ```json
 {
   "extraKnownMarketplaces": {
-    "clownware-plugins": {
+    "clownware": {
       "source": { "source": "github", "repo": "clownware/plugins" }
     }
   },
   "enabledPlugins": {
-    "product-dev@clownware-plugins": true
+    "product-dev@clownware": true
   }
 }
 ```
 
-`extraKnownMarketplaces` makes the marketplace known; `enabledPlugins` declares intent to use the plugin. This does **not** auto-download — on next launch Claude Code prompts you to install, or run `claude plugin install product-dev@clownware-plugins` (or `/reload-plugins`) to pick it up. Same behavior in CLI, desktop, and Cowork.
+`extraKnownMarketplaces` makes the marketplace known; `enabledPlugins` declares intent to use the plugin. This does **not** auto-download — on next launch Claude Code prompts you to install, or run `claude plugin install product-dev@clownware` (or `/reload-plugins`) to pick it up. Same behavior in CLI, desktop, and Cowork.
 
 > **Private repos:** both this marketplace and the plugin sources are private. Installers need git credentials configured (SSH key, or a `GITHUB_TOKEN` with repo read access). `GITHUB_TOKEN` is also used for auto-updates.
 

@@ -27,7 +27,7 @@ Append an entry to the `plugins` array in [`.claude-plugin/marketplace.json`](..
 
 Requirements for the entry:
 
-- **`name`** — unique across the catalog, kebab-case. Users install with `my-plugin@clownware-plugins`.
+- **`name`** — unique across the catalog, kebab-case. Users install with `my-plugin@clownware`.
 - **`source.path`** — the directory in the source repo that contains `.claude-plugin/plugin.json`.
 - **`description`** — a single sentence; shown in `/plugin` listings.
 

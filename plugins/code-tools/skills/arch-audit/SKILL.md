@@ -8,11 +8,11 @@ Audit this repository's architecture decisions and readiness. Focus, if given: $
 
 ## Repo context (pre-fetched)
 
-**Decision records:** !`ls docs/adr/ docs/decisions/ adr/ 2>/dev/null | head -5 || echo "none found — infer decisions from configs, README, and code"`
-**Roadmap/product docs:** !`ls docs/product/ docs/roadmap* ROADMAP* docs/updates/ 2>/dev/null | head -5 || echo "none found"`
+**Decision records:** !`out=$(ls docs/adr/ docs/decisions/ adr/ 2>/dev/null | head -5); echo "${out:-none found — infer decisions from configs, README, and code}"`
+**Roadmap/product docs:** !`out=$(find . -maxdepth 2 \( -iname "roadmap*" -o -path "./docs/product/*" -o -path "./docs/updates/*" \) 2>/dev/null | head -5); echo "${out:-none found}"`
 **CI workflows:** !`ls .github/workflows/ 2>/dev/null || echo "none"`
-**Quality gate:** !`ls Taskfile.yml Makefile justfile 2>/dev/null; grep -l '"scripts"' package.json 2>/dev/null || true`
-**Default branch:** !`git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's|.*/||' || git branch --show-current`
+**Quality gate:** !`out=$(ls Taskfile.yml Makefile justfile 2>/dev/null; grep -l '"scripts"' package.json 2>/dev/null); echo "${out:-none found}"`
+**Default branch:** !`b=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's|.*/||'); [ -n "$b" ] || b=$(git branch --show-current 2>/dev/null); echo "${b:-unknown}"`
 **Deploy config:** !`ls Dockerfile docker-compose.yml fly.toml render.yaml wrangler.toml vercel.json 2>/dev/null || echo "none"`
 
 ## Pipeline

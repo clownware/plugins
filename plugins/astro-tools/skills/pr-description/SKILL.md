@@ -1,6 +1,6 @@
 ---
 name: pr-description
-description: "Writes pull request descriptions following the project's PR template. Use when creating a PR, writing a PR, or summarizing changes for a pull request."
+description: "Writes pull request descriptions following the project's PR template, for Astro projects built on the astro-performance-starter template. Use when creating a PR, writing a PR, or summarizing changes for a pull request in an Astro project."
 allowed-tools: Bash, Read, Grep, Glob
 license: MIT
 ---
@@ -9,16 +9,16 @@ Write a pull request description for the current branch.
 
 ## Branch context (pre-fetched)
 
-**Base branch:** !`git rev-parse --verify develop 2>/dev/null && echo "develop" || git rev-parse --verify main 2>/dev/null && echo "main" || echo "master"`
+**Base branch:** !`git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }`
 
 **Commits on this branch:**
-!`BASE=$(git rev-parse --verify develop 2>/dev/null && echo develop || git rev-parse --verify main 2>/dev/null && echo main || echo master); git log "$BASE"...HEAD --oneline 2>/dev/null || echo "(no commits diverged from $BASE)"`
+!`BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); out=$(git log "$BASE"...HEAD --oneline 2>/dev/null); echo "${out:-(no commits diverged from $BASE)}"`
 
 **Changed files:**
-!`BASE=$(git rev-parse --verify develop 2>/dev/null && echo develop || git rev-parse --verify main 2>/dev/null && echo main || echo master); git diff "$BASE"...HEAD --stat 2>/dev/null || echo "(no diff found)"`
+!`BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); out=$(git diff "$BASE"...HEAD --stat 2>/dev/null); echo "${out:-(no diff found)}"`
 
 **Full diff:**
-!`BASE=$(git rev-parse --verify develop 2>/dev/null && echo develop || git rev-parse --verify main 2>/dev/null && echo main || echo master); git diff "$BASE"...HEAD 2>/dev/null || echo "(no diff found)"`
+!`BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); d=$(git diff "$BASE"...HEAD 2>/dev/null); if [ -z "$d" ]; then echo "(no diff found)"; else printf %s "$d" | head -c 20000; [ ${#d} -gt 20000 ] && printf "\n[diff truncated at 20k chars - run git diff \"$BASE\"...HEAD for the rest]\n"; fi`
 
 ## Steps
 

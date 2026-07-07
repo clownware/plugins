@@ -1,6 +1,6 @@
 ---
 name: component-scaffold
-description: "Scaffolds new Astro or Preact components following project patterns. Use when asked to create a component, scaffold a component, add a new component, or build a UI element."
+description: "Scaffolds new Astro or Preact components following project patterns. Use in Astro projects when asked to create a component, scaffold a component, or add a new component."
 allowed-tools: Bash, Read, Write, Glob
 license: MIT
 ---
@@ -10,7 +10,7 @@ Scaffold a new component for this project: $ARGUMENTS
 ## Current conventions (pre-fetched)
 
 **Component directory structure:**
-!`find src/components -type f \( -name "*.astro" -o -name "*.tsx" \) | sort`
+!`out=$(find src/components -type f \( -name "*.astro" -o -name "*.tsx" \) 2>/dev/null | sort | head -40); echo "${out:-no src/components directory found — check the project layout before scaffolding}"`
 
 ## Steps
 

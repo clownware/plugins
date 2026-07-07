@@ -1,6 +1,6 @@
 ---
 name: test-scaffold
-description: "Generates test file stubs for source files. Use when asked to write tests for, scaffold tests, generate test file, or add test coverage for a file or function."
+description: "Generates test file stubs for JavaScript/TypeScript source files (vitest or jest). Use when asked to write tests for, scaffold tests, generate test file, or add test coverage for a file or function in a JS/TS project."
 allowed-tools: Bash, Read, Write, Glob, Grep
 ---
 
@@ -9,10 +9,10 @@ Generate test stubs for: $ARGUMENTS
 ## Project test context (pre-fetched)
 
 **Test framework:** !`(grep -q '"vitest"' package.json 2>/dev/null && echo "vitest") || (grep -q '"jest"' package.json 2>/dev/null && echo "jest") || echo "unknown"`
-**Existing test files:** !`find src -name "*.test.ts" -o -name "*.test.tsx" -o -name "*.spec.ts" -o -name "*.spec.tsx" 2>/dev/null | head -8 || echo "no tests found"`
-**Test config:** !`ls vitest.config.* vite.config.* jest.config.* 2>/dev/null | head -3 || echo "no config found"`
-**E2E tests:** !`ls e2e/*.spec.ts 2>/dev/null | head -5 || echo "no e2e tests"`
-**Test convention:** !`find src -type d -name "__tests__" 2>/dev/null | head -3 || echo "no __tests__ dirs found"`
+**Existing test files:** !`out=$(find src \( -name "*.test.ts" -o -name "*.test.tsx" -o -name "*.spec.ts" -o -name "*.spec.tsx" \) 2>/dev/null | head -8); echo "${out:-no tests found}"`
+**Test config:** !`out=$(ls 2>/dev/null | grep -E '^(vitest|vite|jest)\.config\.' | head -3); echo "${out:-no config found}"`
+**E2E tests:** !`out=$(ls e2e 2>/dev/null | grep '\.spec\.ts$' | head -5); echo "${out:-no e2e tests}"`
+**Test convention:** !`out=$(find src -type d -name "__tests__" 2>/dev/null | head -3); echo "${out:-no __tests__ dirs found}"`
 
 ## Steps
 

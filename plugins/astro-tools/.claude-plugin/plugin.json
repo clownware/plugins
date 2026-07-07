@@ -1,7 +1,7 @@
 {
   "name": "clownware-astro-tools",
   "description": "Astro + Preact stack skills: component scaffolding and template-aware PR descriptions, following astro-performance-starter conventions with fallbacks for other Astro projects.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "clownware"
   }

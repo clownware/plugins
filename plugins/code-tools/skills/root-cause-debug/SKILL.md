@@ -11,7 +11,7 @@ You are a pair-debugging partner. Your job is to find and fix the root cause of 
 - **Node:** !`node --version 2>/dev/null || echo "not found"`
 - **Package manager:** !`(which pnpm > /dev/null 2>&1 && echo "pnpm $(pnpm --version)") || (which npm > /dev/null 2>&1 && echo "npm $(npm --version)") || echo "none found"`
 - **OS:** !`uname -s` !`uname -m`
-- **Git status:** !`git status --short 2>/dev/null | head -20 || echo "not a git repo"`
+- **Git status:** !`if git rev-parse --git-dir >/dev/null 2>&1; then out=$(git status --short | head -20); echo "${out:-clean working tree}"; else echo "not a git repo"; fi`
 - **Recent changes:** !`git log --oneline -5 2>/dev/null || echo "no git history"`
 
 ## Diagnostic Pipeline
@@ -36,7 +36,7 @@ Review the pre-fetched environment above. If the error relates to build/tooling,
 Actually run the failing command or reproduce the error. Read the output carefully. Check:
 - Log files if they exist
 - Recent git changes (`git diff HEAD~3`)
-- Dependency state (`pnpm ls` for version conflicts)
+- Dependency state for version conflicts (`pnpm ls` / `npm ls` — match the package manager detected above)
 - Environment variables if relevant
 
 ### 4. Identify the root cause

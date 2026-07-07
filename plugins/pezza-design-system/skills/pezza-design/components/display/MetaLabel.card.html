@@ -1,0 +1,28 @@
+<!-- @dsCard group="Display" viewport="700x180" name="MetaLabel" subtitle="The mono metadata register - music and dev values, one voice" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  html,body{margin:0}
+  body{background:hsl(var(--bg-app)); padding:var(--space-5) var(--space-6); box-sizing:border-box;
+       display:flex; flex-direction:column; gap:var(--space-3);}
+  .meta{font-family:var(--font-mono); font-size:var(--text-sm); letter-spacing:var(--tracking-mono);
+        text-transform:uppercase; color:hsl(var(--text-muted)); white-space:nowrap;}
+  .meta.body{color:hsl(var(--text-body));}
+  .meta.xs{font-size:var(--text-xs);}
+  .meta.lower{text-transform:none;}
+  .spec{font:var(--type-meta); color:hsl(var(--text-faint)); text-transform:uppercase; letter-spacing:var(--tracking-wider);}
+</style>
+</head>
+<body>
+  <div class="spec">Music register</div>
+  <div class="meta body">124 BPM · A&#9837; MIN · CAT# PZA-007</div>
+  <div class="meta">WEIGHTLESS STRUCTURE · 6:42 · 24BIT/44.1K</div>
+  <div class="spec" style="margin-top:var(--space-3)">Dev register - same voice, different domain</div>
+  <div class="meta body">ASTRO 6 · 100/100 LH · 2026-07</div>
+  <div class="meta lower">main @ 4927e37 · deploy 42s</div>
+  <div class="meta xs">REACT · ASTRO · CLOUDFLARE</div>
+</body>
+</html>

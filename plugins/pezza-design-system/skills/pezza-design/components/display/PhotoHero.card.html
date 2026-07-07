@@ -1,0 +1,41 @@
+<!-- @dsCard group="Display" viewport="900x420" name="PhotoHero" subtitle="Full-bleed photo hero - protection gradient enforced" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  html,body{margin:0}
+  body{background:hsl(var(--ink-1000));}
+  .hero{
+    position:relative; height:420px; overflow:hidden;
+    background:url('../../assets/img/bg-galaxy.webp') center/cover, hsl(var(--ink-1000));
+  }
+  .hero .protect{position:absolute; inset:0; background:var(--protect-gradient);}
+  .hero .content{
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    justify-content:flex-end; align-items:flex-start;
+    padding:var(--space-7) var(--space-6); gap:var(--space-3);
+  }
+  .hero .mark{width:56px; color:hsl(var(--ink-0)); filter:drop-shadow(0 2px 12px hsl(var(--ink-1000) / .5));}
+  .hero h1{font:var(--type-display); letter-spacing:var(--tracking-tight); color:hsl(var(--ink-0)); margin:0; max-width:16ch;}
+  .hero .meta{font-family:var(--font-mono); font-size:var(--text-sm); letter-spacing:var(--tracking-mono);
+              text-transform:uppercase; color:hsl(var(--ink-200));}
+</style>
+</head>
+<body>
+  <section class="hero">
+    <div class="protect" aria-hidden="true"></div>
+    <div class="content">
+      <div class="mark">
+        <svg viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+          <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+        </svg>
+      </div>
+      <h1>Weightless Structure EP</h1>
+      <div class="meta">PZA-007 · 4 TRACKS · OUT 2026-08</div>
+    </div>
+  </section>
+</body>
+</html>

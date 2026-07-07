@@ -6,10 +6,10 @@
 <link rel="stylesheet" href="../../styles.css" />
 <style>
   html,body{margin:0}
-  body{background:var(--bg-app); padding:var(--space-6); box-sizing:border-box; font-family:var(--font-ui);}
+  body{background:hsl(var(--bg-app)); padding:var(--space-6); box-sizing:border-box; font-family:var(--font-ui);}
   .wrap{display:flex; gap:var(--space-6); align-items:flex-start;}
   .col{display:flex; flex-direction:column; gap:14px;}
-  .lbl{font:var(--type-meta); color:var(--text-muted); letter-spacing:var(--tracking-wide); text-transform:uppercase;}
+  .lbl{font:var(--type-meta); color:hsl(var(--text-muted)); letter-spacing:var(--tracking-wide); text-transform:uppercase;}
   .row{display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
 </style>
 </head>
@@ -29,8 +29,8 @@
             <Card padding="md" interactive>
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:12}}>
                 <div>
-                  <div style={{font:'var(--weight-semi) var(--text-lg)/1.2 var(--font-display)',color:'var(--text-strong)'}}>Olive oil</div>
-                  <div style={{fontFamily:'var(--font-mono)',fontSize:'var(--text-2xs)',color:'var(--text-muted)',marginTop:6}}>2 bottles · exp. AUG</div>
+                  <div style={{font:'var(--weight-semi) var(--text-2xl)/1.2 var(--font-display)',color:'hsl(var(--text-strong))'}}>Olive oil</div>
+                  <div style={{fontFamily:'var(--font-mono)',fontSize:'var(--text-sm)',color:'hsl(var(--text-muted))',marginTop:6}}>2 bottles · exp. AUG</div>
                 </div>
                 <Badge tone="warn" dot>Low</Badge>
               </div>
@@ -56,7 +56,7 @@
             <span className="lbl">Avatars</span>
             <div className="row">
               <Avatar initials="CP" />
-              <Avatar src="../../assets/logo/emblem-white.png" style={{background:'var(--ink-1000)',padding:0}} />
+              <Avatar src="../../assets/logo/emblem-white.png" style={{background:'hsl(var(--ink-1000))',padding:0}} />
               <Avatar emblem shape="square" size={44} src="../../assets/logo/emblem-white.png" />
               <Avatar initials="DJ" shape="square" />
             </div>

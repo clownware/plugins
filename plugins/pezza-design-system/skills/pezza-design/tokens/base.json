@@ -1,0 +1,143 @@
+{
+  "_note": "Mirrors the token CSS files (colors/typography/spacing/effects). Hand-synced, same direction as the chassis: edit CSS first, then update this bridge. Consumed by the Astro Performance Starter token pipeline.",
+  "color": {
+    "ink": {
+      "1000": "240 5% 4%",
+      "900": "240 6% 7%",
+      "800": "240 6% 10%",
+      "700": "240 5.4% 14.5%",
+      "600": "240 5.5% 21.6%",
+      "500": "240 4.4% 35.3%",
+      "400": "240 3.6% 50.4%",
+      "300": "240 4.7% 66.7%",
+      "200": "240 5.5% 82.2%",
+      "150": "240 7.4% 89.4%",
+      "100": "240 7% 94%",
+      "50": "240 7% 97%",
+      "0": "0 0% 100%"
+    },
+    "accent": {
+      "DEFAULT": "170.3 100% 44.9%",
+      "bright": "170.8 91% 56.5%",
+      "dim": "170.1 87.8% 35.3%",
+      "ink": "171 78% 7%"
+    },
+    "status": {
+      "ok": "151 65% 54%",
+      "warn": "41.4 79.1% 56.9%",
+      "err": "358.8 85.6% 64.7%",
+      "info": "170.3 100% 44.9%"
+    }
+  },
+  "semantic": {
+    "background": {
+      "light": "240 7% 97%",
+      "dark": "240 5% 4%"
+    },
+    "surface": {
+      "light": "0 0% 100%",
+      "dark": "240 6% 7%"
+    },
+    "surfaceRaised": {
+      "light": "0 0% 100%",
+      "dark": "240 6% 10%"
+    },
+    "surfaceSunken": {
+      "light": "240 7% 94%",
+      "dark": "240 5% 4%"
+    },
+    "foreground": {
+      "light": "240 5% 4%",
+      "dark": "0 0% 100%"
+    },
+    "body": {
+      "light": "240 6% 10%",
+      "dark": "240 7.4% 89.4%"
+    },
+    "mutedForeground": {
+      "light": "240 4.4% 35.3%",
+      "dark": "240 3.6% 50.4%"
+    },
+    "faintForeground": {
+      "light": "240 3.6% 50.4%",
+      "dark": "240 4.4% 35.3%"
+    },
+    "border": {
+      "light": "240 7% 94%",
+      "dark": "240 6% 10%"
+    },
+    "borderEmphasis": {
+      "light": "240 4.7% 66.7%",
+      "dark": "240 5.5% 21.6%"
+    },
+    "link": {
+      "light": "170.1 87.8% 35.3%",
+      "dark": "170.3 100% 44.9%"
+    },
+    "ring": {
+      "light": "170.3 100% 44.9%",
+      "dark": "170.3 100% 44.9%"
+    }
+  },
+  "fontFamily": {
+    "display": "'Space Grotesk', 'Helvetica Neue', Arial, sans-serif",
+    "ui": "'Space Grotesk', 'Helvetica Neue', Arial, sans-serif",
+    "mono": "'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+  },
+  "fontSize": {
+    "xs": "0.6875rem",
+    "sm": "0.75rem",
+    "base": "0.8125rem",
+    "lg": "0.875rem",
+    "xl": "1rem",
+    "2xl": "1.125rem",
+    "3xl": "1.5rem",
+    "4xl": "2rem",
+    "5xl": "2.75rem",
+    "6xl": "4rem",
+    "7xl": "5rem",
+    "8xl": "6rem"
+  },
+  "spacing": {
+    "0": "0",
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.5rem",
+    "6": "2rem",
+    "7": "3rem",
+    "8": "4rem",
+    "9": "6rem",
+    "10": "8rem"
+  },
+  "borderRadius": {
+    "xs": "3px",
+    "sm": "6px",
+    "md": "10px",
+    "lg": "16px",
+    "xl": "24px",
+    "pill": "999px",
+    "round": "50%"
+  },
+  "shadow": {
+    "sm": "0 1px 2px hsl(240 5% 4% / 0.06)",
+    "md": "0 4px 16px hsl(240 5% 4% / 0.08)",
+    "lg": "0 12px 40px hsl(240 5% 4% / 0.16)",
+    "pop": "0 8px 32px hsl(240 5% 4% / 0.24)",
+    "glowAccent": "0 0 0 1px hsl(170.3 100% 44.9% / 0.4), 0 0 24px hsl(170.3 100% 44.9% / 0.25)"
+  },
+  "motion": {
+    "duration": {
+      "fast": "120ms",
+      "base": "220ms",
+      "slow": "420ms",
+      "intro": "2400ms"
+    },
+    "ease": {
+      "out": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "in-out": "cubic-bezier(0.65, 0, 0.35, 1)",
+      "crossfade": "cubic-bezier(0.4, 0, 0.1, 1)"
+    }
+  }
+}

@@ -6,19 +6,19 @@
 <link rel="stylesheet" href="../styles.css" />
 <style>
   html,body{margin:0}
-  body{background:var(--ink-0); display:flex; gap:var(--space-5); align-items:center;
+  body{background:hsl(var(--ink-0)); display:flex; gap:var(--space-5); align-items:center;
     padding:var(--space-5) var(--space-6); box-sizing:border-box; font-family:var(--font-mono);}
   .item{display:flex; flex-direction:column; align-items:center; gap:var(--space-2); flex:1;}
   .frame{position:relative; width:96px; height:96px; display:grid; place-items:center;
-    border-radius:var(--radius-sm); background:var(--ink-50);}
-  .clear{outline:1px dashed var(--ink-300); outline-offset:-18px;}
+    border-radius:var(--radius-sm); background:hsl(var(--ink-50));}
+  .clear{outline:1px dashed hsl(var(--ink-300)); outline-offset:-18px;}
   .frame img{height:48px;}
-  .bad{background:var(--ink-1000);}
+  .bad{background:hsl(var(--ink-1000));}
   .bad img{height:48px;}
-  .lbl{font-size:var(--text-2xs); letter-spacing:var(--tracking-mono); color:var(--ink-500); text-align:center;}
-  .ok{color:var(--accent-dim);} .no{color:var(--err);}
+  .lbl{font-size:var(--text-sm); letter-spacing:var(--tracking-mono); color:hsl(var(--ink-500)); text-align:center;}
+  .ok{color:hsl(var(--accent-dim));} .no{color:hsl(var(--err));}
   .cross{position:absolute; inset:0; }
-  .cross::before,.cross::after{content:""; position:absolute; left:8%; right:8%; top:50%; height:2px; background:var(--err); opacity:.85;}
+  .cross::before,.cross::after{content:""; position:absolute; left:8%; right:8%; top:50%; height:2px; background:hsl(var(--err)); opacity:.85;}
   .cross::before{transform:rotate(28deg);} .cross::after{transform:rotate(-28deg);}
 </style>
 </head>
@@ -36,7 +36,7 @@
     <span class="lbl no">DON'T DISTORT</span>
   </div>
   <div class="item">
-    <div class="frame bad" style="background:var(--ink-200)"><img src="../assets/logo/emblem-white.png" alt="" /><span class="cross"></span></div>
+    <div class="frame bad" style="background:hsl(var(--ink-200))"><img src="../assets/logo/emblem-white.png" alt="" /><span class="cross"></span></div>
     <span class="lbl no">DON'T LOW-CONTRAST</span>
   </div>
 </body>

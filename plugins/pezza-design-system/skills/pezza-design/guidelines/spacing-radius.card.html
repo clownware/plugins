@@ -6,13 +6,13 @@
 <link rel="stylesheet" href="../styles.css" />
 <style>
   html,body{margin:0}
-  body{background:var(--ink-50); font-family:var(--font-mono); padding:var(--space-5); box-sizing:border-box;
+  body{background:hsl(var(--ink-50)); font-family:var(--font-mono); padding:var(--space-5); box-sizing:border-box;
     display:flex; gap:var(--space-5); align-items:center;}
   .group{display:flex; gap:var(--space-4); align-items:flex-end;}
   .item{display:flex; flex-direction:column; align-items:center; gap:8px;}
-  .box{width:60px; height:60px; background:var(--ink-0); border:1px solid var(--ink-150);}
-  .lbl{font-size:9px; color:var(--ink-500); letter-spacing:.04em;}
-  .sep{width:1px; align-self:stretch; background:var(--ink-150); margin:0 6px;}
+  .box{width:60px; height:60px; background:hsl(var(--ink-0)); border:1px solid hsl(var(--ink-150));}
+  .lbl{font-size:9px; color:hsl(var(--ink-500)); letter-spacing:.04em;}
+  .sep{width:1px; align-self:stretch; background:hsl(var(--ink-150)); margin:0 6px;}
 </style>
 </head>
 <body>
@@ -28,7 +28,7 @@
     <div class="item"><div class="box" style="border-radius:8px;box-shadow:var(--shadow-sm);border:0"></div><span class="lbl">sm</span></div>
     <div class="item"><div class="box" style="border-radius:8px;box-shadow:var(--shadow-md);border:0"></div><span class="lbl">md</span></div>
     <div class="item"><div class="box" style="border-radius:8px;box-shadow:var(--shadow-lg);border:0"></div><span class="lbl">lg</span></div>
-    <div class="item"><div class="box" style="border-radius:8px;box-shadow:var(--glow-accent);border:0;background:var(--ink-900)"></div><span class="lbl">glow</span></div>
+    <div class="item"><div class="box" style="border-radius:8px;box-shadow:var(--glow-accent);border:0;background:hsl(var(--ink-900))"></div><span class="lbl">glow</span></div>
   </div>
 </body>
 </html>

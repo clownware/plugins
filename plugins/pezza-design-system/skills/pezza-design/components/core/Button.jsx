@@ -17,32 +17,32 @@ export function Button({
   ...rest
 }) {
   const sizes = {
-    sm: { height: 32, padding: '0 14px', font: 'var(--text-sm)', gap: 7 },
-    md: { height: 40, padding: '0 20px', font: 'var(--text-sm)', gap: 8 },
-    lg: { height: 48, padding: '0 28px', font: 'var(--text-md)', gap: 10 },
+    sm: { height: 32, padding: '0 14px', font: 'var(--text-lg)', gap: 7 },
+    md: { height: 40, padding: '0 20px', font: 'var(--text-lg)', gap: 8 },
+    lg: { height: 48, padding: '0 28px', font: 'var(--text-xl)', gap: 10 },
   };
   const s = sizes[size] || sizes.md;
 
   const variants = {
     primary: {
-      background: 'var(--text-strong)',
-      color: 'var(--text-inverse)',
-      border: '1px solid var(--text-strong)',
+      background: 'hsl(var(--text-strong))',
+      color: 'hsl(var(--text-inverse))',
+      border: '1px solid hsl(var(--text-strong))',
     },
     secondary: {
       background: 'transparent',
-      color: 'var(--text-strong)',
-      border: '1px solid var(--border-strong)',
+      color: 'hsl(var(--text-strong))',
+      border: '1px solid hsl(var(--border-strong))',
     },
     ghost: {
       background: 'transparent',
-      color: 'var(--text-body)',
+      color: 'hsl(var(--text-body))',
       border: '1px solid transparent',
     },
     accent: {
-      background: 'var(--accent)',
-      color: 'var(--accent-ink)',
-      border: '1px solid var(--accent)',
+      background: 'hsl(var(--accent))',
+      color: 'hsl(var(--accent-ink))',
+      border: '1px solid hsl(var(--accent))',
     },
   };
   const v = variants[variant] || variants.primary;

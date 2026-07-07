@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="../styles.css" />
 <style>
   html,body{margin:0}
-  body{font-family:var(--font-mono); padding:var(--space-4); box-sizing:border-box; background:var(--ink-0);}
+  body{font-family:var(--font-mono); padding:var(--space-4); box-sizing:border-box; background:hsl(var(--ink-0));}
   .row{display:grid; grid-template-columns:repeat(13,1fr); gap:6px;}
   .sw{display:flex; flex-direction:column; gap:6px;}
-  .chip{height:70px; border-radius:var(--radius-sm); border:1px solid var(--ink-100);}
-  .n{font-size:9px; letter-spacing:var(--tracking-mono); color:var(--ink-500); text-align:center;}
+  .chip{height:70px; border-radius:var(--radius-sm); border:1px solid hsl(var(--ink-100));}
+  .n{font-size:9px; letter-spacing:var(--tracking-mono); color:hsl(var(--ink-500)); text-align:center;}
 </style>
 </head>
 <body>
@@ -18,7 +18,7 @@
   <script>
     const steps=[1000,900,800,700,600,500,400,300,200,150,100,50,0];
     document.getElementById('r').innerHTML = steps.map(s=>
-      `<div class="sw"><div class="chip" style="background:var(--ink-${s})"></div><div class="n">${s}</div></div>`
+      `<div class="sw"><div class="chip" style="background:hsl(var(--ink-${s}))"></div><div class="n">${s}</div></div>`
     ).join('');
   </script>
 </body>

@@ -11,9 +11,9 @@ export function Input({
   ...rest
 }) {
   const sizes = {
-    sm: { height: 32, font: 'var(--text-sm)', pad: 10 },
-    md: { height: 40, font: 'var(--text-md)', pad: 12 },
-    lg: { height: 48, font: 'var(--text-md)', pad: 14 },
+    sm: { height: 32, font: 'var(--text-lg)', pad: 10 },
+    md: { height: 40, font: 'var(--text-xl)', pad: 12 },
+    lg: { height: 48, font: 'var(--text-xl)', pad: 14 },
   };
   const s = sizes[size] || sizes.md;
 
@@ -27,15 +27,15 @@ export function Input({
         gap: 8,
         height: s.height,
         padding: `0 ${s.pad}px`,
-        background: 'var(--bg-surface)',
-        border: `1px solid ${invalid ? 'var(--err)' : focused ? 'var(--accent)' : 'var(--border-soft)'}`,
+        background: 'hsl(var(--bg-surface))',
+        border: `1px solid ${invalid ? 'hsl(var(--err))' : focused ? 'hsl(var(--accent))' : 'hsl(var(--border-soft))'}`,
         borderRadius: 'var(--radius-sm)',
         boxShadow: focused && !invalid ? '0 0 0 3px rgba(0,229,192,0.18)' : 'none',
         transition: 'border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)',
         ...style,
       }}
     >
-      {prefix && <span style={{ color: 'var(--text-faint)', display: 'inline-flex' }}>{prefix}</span>}
+      {prefix && <span style={{ color: 'hsl(var(--text-faint))', display: 'inline-flex' }}>{prefix}</span>}
       <input
         onFocus={(e) => { setFocused(true); rest.onFocus && rest.onFocus(e); }}
         onBlur={(e) => { setFocused(false); rest.onBlur && rest.onBlur(e); }}
@@ -47,13 +47,13 @@ export function Input({
           border: 'none',
           outline: 'none',
           background: 'transparent',
-          color: 'var(--text-strong)',
+          color: 'hsl(var(--text-strong))',
           fontFamily: mono ? 'var(--font-mono)' : 'var(--font-ui)',
           fontSize: s.font,
           letterSpacing: mono ? 'var(--tracking-mono)' : '0',
         }}
       />
-      {suffix && <span style={{ color: 'var(--text-faint)', display: 'inline-flex', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-xs)' }}>{suffix}</span>}
+      {suffix && <span style={{ color: 'hsl(var(--text-faint))', display: 'inline-flex', fontFamily: 'var(--font-mono)', fontSize: 'var(--text-base)' }}>{suffix}</span>}
     </div>
   );
 }

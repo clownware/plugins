@@ -24,8 +24,8 @@ export function Checkbox({ checked, onChange, disabled = false, label, style, ..
         height: 20,
         flex: 'none',
         borderRadius: 'var(--radius-xs)',
-        border: `1.5px solid ${isOn ? 'var(--accent)' : 'var(--border-strong)'}`,
-        background: isOn ? 'var(--accent)' : 'transparent',
+        border: `1.5px solid ${isOn ? 'hsl(var(--accent))' : 'hsl(var(--border-strong))'}`,
+        background: isOn ? 'hsl(var(--accent))' : 'transparent',
         cursor: disabled ? 'not-allowed' : 'pointer',
         opacity: disabled ? 0.4 : 1,
         transition: 'background var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out)',
@@ -34,7 +34,7 @@ export function Checkbox({ checked, onChange, disabled = false, label, style, ..
       {...rest}
     >
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ opacity: isOn ? 1 : 0, transition: 'opacity var(--dur-fast) var(--ease-out)' }}>
-        <path d="M2.5 6.2L5 8.7L9.6 3.4" stroke="var(--accent-ink)" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2.5 6.2L5 8.7L9.6 3.4" stroke="hsl(var(--accent-ink))" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
   );
@@ -43,7 +43,7 @@ export function Checkbox({ checked, onChange, disabled = false, label, style, ..
   return (
     <label style={{ display: 'inline-flex', alignItems: 'center', gap: 10, cursor: disabled ? 'not-allowed' : 'pointer' }}>
       {box}
-      <span style={{ fontFamily: 'var(--font-ui)', fontSize: 'var(--text-sm)', color: 'var(--text-body)' }}>{label}</span>
+      <span style={{ fontFamily: 'var(--font-ui)', fontSize: 'var(--text-lg)', color: 'hsl(var(--text-body))' }}>{label}</span>
     </label>
   );
 }

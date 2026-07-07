@@ -1,0 +1,32 @@
+/* ============================================================
+   PEZZA · EFFECTS — shadows · glow · motion · photo protection
+   Split from spacing.css per chassis convention.
+   NO grain token by design: grain is the Astro chassis's brand;
+   Pezza surfaces are flat — photography carries the texture.
+   ============================================================ */
+:root {
+  /* —— Shadows — minimal. The brand is flat/photographic; depth
+     comes from contrast, not heavy drop shadows. —— */
+  --shadow-none: none; /* @kind other */
+  --shadow-sm:   0 1px 2px hsl(var(--ink-1000) / .06); /* @kind other */
+  --shadow-md:   0 4px 16px hsl(var(--ink-1000) / .08); /* @kind other */
+  --shadow-lg:   0 12px 40px hsl(var(--ink-1000) / .16); /* @kind other */
+  --shadow-pop:  0 8px 32px hsl(var(--ink-1000) / .24); /* @kind other */
+  /* glow for accent/waveform moments on dark */
+  --glow-accent: 0 0 0 1px hsl(var(--accent) / .4), 0 0 24px hsl(var(--accent) / .25); /* @kind other */
+
+  /* —— Photo protection — the named rule for text/mark legibility
+     over photography: transparent top fading to near-opaque ink.
+     Mandatory under any text or mark placed on a photograph. —— */
+  --protect-gradient: linear-gradient(180deg, hsl(var(--ink-1000) / 0) 0%, hsl(var(--ink-1000) / .85) 100%); /* @kind color */
+
+  /* —— Motion. The X is a crossfader: strokes draw, triangles
+     separate & recombine. Easings favor quick, confident moves. —— */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);   /* @kind other */
+  --ease-inout:   cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
+  --ease-crossfade: cubic-bezier(0.4, 0, 0.1, 1);  /* @kind other */
+  --dur-fast:   120ms;   /* @kind other */
+  --dur-base:   220ms;   /* @kind other */
+  --dur-slow:   420ms;   /* @kind other */
+  --dur-intro:  2400ms;  /* @kind other */
+}

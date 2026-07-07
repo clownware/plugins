@@ -5,6 +5,8 @@
      mark's construction). Wordmark = ALL CAPS, wide tracking.
    - Metadata/technical: Space Mono — tracklists, BPM, key,
      catalog numbers, release credits, timestamps.
+   Scale numbering follows the chassis ladder (xs…8xl); px values
+   are Pezza's own (preserved through the renumber).
    ============================================================ */
 :root {
   /* —— Families —— */
@@ -18,18 +20,19 @@
   --weight-semi:    600;
   --weight-bold:    700;
 
-  /* —— Type scale (1.25 major-third-ish, tuned) —— */
-  --text-3xs: 0.6875rem;  /* 11px — mono micro tags */
-  --text-2xs: 0.75rem;    /* 12px — mono labels, catalog ids */
-  --text-xs:  0.8125rem;  /* 13px — captions */
-  --text-sm:  0.875rem;   /* 14px — secondary UI */
-  --text-md:  1rem;       /* 16px — body */
-  --text-lg:  1.125rem;   /* 18px — lead */
-  --text-xl:  1.5rem;     /* 24px — card titles */
-  --text-2xl: 2rem;       /* 32px — section heads */
-  --text-3xl: 2.75rem;    /* 44px — page titles */
-  --text-4xl: 4rem;       /* 64px — hero */
-  --text-5xl: 6rem;       /* 96px — display / cover art */
+  /* —— Type scale (chassis ladder, Pezza values) —— */
+  --text-xs:   0.6875rem; /* 11px — mono micro tags */
+  --text-sm:   0.75rem;   /* 12px — mono labels, catalog ids */
+  --text-base: 0.8125rem; /* 13px — captions */
+  --text-lg:   0.875rem;  /* 14px — secondary UI */
+  --text-xl:   1rem;      /* 16px — body */
+  --text-2xl:  1.125rem;  /* 18px — lead */
+  --text-3xl:  1.5rem;    /* 24px — card titles */
+  --text-4xl:  2rem;      /* 32px — section heads */
+  --text-5xl:  2.75rem;   /* 44px — page titles */
+  --text-6xl:  4rem;      /* 64px — hero */
+  --text-7xl:  5rem;      /* 80px — hero+ (inserted step) */
+  --text-8xl:  6rem;      /* 96px — display / cover art */
 
   /* —— Line heights —— */
   --leading-tight:  1.04;
@@ -44,11 +47,11 @@
   --tracking-wider:   0.18em;   /* wordmark, eyebrows */
   --tracking-mono:    0.02em;   /* mono metadata */
 
-  /* —— Semantic roles —— */
-  --type-wordmark: var(--weight-bold) var(--text-2xl)/1 var(--font-display);
-  --type-display:  var(--weight-bold) var(--text-4xl)/var(--leading-tight) var(--font-display);
-  --type-title:    var(--weight-semi) var(--text-3xl)/var(--leading-tight) var(--font-display);
-  --type-heading:  var(--weight-semi) var(--text-2xl)/var(--leading-snug) var(--font-display);
-  --type-body:     var(--weight-regular) var(--text-md)/var(--leading-normal) var(--font-ui);
-  --type-meta:     var(--weight-regular) var(--text-2xs)/var(--leading-normal) var(--font-mono);
+  /* —— Semantic roles — better than raw ladder steps; keep using these —— */
+  --type-wordmark: var(--weight-bold) var(--text-4xl)/1 var(--font-display);
+  --type-display:  var(--weight-bold) var(--text-6xl)/var(--leading-tight) var(--font-display);
+  --type-title:    var(--weight-semi) var(--text-5xl)/var(--leading-tight) var(--font-display);
+  --type-heading:  var(--weight-semi) var(--text-4xl)/var(--leading-snug) var(--font-display);
+  --type-body:     var(--weight-regular) var(--text-xl)/var(--leading-normal) var(--font-ui);
+  --type-meta:     var(--weight-regular) var(--text-sm)/var(--leading-normal) var(--font-mono);
 }

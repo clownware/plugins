@@ -1,6 +1,7 @@
 /* ============================================================
-   PEZZA · SPACING, RADII, SHADOW, MOTION
+   PEZZA · SPACING, RADII, BORDERS, LAYOUT
    Built on a grid — same DNA as the monoline mark. 4px base unit.
+   (Shadows, glow and motion live in effects.css.)
    ============================================================ */
 :root {
   /* —— Spacing scale (4px base) —— */
@@ -30,26 +31,6 @@
   --border-w:      1px;
   --border-w-2:    1.5px;
   --stroke-mark:   2px;   /* monoline weight reference */
-
-  /* —— Shadows — minimal. The brand is flat/photographic; depth
-     comes from contrast, not heavy drop shadows. —— */
-  --shadow-none: none;
-  --shadow-sm:   0 1px 2px rgba(10,10,11,0.06);
-  --shadow-md:   0 4px 16px rgba(10,10,11,0.08);
-  --shadow-lg:   0 12px 40px rgba(10,10,11,0.16);
-  --shadow-pop:  0 8px 32px rgba(10,10,11,0.24);
-  /* glow for accent/waveform moments on dark */
-  --glow-accent: 0 0 0 1px rgba(0,229,192,0.4), 0 0 24px rgba(0,229,192,0.25);
-
-  /* —— Motion. The X is a crossfader: strokes draw, triangles
-     separate & recombine. Easings favor quick, confident moves. —— */
-  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);   /* @kind other */
-  --ease-inout:   cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
-  --ease-crossfade: cubic-bezier(0.4, 0, 0.1, 1);  /* @kind other */
-  --dur-fast:   120ms;   /* @kind other */
-  --dur-base:   220ms;   /* @kind other */
-  --dur-slow:   420ms;   /* @kind other */
-  --dur-intro:  2400ms;  /* @kind other */
 
   /* —— Layout —— */
   --container:   1200px;

@@ -35,14 +35,14 @@ function AppShell() {
   const title = titleMap[view] || (groupObj ? groupObj.name : 'Items');
 
   return (
-    <div style={{ display: 'flex', height: '100%', background: 'var(--bg-app)', fontFamily: 'var(--font-ui)' }}>
+    <div style={{ display: 'flex', height: '100%', background: 'hsl(var(--bg-app))', fontFamily: 'var(--font-ui)' }}>
       <window.AppSidebar active={view} onSelect={setView} counts={counts} />
 
       <main style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden' }}>
-        <header style={{ display: 'flex', alignItems: 'center', gap: 16, padding: 'var(--space-5) var(--space-6)', borderBottom: '1px solid var(--border-soft)', background: 'var(--bg-surface)' }}>
+        <header style={{ display: 'flex', alignItems: 'center', gap: 16, padding: 'var(--space-5) var(--space-6)', borderBottom: '1px solid hsl(var(--border-soft))', background: 'hsl(var(--bg-surface))' }}>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <div style={{ font: 'var(--type-meta)', color: 'var(--text-faint)', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase' }}>Workspace</div>
-            <h1 style={{ font: 'var(--weight-bold) var(--text-2xl)/1 var(--font-display)', color: 'var(--text-strong)', margin: '4px 0 0', letterSpacing: '-0.01em' }}>{title}</h1>
+            <div style={{ font: 'var(--type-meta)', color: 'hsl(var(--text-faint))', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase' }}>Workspace</div>
+            <h1 style={{ font: 'var(--weight-bold) var(--text-4xl)/1 var(--font-display)', color: 'hsl(var(--text-strong))', margin: '4px 0 0', letterSpacing: '-0.01em' }}>{title}</h1>
           </div>
           <div style={{ width: 240 }}>
             <Input placeholder="Search…" prefix={<I.Search size={16} />} value={query} onChange={(e)=>setQuery(e.target.value)} />
@@ -57,8 +57,8 @@ function AppShell() {
           ) : (
             <>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 18 }}>
-                <h2 style={{ font: 'var(--weight-semi) var(--text-lg)/1 var(--font-display)', color: 'var(--text-strong)', margin: 0 }}>{view === 'overview' ? 'Recent items' : title}</h2>
-                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-muted)' }}>{visible.length}</span>
+                <h2 style={{ font: 'var(--weight-semi) var(--text-2xl)/1 var(--font-display)', color: 'hsl(var(--text-strong))', margin: 0 }}>{view === 'overview' ? 'Recent items' : title}</h2>
+                <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'hsl(var(--text-muted))' }}>{visible.length}</span>
                 <div style={{ flex: 1 }} />
                 <IconButton label="Grid view" active={layout==='grid'} onClick={()=>setLayout('grid')}><I.Grid size={17} /></IconButton>
                 <IconButton label="List view" active={layout==='list'} onClick={()=>setLayout('list')}><I.List size={17} /></IconButton>
@@ -84,9 +84,9 @@ function OverviewStats() {
     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'var(--space-4)', marginBottom: 'var(--space-7)' }}>
       {window.AppData.stats.map((s, i) => (
         <Card key={i} padding="md">
-          <div style={{ font: 'var(--type-meta)', color: 'var(--text-muted)', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase' }}>{s.label}</div>
-          <div style={{ font: 'var(--weight-bold) var(--text-3xl)/1 var(--font-display)', color: 'var(--text-strong)', margin: '10px 0 6px', letterSpacing: '-0.02em' }}>{s.value}</div>
-          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--accent-dim)' }}>{s.delta}</div>
+          <div style={{ font: 'var(--type-meta)', color: 'hsl(var(--text-muted))', letterSpacing: 'var(--tracking-wide)', textTransform: 'uppercase' }}>{s.label}</div>
+          <div style={{ font: 'var(--weight-bold) var(--text-5xl)/1 var(--font-display)', color: 'hsl(var(--text-strong))', margin: '10px 0 6px', letterSpacing: '-0.02em' }}>{s.value}</div>
+          <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'hsl(var(--accent-dim))' }}>{s.delta}</div>
         </Card>
       ))}
     </div>
@@ -99,13 +99,13 @@ function ListView({ items, onStar }) {
   return (
     <Card padding="none" style={{ overflow: 'hidden' }}>
       {items.map((it, idx) => (
-        <div key={it.id} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px var(--space-5)', borderTop: idx ? '1px solid var(--border-hair)' : 'none' }}>
-          <button onClick={()=>onStar(it.id)} aria-label="Star" style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: it.starred ? 'var(--accent)' : 'var(--text-faint)', display: 'inline-flex' }}>
+        <div key={it.id} style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px var(--space-5)', borderTop: idx ? '1px solid hsl(var(--border-hair))' : 'none' }}>
+          <button onClick={()=>onStar(it.id)} aria-label="Star" style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: it.starred ? 'hsl(var(--accent))' : 'hsl(var(--text-faint))', display: 'inline-flex' }}>
             {it.starred ? <I.StarFill size={15} /> : <I.Star size={15} />}
           </button>
-          <span style={{ flex: 1, font: 'var(--weight-medium) var(--text-md)/1 var(--font-ui)', color: 'var(--text-strong)' }}>{it.name}</span>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-faint)', width: 130, textAlign: 'right' }}>{it.meta}</span>
-          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'var(--text-strong)', width: 40, textAlign: 'right' }}>{it.count}</span>
+          <span style={{ flex: 1, font: 'var(--weight-medium) var(--text-xl)/1 var(--font-ui)', color: 'hsl(var(--text-strong))' }}>{it.name}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'hsl(var(--text-faint))', width: 130, textAlign: 'right' }}>{it.meta}</span>
+          <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-lg)', color: 'hsl(var(--text-strong))', width: 40, textAlign: 'right' }}>{it.count}</span>
           <div style={{ width: 92, display: 'flex', justifyContent: 'flex-end' }}>{window.appStatusBadge(it.status, Badge)}</div>
         </div>
       ))}
@@ -119,12 +119,12 @@ function ActivityFeed() {
     <div style={{ maxWidth: 560 }}>
       <Card padding="none" style={{ overflow: 'hidden' }}>
         {window.AppData.activity.map((a, i) => (
-          <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '16px var(--space-5)', borderTop: i ? '1px solid var(--border-hair)' : 'none' }}>
-            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--accent)', flex: 'none' }} />
-            <span style={{ flex: 1, font: 'var(--text-sm)/1.4 var(--font-ui)', color: 'var(--text-body)' }}>
-              <strong style={{ color: 'var(--text-strong)', fontWeight: 600 }}>{a.who}</strong> {a.what} <strong style={{ color: 'var(--text-strong)', fontWeight: 600 }}>{a.target}</strong>
+          <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 14, padding: '16px var(--space-5)', borderTop: i ? '1px solid hsl(var(--border-hair))' : 'none' }}>
+            <span style={{ width: 7, height: 7, borderRadius: '50%', background: 'hsl(var(--accent))', flex: 'none' }} />
+            <span style={{ flex: 1, font: 'var(--text-lg)/1.4 var(--font-ui)', color: 'hsl(var(--text-body))' }}>
+              <strong style={{ color: 'hsl(var(--text-strong))', fontWeight: 600 }}>{a.who}</strong> {a.what} <strong style={{ color: 'hsl(var(--text-strong))', fontWeight: 600 }}>{a.target}</strong>
             </span>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-2xs)', color: 'var(--text-faint)' }}>{a.when}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'hsl(var(--text-faint))' }}>{a.when}</span>
           </div>
         ))}
       </Card>
@@ -135,7 +135,7 @@ function ActivityFeed() {
 function EmptyState({ query }) {
   const I = window.AppIcons;
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: '80px 0', color: 'var(--text-faint)' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: '80px 0', color: 'hsl(var(--text-faint))' }}>
       <I.Grid size={38} />
       <p style={{ font: 'var(--type-body)', margin: 0 }}>{query ? `No items match “${query}”` : 'Nothing here yet'}</p>
     </div>

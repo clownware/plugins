@@ -26,7 +26,7 @@ export function Switch({ checked, onChange, disabled = false, label, style, ...r
         border: 'none',
         cursor: disabled ? 'not-allowed' : 'pointer',
         opacity: disabled ? 0.4 : 1,
-        background: isOn ? 'var(--accent)' : 'var(--border-strong)',
+        background: isOn ? 'hsl(var(--accent))' : 'hsl(var(--border-strong))',
         transition: 'background var(--dur-base) var(--ease-crossfade)',
         padding: 0,
         ...style,
@@ -41,7 +41,7 @@ export function Switch({ checked, onChange, disabled = false, label, style, ...r
           width: 20,
           height: 20,
           borderRadius: 'var(--radius-round)',
-          background: 'var(--ink-0)',
+          background: 'hsl(var(--ink-0))',
           boxShadow: 'var(--shadow-sm)',
           transition: 'left var(--dur-base) var(--ease-crossfade)',
         }}
@@ -53,7 +53,7 @@ export function Switch({ checked, onChange, disabled = false, label, style, ...r
   return (
     <label style={{ display: 'inline-flex', alignItems: 'center', gap: 10, cursor: disabled ? 'not-allowed' : 'pointer' }}>
       {sw}
-      <span style={{ fontFamily: 'var(--font-ui)', fontSize: 'var(--text-sm)', color: 'var(--text-body)' }}>{label}</span>
+      <span style={{ fontFamily: 'var(--font-ui)', fontSize: 'var(--text-lg)', color: 'hsl(var(--text-body))' }}>{label}</span>
     </label>
   );
 }

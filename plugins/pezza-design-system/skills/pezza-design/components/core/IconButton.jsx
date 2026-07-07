@@ -19,19 +19,19 @@ export function IconButton({
 
   const variants = {
     ghost: {
-      background: active ? 'var(--bg-sunken)' : 'transparent',
-      color: active ? 'var(--text-strong)' : 'var(--text-muted)',
+      background: active ? 'hsl(var(--bg-sunken))' : 'transparent',
+      color: active ? 'hsl(var(--text-strong))' : 'hsl(var(--text-muted))',
       border: '1px solid transparent',
     },
     outline: {
       background: 'transparent',
-      color: 'var(--text-body)',
-      border: '1px solid var(--border-soft)',
+      color: 'hsl(var(--text-body))',
+      border: '1px solid hsl(var(--border-soft))',
     },
     solid: {
-      background: 'var(--text-strong)',
-      color: 'var(--text-inverse)',
-      border: '1px solid var(--text-strong)',
+      background: 'hsl(var(--text-strong))',
+      color: 'hsl(var(--text-inverse))',
+      border: '1px solid hsl(var(--text-strong))',
     },
   };
   const v = variants[variant] || variants.ghost;
@@ -54,7 +54,7 @@ export function IconButton({
         ...v,
         ...style,
       }}
-      onMouseEnter={(e) => { if (!active && variant === 'ghost') e.currentTarget.style.background = 'var(--bg-sunken)'; }}
+      onMouseEnter={(e) => { if (!active && variant === 'ghost') e.currentTarget.style.background = 'hsl(var(--bg-sunken))'; }}
       onMouseLeave={(e) => { if (!active && variant === 'ghost') e.currentTarget.style.background = 'transparent'; }}
       onMouseDown={(e) => { if (!disabled) e.currentTarget.style.transform = 'scale(0.92)'; }}
       onMouseUp={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}

@@ -18,14 +18,14 @@ export function Card({
       onMouseEnter={(e) => { setHover(true); rest.onMouseEnter && rest.onMouseEnter(e); }}
       onMouseLeave={(e) => { setHover(false); rest.onMouseLeave && rest.onMouseLeave(e); }}
       style={{
-        background: 'var(--bg-surface)',
-        border: '1px solid var(--border-soft)',
+        background: 'hsl(var(--bg-surface))',
+        border: '1px solid hsl(var(--border-soft))',
         borderRadius: 'var(--radius-lg)',
         padding: pads[padding] ?? pads.md,
         boxShadow: elevated ? 'var(--shadow-md)' : 'var(--shadow-none)',
         transition: 'transform var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out)',
         cursor: interactive ? 'pointer' : 'default',
-        ...(interactive && hover ? { borderColor: 'var(--border-strong)', transform: 'translateY(-2px)', boxShadow: 'var(--shadow-md)' } : null),
+        ...(interactive && hover ? { borderColor: 'hsl(var(--border-strong))', transform: 'translateY(-2px)', boxShadow: 'var(--shadow-md)' } : null),
         ...style,
       }}
       {...rest}

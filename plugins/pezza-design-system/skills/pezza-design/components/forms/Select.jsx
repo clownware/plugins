@@ -3,9 +3,9 @@ import React from 'react';
 /** Pezza select — hairline field matching Input, custom chevron. */
 export function Select({ size = 'md', invalid = false, children, style, ...rest }) {
   const sizes = {
-    sm: { height: 32, font: 'var(--text-sm)', pad: 10 },
-    md: { height: 40, font: 'var(--text-md)', pad: 12 },
-    lg: { height: 48, font: 'var(--text-md)', pad: 14 },
+    sm: { height: 32, font: 'var(--text-lg)', pad: 10 },
+    md: { height: 40, font: 'var(--text-xl)', pad: 12 },
+    lg: { height: 48, font: 'var(--text-xl)', pad: 14 },
   };
   const s = sizes[size] || sizes.md;
   const [focused, setFocused] = React.useState(false);
@@ -22,9 +22,9 @@ export function Select({ size = 'md', invalid = false, children, style, ...rest 
           width: '100%',
           height: s.height,
           padding: `0 ${s.pad + 22}px 0 ${s.pad}px`,
-          background: 'var(--bg-surface)',
-          color: 'var(--text-strong)',
-          border: `1px solid ${invalid ? 'var(--err)' : focused ? 'var(--accent)' : 'var(--border-soft)'}`,
+          background: 'hsl(var(--bg-surface))',
+          color: 'hsl(var(--text-strong))',
+          border: `1px solid ${invalid ? 'hsl(var(--err))' : focused ? 'hsl(var(--accent))' : 'hsl(var(--border-soft))'}`,
           borderRadius: 'var(--radius-sm)',
           boxShadow: focused && !invalid ? '0 0 0 3px rgba(0,229,192,0.18)' : 'none',
           fontFamily: 'var(--font-ui)',
@@ -39,7 +39,7 @@ export function Select({ size = 'md', invalid = false, children, style, ...rest 
       </select>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
         style={{ position: 'absolute', right: s.pad, top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}>
-        <path d="M2.5 4.5L6 8L9.5 4.5" stroke="var(--text-muted)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2.5 4.5L6 8L9.5 4.5" stroke="hsl(var(--text-muted))" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </div>
   );

@@ -4,12 +4,42 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 
 ## Available plugins
 
-| Plugin | Description | Source |
-|--------|-------------|--------|
+| Plugin | What it is | Source |
+|--------|------------|--------|
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`tool-mcp-ux-prototyping/plugin`](https://github.com/clownware/tool-mcp-ux-prototyping/tree/main/plugin) |
-| `clownware-code-tools` | Universal dev workflow skills: architecture auditing, security auditing, test-suite auditing, skill auditing, design-system auditing, ADR authoring, PR descriptions, root-cause debugging, test scaffolding. | [`plugins/code-tools`](plugins/code-tools) |
-| `clownware-astro-tools` | Astro + Preact stack skills: component scaffolding and template-aware PR descriptions. | [`plugins/astro-tools`](plugins/astro-tools) |
-| `pezza-design-system` | The Pezza brand design system: guidelines, tokens, brand assets, React primitives, and two UI kit starters. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
+| `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. | [`plugins/code-tools`](plugins/code-tools) |
+| `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. | [`plugins/astro-tools`](plugins/astro-tools) |
+| `pezza-design-system` | The Pezza brand design system as a skill: guidelines, HSL-channel tokens, animatable brand SVGs, prose layer, motion system, React primitives, two UI kits. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
+
+## Skills at a glance
+
+**clownware-code-tools** — the audit suite is assessment-only by design: each skill reports
+ranked, `file:line`-cited findings and leaves fixes to you.
+
+| Skill | What it does |
+|-------|--------------|
+| `/arch-audit` | Architecture decisions vs roadmap vs actual code; phased readiness plan |
+| `/security-audit` | Auth/session, injection, platform vulnerabilities — verified against code before reporting |
+| `/test-audit` | Coverage gaps ranked by risk, CI enforcement vs observation, test quality |
+| `/design-audit` | Token-bridge sync, computed WCAG contrast, the system's own rules vs its code |
+| `/skill-audit` | SKILL.md quality: dead shell fallbacks, triggering, collisions — by executing, not reading |
+| `/adr` | Architecture Decision Records, numbered and templated from the repo's own conventions |
+| `/pr-description` | PR descriptions from the branch diff, template-aware |
+| `/root-cause-debug` | Pair-debugging pipeline: root causes, never band-aids |
+| `/test-scaffold` | Test stubs for JS/TS (vitest/jest), matching the project's conventions |
+
+**clownware-astro-tools**
+
+| Skill | What it does |
+|-------|--------------|
+| `/component-scaffold` | Astro/Preact components following project patterns (atomic layout aware) |
+| `/pr-description` | PR descriptions for astro-performance-starter template repos |
+
+**pezza-design-system**
+
+| Skill | What it does |
+|-------|--------------|
+| `/pezza-design` | Generate on-brand Pezza interfaces, artifacts, and production code from the full design system |
 
 ## Install
 
@@ -65,7 +95,8 @@ Each plugin's version is resolved from its `plugin.json` `version` field (highes
 
 ## Documentation
 
-- **[docs/MAINTAINING.md](docs/MAINTAINING.md)** — adding plugins, the release process, version resolution, pinning stable channels, and validation.
+- **[docs/MAINTAINING.md](docs/MAINTAINING.md)** — adding plugins, the release process, version resolution, pinning stable channels, validation, and the skill authoring standards.
+- **[docs/ROADMAP.md](docs/ROADMAP.md)** — light specs for upcoming skills and tracked open decisions.
 
 ## License
 

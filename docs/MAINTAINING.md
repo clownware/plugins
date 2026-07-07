@@ -92,6 +92,40 @@ claude plugin validate ./plugin --strict
 
 That validates the plugin's manifest, skills, commands, and agent frontmatter. The catalog CI here and the plugin validator there are complementary: this repo guards the index, that command guards the plugin.
 
+## Skill authoring standards
+
+House conventions for every skill in this marketplace. All of them exist because their
+absence produced a real, verified bug — none are style preferences.
+
+1. **Pre-fetched context uses capture-then-default.** A pipeline's exit status is its
+   *last* command's, and `head`/`tail`/`sed`/`sort` exit 0 on empty input — so
+   `cmd | filter || echo "fallback"` never fires. Write
+   `out=$(cmd | filter); echo "${out:-fallback}"` instead. No unquoted globs (zsh
+   `nomatch` leaks to stderr); no apostrophes inside `${var:-fallback}` text (quoting
+   is honored inside parameter-expansion words, so a `'` opens an unterminated quote).
+
+2. **Every pre-fetch command is verified by execution before shipping** — in bash *and*
+   zsh, against three contexts: a repo where the probe should hit, one where it should
+   miss, and an unrelated directory. Zero blank outputs, zero stderr leaks.
+
+3. **Descriptions carry trigger phrases, not just capability summaries** — skills
+   undertrigger by default. Name the stack when the skill is stack-specific, so it
+   doesn't fire (or collide with a sibling) in the wrong repo.
+
+4. **Audit skills are assessment-only.** They report ranked findings cited `file:line`,
+   labeled verified/unverified, and never edit the tree — fixes are a separate,
+   explicit step. Verified means executed or computed: contrast by math, sync by
+   parsing, fallbacks by running.
+
+5. **New skills get a blind validation run** before release: a fresh agent executes
+   the skill against a target with known ground truth; the skill ships when the run
+   reproduces the ground truth without hints. (This is how skill-audit and design-audit
+   were released — both runs also found things their authors missed, which is the point.)
+
+6. **Releases are per-plugin semver bumps** with conventional commits; the plugin's
+   `plugin.json`, its `marketplace.json` description, and the README tables are kept
+   in sync in the same commit.
+
 ## Access notes
 
 Both this marketplace and the plugin sources are currently **private**. Anyone adding the marketplace or installing a plugin needs git credentials with read access to the referenced repos (SSH key, or a `GITHUB_TOKEN`). To make a plugin frictionless to install publicly, make its **source repo** public — this catalog repo can remain private or be made public independently.

@@ -16,7 +16,7 @@
     {
       "name": "clownware-code-tools",
       "source": "./plugins/code-tools",
-      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), ADR authoring, PR descriptions, root-cause debugging, and test scaffolding \u2014 that probe the repo they run in and degrade gracefully."
+      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), ADR authoring, PR descriptions, root-cause debugging, and test scaffolding \u2014 that probe the repo they run in and degrade gracefully."
     },
     {
       "name": "clownware-astro-tools",

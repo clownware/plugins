@@ -12,7 +12,7 @@ function AddPanel({ open, onClose, onAdd }) {
 
   return (
     <>
-      <div onClick={onClose} style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,11,0.32)',
+      <div onClick={onClose} style={{ position: 'absolute', inset: 0, background: 'hsl(var(--ink-1000) / 0.32)',
         opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none',
         transition: 'opacity var(--dur-base) var(--ease-out)', zIndex: 20 }} />
       <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: 380, zIndex: 21,

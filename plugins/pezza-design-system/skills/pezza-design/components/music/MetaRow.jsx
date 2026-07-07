@@ -33,7 +33,7 @@ export function MetaRow({ index, title, artist, bpm, musicKey, duration, active 
         {artist && <span style={{ fontSize: 'var(--text-lg)', color: 'hsl(var(--text-muted))' }}> — {artist}</span>}
       </span>
       <span style={{ display: 'inline-flex', gap: 'var(--space-4)', fontSize: 'var(--text-sm)', color: 'hsl(var(--text-muted))', letterSpacing: 'var(--tracking-mono)' }}>
-        {bpm && <span style={{ color: 'hsl(var(--accent))' }}>{bpm} BPM</span>}
+        {bpm && <span>{bpm} BPM</span>}
         {musicKey && <span>{musicKey}</span>}
         {duration && <span style={{ color: 'hsl(var(--text-faint))' }}>{duration}</span>}
       </span>

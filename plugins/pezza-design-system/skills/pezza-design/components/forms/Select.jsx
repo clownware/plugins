@@ -26,7 +26,7 @@ export function Select({ size = 'md', invalid = false, children, style, ...rest 
           color: 'hsl(var(--text-strong))',
           border: `1px solid ${invalid ? 'hsl(var(--err))' : focused ? 'hsl(var(--accent))' : 'hsl(var(--border-soft))'}`,
           borderRadius: 'var(--radius-sm)',
-          boxShadow: focused && !invalid ? '0 0 0 3px rgba(0,229,192,0.18)' : 'none',
+          boxShadow: focused && !invalid ? '0 0 0 3px hsl(var(--accent) / 0.18)' : 'none',
           fontFamily: 'var(--font-ui)',
           fontSize: s.font,
           cursor: 'pointer',

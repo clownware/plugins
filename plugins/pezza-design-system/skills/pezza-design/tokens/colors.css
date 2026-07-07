@@ -29,13 +29,17 @@
      like a cursor — small, deliberate, never as a fill field. —— */
   --accent:        170.3 100% 44.9%; /* @kind color */
   --accent-bright: 170.8 91% 56.5%; /* @kind color */ /* hover / glow */
-  --accent-dim:    170.1 87.8% 35.3%; /* @kind color */ /* on light backgrounds for contrast */
+  --accent-dim:    170.1 87.8% 25%; /* @kind color */ /* on light backgrounds — darkened to clear 4.5:1 AA on ink-50/white */
   --accent-ink:    171 78% 7%; /* @kind color */ /* text/icon sitting ON the accent */
 
   /* —— Semantic status (kept muted; the brand is not colorful) —— */
   --ok:    151 65% 54%; /* @kind color */
   --warn:  41.4 79.1% 56.9%; /* @kind color */
   --err:   358.8 85.6% 64.7%; /* @kind color */
+  /* dim status variants — AA-passing text on light surfaces */
+  --ok-dim:   151 65% 28%; /* @kind color */
+  --warn-dim: 41.4 79.1% 29%; /* @kind color */
+  --err-dim:  358.8 85.6% 42%; /* @kind color */
   --info:  var(--accent); /* @kind color */
 
   /* ===== SEMANTIC ALIASES — default (light) theme =====
@@ -48,10 +52,15 @@
 
   --text-strong:   var(--ink-1000); /* @kind color */
   --text-body:     var(--ink-800); /* @kind color */
-  --text-muted:    var(--ink-500); /* @kind color */
-  --text-faint:    var(--ink-400); /* @kind color */
+  --text-muted:    var(--ink-600); /* @kind color */
+  --text-faint:    var(--ink-500); /* @kind color */ /* faint still carries content: keep it AA (4.5:1+) */
   --text-onAccent: var(--accent-ink); /* @kind color */
   --text-inverse:  var(--ink-0); /* @kind color */
+
+  /* status text on tinted/light surfaces — dim variants for AA */
+  --ok-fg:   var(--ok-dim); /* @kind color */
+  --warn-fg: var(--warn-dim); /* @kind color */
+  --err-fg:  var(--err-dim); /* @kind color */
 
   --border-hair:   var(--ink-100); /* @kind color */
   --border-soft:   var(--ink-150); /* @kind color */
@@ -73,8 +82,8 @@
 
   --text-strong:   var(--ink-0); /* @kind color */
   --text-body:     var(--ink-150); /* @kind color */
-  --text-muted:    var(--ink-400); /* @kind color */
-  --text-faint:    var(--ink-500); /* @kind color */
+  --text-muted:    var(--ink-300); /* @kind color */
+  --text-faint:    var(--ink-400); /* @kind color */ /* 4.8:1 on ink-1000; borderline 4.3:1 on ink-800 raised surfaces */
   --text-onAccent: var(--accent-ink); /* @kind color */ /* theme-invariant: sits on accent */
   --text-inverse:  var(--ink-1000); /* @kind color */
 
@@ -85,4 +94,8 @@
 
   --link:          var(--accent); /* @kind color */
   --waveform:      var(--accent); /* @kind color */ /* theme-invariant: playhead is always accent */
+
+  --ok-fg:   var(--ok); /* @kind color */ /* bright status reads fine on dark */
+  --warn-fg: var(--warn); /* @kind color */
+  --err-fg:  var(--err); /* @kind color */
 }

@@ -34,7 +34,7 @@ export function Checkbox({ checked, onChange, disabled = false, label, style, ..
       {...rest}
     >
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" style={{ opacity: isOn ? 1 : 0, transition: 'opacity var(--dur-fast) var(--ease-out)' }}>
-        <path d="M2.5 6.2L5 8.7L9.6 3.4" stroke="hsl(var(--accent-ink))" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2.5 6.2L5 8.7L9.6 3.4" stroke="hsl(var(--text-onAccent))" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
     </span>
   );

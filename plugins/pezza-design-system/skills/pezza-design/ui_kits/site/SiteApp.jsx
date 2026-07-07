@@ -11,10 +11,10 @@ function SiteNav() {
   const link = (t) => <a href="#" style={{ font: 'var(--weight-medium) var(--text-lg)/1 var(--font-ui)', color: 'hsl(var(--ink-300))', textDecoration: 'none', letterSpacing: '0.02em' }}
     onMouseEnter={(e)=>e.currentTarget.style.color='hsl(var(--ink-0))'} onMouseLeave={(e)=>e.currentTarget.style.color='hsl(var(--ink-300))'}>{t}</a>;
   return (
-    <nav style={{ position: 'sticky', top: 0, zIndex: 10, display: 'flex', alignItems: 'center', gap: 28, padding: '18px 40px', background: 'rgba(10,10,11,0.6)', backdropFilter: 'blur(12px)', borderBottom: '1px solid hsl(var(--ink-800))' }}>
+    <nav style={{ position: 'sticky', top: 0, zIndex: 10, display: 'flex', alignItems: 'center', gap: 28, padding: '18px 40px', background: 'hsl(var(--ink-1000) / 0.6)', backdropFilter: 'blur(12px)', borderBottom: '1px solid hsl(var(--ink-800))' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-        <img src="../../assets/logo/emblem-white.png" alt="" style={{ height: 24 }} />
-        <span style={{ font: 'var(--weight-bold) var(--text-xl)/1 var(--font-display)', letterSpacing: '0.2em', color: 'hsl(var(--ink-0))' }}>PEZZA</span>
+        <img src="../../assets/logo/emblem-white.svg" alt="" style={{ height: 24 }} />
+        <span style={{ font: 'var(--weight-bold) var(--text-xl)/1 var(--font-display)', letterSpacing: 'var(--tracking-wider)', color: 'hsl(var(--ink-0))' }}>PEZZA</span>
       </div>
       <div style={{ flex: 1 }} />
       {link('Releases')}{link('Sets')}{link('Live')}{link('About')}
@@ -28,7 +28,7 @@ function Hero({ onPlay }) {
   return (
     <header style={{ position: 'relative', minHeight: 460, display: 'flex', alignItems: 'flex-end', overflow: 'hidden' }}>
       <img src={BG.smoke} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, rgba(10,10,11,0.2) 0%, rgba(10,10,11,0.85) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'var(--protect-gradient)' }} />
       <div style={{ position: 'relative', padding: '0 40px 48px', width: '100%', boxSizing: 'border-box' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 18 }}>
           <span style={{ font: 'var(--type-meta)', color: 'hsl(var(--accent))', letterSpacing: 'var(--tracking-wide)' }}>NOW PLAYING</span>
@@ -54,8 +54,8 @@ function Player({ release, playing, progress, onToggle, activeTrack, setActiveTr
       <div>
         <div style={{ position: 'relative', aspectRatio: '1/1', borderRadius: 'var(--radius-lg)', overflow: 'hidden', border: '1px solid hsl(var(--ink-800))' }}>
           <img src={BG[release.bg]} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-          <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,11,0.25)', display: 'grid', placeItems: 'center' }}>
-            <img src="../../assets/logo/emblem-white.png" alt="" style={{ width: 64, filter: 'drop-shadow(0 2px 12px rgba(0,0,0,.5))' }} />
+          <div style={{ position: 'absolute', inset: 0, background: 'hsl(var(--ink-1000) / 0.25)', display: 'grid', placeItems: 'center' }}>
+            <img src="../../assets/logo/emblem-white.svg" alt="" style={{ width: 64, filter: 'drop-shadow(0 2px 12px hsl(var(--ink-1000) / .5))' }} />
           </div>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 16 }}>
@@ -70,7 +70,7 @@ function Player({ release, playing, progress, onToggle, activeTrack, setActiveTr
         <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '18px 20px', background: 'hsl(var(--ink-900))', border: '1px solid hsl(var(--ink-800))', borderRadius: 'var(--radius-lg)' }}>
           <button onClick={onToggle} aria-label={playing ? 'Pause' : 'Play'} style={{
             width: 48, height: 48, flex: 'none', borderRadius: '50%', border: 'none', cursor: 'pointer',
-            background: 'hsl(var(--accent))', color: 'hsl(var(--accent-ink))', display: 'grid', placeItems: 'center',
+            background: 'hsl(var(--accent))', color: 'hsl(var(--text-onAccent))', display: 'grid', placeItems: 'center',
             boxShadow: playing ? 'var(--glow-accent)' : 'none', transition: 'box-shadow var(--dur-base) var(--ease-out)',
           }}>
             {playing ? <I.Pause size={18} /> : <I.Play size={18} />}
@@ -110,8 +110,8 @@ function Discography({ onSelect, currentId }) {
             <button key={r.id} onClick={() => onSelect(r.id)} style={{ textAlign: 'left', border: 'none', background: 'transparent', cursor: 'pointer', padding: 0 }}>
               <div style={{ position: 'relative', aspectRatio: '1/1', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: on ? '1.5px solid hsl(var(--accent))' : '1px solid hsl(var(--ink-800))', transition: 'border-color var(--dur-base) var(--ease-out)' }}>
                 <img src={BG[r.bg]} alt="" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-                <div style={{ position: 'absolute', inset: 0, background: 'rgba(10,10,11,0.3)', display: 'grid', placeItems: 'center' }}>
-                  <img src="../../assets/logo/emblem-white.png" alt="" style={{ width: 38 }} />
+                <div style={{ position: 'absolute', inset: 0, background: 'hsl(var(--ink-1000) / 0.3)', display: 'grid', placeItems: 'center' }}>
+                  <img src="../../assets/logo/emblem-white.svg" alt="" style={{ width: 38 }} />
                 </div>
               </div>
               <div style={{ marginTop: 10, display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
@@ -135,7 +135,7 @@ function Dates() {
       <div style={{ border: '1px solid hsl(var(--ink-800))', borderRadius: 'var(--radius-lg)', overflow: 'hidden' }}>
         {window.SiteData.dates.map((d, i) => (
           <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 24, padding: '18px 22px', borderTop: i ? '1px solid hsl(var(--ink-800))' : 'none' }}>
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-lg)', color: 'hsl(var(--accent))', width: 70 }}>{d.date}</span>
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-lg)', color: 'hsl(var(--text-strong))', width: 70 }}>{d.date}</span>
             <div style={{ flex: 1 }}>
               <div style={{ font: 'var(--weight-semi) var(--text-2xl)/1.1 var(--font-display)', color: 'hsl(var(--ink-0))' }}>{d.city}</div>
               <div style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'hsl(var(--ink-500))' }}>{d.venue}</div>
@@ -155,7 +155,7 @@ function SiteFooter() {
   const social = (Icon) => <a href="#" style={{ color: 'hsl(var(--ink-400))', display: 'inline-flex' }} onMouseEnter={(e)=>e.currentTarget.style.color='hsl(var(--accent))'} onMouseLeave={(e)=>e.currentTarget.style.color='hsl(var(--ink-400))'}><Icon size={20} /></a>;
   return (
     <footer style={{ padding: '32px 40px', borderTop: '1px solid hsl(var(--ink-800))', display: 'flex', alignItems: 'center', gap: 16 }}>
-      <img src="../../assets/logo/emblem-white.png" alt="" style={{ height: 22 }} />
+      <img src="../../assets/logo/emblem-white.svg" alt="" style={{ height: 22 }} />
       <span style={{ fontFamily: 'var(--font-mono)', fontSize: 'var(--text-sm)', color: 'hsl(var(--ink-500))' }}>© 2026 PEZZA RECORDINGS</span>
       <div style={{ flex: 1 }} />
       <div style={{ display: 'flex', gap: 18 }}>{social(I.Soundcloud)}{social(I.Bandcamp)}{social(I.Instagram)}</div>

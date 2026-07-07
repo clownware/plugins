@@ -29,9 +29,9 @@ function AppSidebar({ active, onSelect, counts }) {
       display: 'flex', flexDirection: 'column', padding: 'var(--space-5) var(--space-4)' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: 10, padding: '0 8px 22px' }}>
         <span style={{ width: 32, height: 32, borderRadius: 'var(--radius-sm)', background: 'hsl(var(--ink-1000))', display: 'grid', placeItems: 'center' }}>
-          <img src="../../assets/logo/emblem-white.png" alt="" style={{ width: 17 }} />
+          <img src="../../assets/logo/emblem-white.svg" alt="" style={{ width: 17 }} />
         </span>
-        <span style={{ font: 'var(--weight-bold) var(--text-xl)/1 var(--font-display)', letterSpacing: '0.18em', color: 'hsl(var(--text-strong))' }}>PEZZA</span>
+        <span style={{ font: 'var(--weight-bold) var(--text-xl)/1 var(--font-display)', letterSpacing: 'var(--tracking-wider)', color: 'hsl(var(--text-strong))' }}>PEZZA</span>
       </div>
 
       <nav style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>

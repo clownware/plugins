@@ -6,10 +6,10 @@ user-invocable: true
 
 ## Hard rules (violating any of these breaks the brand)
 
-1. **Accent is a cursor, never a fill.** `--accent` (Crossfade Cyan) appears only on: links (hover/active), focus rings, waveform/playhead moments, one "now playing"-class glow per view. Never backgrounds, never gradients, never decorative.
+1. **Accent is a cursor, never decoration.** `--accent` (Crossfade Cyan) appears only on: links (hover/active), focus rings, waveform/playhead moments, one "now playing"-class glow per view, checked control on-states (switch, checkbox), and at most one accent CTA per view. Never surface backgrounds, never gradients, never decorative repetition (no accent-per-row lists).
 2. **Monochrome discipline.** Grayscale Ink ramp + the one accent + muted status colors. No new hues, no gradients (the one exception: `--protect-gradient`, which is ink, not color). Photography carries the color.
 3. **The mark's rules are law.** Never filled, never outlined, never recolored (accent variant excepted, digital only), never distorted. Clearspace = one stroke-square. Two lockups only: bare emblem, and emblem + wordmark horizontal.
-4. **Protection gradient is mandatory over photography.** Any text or mark on a photo sits over `--protect-gradient` (PhotoHero bakes this in).
+4. **Protection gradient is mandatory over photography.** Any text or mark on a photo sits over `--protect-gradient` (PhotoHero bakes this in). One exception: a centered bare mark on a photo may use the documented soft drop-shadow instead.
 5. **The metadata register is the signature.** Every technical value — BPM, key, catalog #, dates, counts, Lighthouse scores, commit refs, stack labels — is Space Mono (MetaLabel), usually uppercase. Music and dev values share one voice.
 6. **Three faces, three jobs.** Space Grotesk = display/UI/wordmark (ALL CAPS, 0.18em tracking). Space Mono = metadata. Inter = long-form prose only, via `.prose`.
 7. **Prose links rest as ink** (1px underline); accent only on hover/active.

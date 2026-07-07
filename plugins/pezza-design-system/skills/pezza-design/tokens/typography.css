@@ -50,7 +50,7 @@
   --tracking-mono:    0.02em;   /* mono metadata */
 
   /* —— Semantic roles — better than raw ladder steps; keep using these —— */
-  --type-wordmark: var(--weight-bold) var(--text-4xl)/1 var(--font-display);
+  --type-wordmark: var(--weight-bold) var(--text-4xl)/1 var(--font-display);  /* lockup scale; small nav wordmarks keep UI sizes + --tracking-wider */
   --type-display:  var(--weight-bold) var(--text-6xl)/var(--leading-tight) var(--font-display);
   --type-title:    var(--weight-semi) var(--text-5xl)/var(--leading-tight) var(--font-display);
   --type-heading:  var(--weight-semi) var(--text-4xl)/var(--leading-snug) var(--font-display);

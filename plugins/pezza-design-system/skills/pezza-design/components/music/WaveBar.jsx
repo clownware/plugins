@@ -32,7 +32,7 @@ export function WaveBar({ bars = 48, progress = 0.4, height = 48, seed = 7, play
             height: `${Math.round(h * 100)}%`,
             minWidth: 2,
             borderRadius: 2,
-            background: i <= playedIdx ? (playedColor || 'hsl(var(--accent))') : 'hsl(var(--border-strong))',
+            background: i <= playedIdx ? (playedColor || 'hsl(var(--waveform))') : 'hsl(var(--border-strong))',
             opacity: i <= playedIdx ? 1 : 0.55,
             transition: 'background var(--dur-base) var(--ease-out), opacity var(--dur-base) var(--ease-out)',
           }}

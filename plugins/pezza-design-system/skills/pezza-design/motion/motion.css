@@ -146,25 +146,27 @@
     animation: none;
     stroke-dashoffset: 0;
   }
-  .crossfade-wipe-in, .crossfade-wipe-out {
-    animation: pz-fade var(--dur-base) linear both;
-    clip-path: none;
-  }
+  .crossfade-wipe-in { animation: pz-fade-in var(--dur-base) linear both; clip-path: none; }
+  .crossfade-wipe-out { animation: pz-fade-out var(--dur-base) linear both; clip-path: none; }
   .crossfade-wipe-edge::after { animation: none; opacity: 0; }
   .motion-demo-loop .playhead--demo::after { animation: none; }
   .playhead::after { transition: none; }
   .pressable:active, .pressable-icon:active { transform: none; }
 }
 .reduce-motion .draw-on path { animation: none; stroke-dashoffset: 0; }
-.reduce-motion .crossfade-wipe-in,
-.reduce-motion .crossfade-wipe-out { animation: pz-fade var(--dur-base) linear both; clip-path: none; }
+.reduce-motion .crossfade-wipe-in { animation: pz-fade-in var(--dur-base) linear both; clip-path: none; }
+.reduce-motion .crossfade-wipe-out { animation: pz-fade-out var(--dur-base) linear both; clip-path: none; }
 .reduce-motion .crossfade-wipe-edge::after { animation: none; opacity: 0; }
 .reduce-motion .playhead--demo::after { animation: none; }
 .reduce-motion .playhead::after { transition: none; }
 .reduce-motion .pressable:active,
 .reduce-motion .pressable-icon:active { transform: none; }
 
-@keyframes pz-fade {
+@keyframes pz-fade-in {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+@keyframes pz-fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }

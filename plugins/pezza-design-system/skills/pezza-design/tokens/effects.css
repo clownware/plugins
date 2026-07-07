@@ -28,5 +28,5 @@
   --dur-fast:   120ms;   /* @kind other */
   --dur-base:   220ms;   /* @kind other */
   --dur-slow:   420ms;   /* @kind other */
-  --dur-intro:  2400ms;  /* @kind other */
+  --dur-intro:  2400ms;  /* @kind other */ /* sting length; canonical consumer motion/sting.html inlines timings to stay self-contained */
 }

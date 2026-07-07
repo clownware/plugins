@@ -5,10 +5,10 @@ export function Badge({ tone = 'neutral', dot = false, children, style, ...rest 
   const tones = {
     neutral: { bg: 'hsl(var(--bg-sunken))', fg: 'hsl(var(--text-muted))', dotC: 'hsl(var(--text-faint))' },
     ink:     { bg: 'hsl(var(--text-strong))', fg: 'hsl(var(--text-inverse))', dotC: 'hsl(var(--text-inverse))' },
-    accent:  { bg: 'rgba(0,229,192,0.14)', fg: 'hsl(var(--accent-dim))', dotC: 'hsl(var(--accent))' },
-    ok:      { bg: 'rgba(61,214,140,0.14)', fg: 'hsl(var(--ok))', dotC: 'hsl(var(--ok))' },
-    warn:    { bg: 'rgba(232,178,58,0.16)', fg: 'hsl(var(--warn))', dotC: 'hsl(var(--warn))' },
-    err:     { bg: 'rgba(242,88,91,0.14)', fg: 'hsl(var(--err))', dotC: 'hsl(var(--err))' },
+    accent:  { bg: 'hsl(var(--accent) / 0.14)', fg: 'hsl(var(--link))', dotC: 'hsl(var(--accent))' },
+    ok:      { bg: 'hsl(var(--ok) / 0.14)', fg: 'hsl(var(--ok-fg))', dotC: 'hsl(var(--ok))' },
+    warn:    { bg: 'hsl(var(--warn) / 0.16)', fg: 'hsl(var(--warn-fg))', dotC: 'hsl(var(--warn))' },
+    err:     { bg: 'hsl(var(--err) / 0.14)', fg: 'hsl(var(--err-fg))', dotC: 'hsl(var(--err))' },
   };
   const t = tones[tone] || tones.neutral;
 

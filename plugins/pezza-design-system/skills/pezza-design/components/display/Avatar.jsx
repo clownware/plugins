@@ -28,7 +28,7 @@ export function Avatar({ src, alt = '', initials, size = 40, shape = 'round', em
       {src ? (
         <img src={src} alt={alt} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       ) : emblem ? (
-        <img src="../../assets/logo/emblem-white.png" alt={alt} style={{ width: '54%', height: '54%', objectFit: 'contain' }} />
+        <img src="../../assets/logo/emblem-white.svg" alt={alt} style={{ width: '54%', height: '54%', objectFit: 'contain' }} />
       ) : (
         initials
       )}

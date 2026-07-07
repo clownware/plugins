@@ -41,7 +41,7 @@ export function Button({
     },
     accent: {
       background: 'hsl(var(--accent))',
-      color: 'hsl(var(--accent-ink))',
+      color: 'hsl(var(--text-onAccent))',
       border: '1px solid hsl(var(--accent))',
     },
   };

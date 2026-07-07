@@ -36,6 +36,7 @@
   --container:   1200px;
   --container-narrow: 720px;
   --gutter:      var(--space-5);
-  /* clear space around the mark = one stroke-square (~ mark height / 5) */
-  --mark-clearspace: 0.2;  /* @kind other */
+  /* clear space around the mark = ONE stroke-square:
+     stroke 2uu / mark height 20.8uu = 0.096, rounded to 0.1 */
+  --mark-clearspace: 0.1;  /* @kind other */
 }

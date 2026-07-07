@@ -49,7 +49,7 @@ Brand files:
 
 **Color is photography, not a palette.** The mark is monochrome by design; the artwork carries the color. The system is built on a **true grayscale Ink ramp** (`--ink-1000` → `--ink-0`) so the white mark always reads, plus **one** electric accent.
 
-- **Accent — Crossfade Cyan (`#00E5C0`).** The single digital hue. Used like a cursor: links, the waveform, focus rings, the active track, a now-playing glow. **Never** a fill field, never a gradient, never decorative. On light backgrounds use `--accent-dim` for contrast.
+- **Accent — Crossfade Cyan (`#00E5C0`).** The single digital hue. Used like a cursor: links, the waveform, focus rings, the active track, a now-playing glow, checked control on-states, and at most one accent CTA per view. **Never** a surface fill, never a gradient, never decorative repetition (no accent-per-row lists). On light backgrounds use `--accent-dim` for contrast (darkened to clear 4.5:1 AA).
 - **Status** hues (ok/warn/err) exist but are muted and rare — the brand is not colorful.
 - **Two themes:** light (`--bg-app: ink-50`) for the app/product surface; dark/stage (`[data-theme="dark"]` or `.on-dark`, `--bg-app: ink-1000`) for the music identity. Dark is the *native* register.
 
@@ -63,7 +63,7 @@ Brand files:
 
 **Radii.** Restrained. Cards `--radius-lg` (16px), controls `--radius-sm` (6px), true pills only for badges/switch. Nothing is overly soft. The mark itself has rounded terminals, so UI rounds *gently*, never bubbly.
 
-**Borders & elevation.** Depth comes from **contrast and hairlines, not heavy shadow.** Surfaces are flat with 1px borders (`--border-soft`/`--border-hair`). Shadows are minimal (`--shadow-sm`/`md`); the one exception is `--glow-accent`, a cyan glow reserved for the playing waveform / now-playing button.
+**Borders & elevation.** Depth comes from **contrast and hairlines, not heavy shadow.** Surfaces are flat with 1px borders (`--border-soft`/`--border-hair`). Shadows are minimal (`--shadow-sm`/`md`); the one exception is `--glow-accent`, a cyan glow reserved for the playing waveform / now-playing button. *Stated exception to WCAG 1.4.11:* hairline borders sit below 3:1 by intent — fields are distinguished by surface fill and the accent focus ring, never by the hairline alone.
 
 **Cards.** Flat, 1px hairline border, 16px radius, no shadow by default. `interactive` adds a 2px lift + border darken on hover. `elevated` adds a soft shadow when a card needs to float.
 
@@ -81,7 +81,7 @@ Brand files:
 
 Specimen: `motion/motion.html` demonstrates all primitives with a reduced-motion toggle.
 
-**Transparency & blur.** Used for the sticky site nav (`rgba(ink-1000,0.6)` + `blur(12px)`) and photo protection gradients. Not used as a general "glassmorphism" style.
+**Transparency & blur.** Used for the sticky site nav (`hsl(var(--ink-1000) / 0.6)` + `blur(12px)`) and photo protection gradients. Not used as a general "glassmorphism" style.
 
 **Logo construction rules.** Clear space ≈ one stroke-square on every side. Never fill the mark, never add a stroke-on-stroke outline (it lives as negative space), never recolor (except the one accent variant for digital), never distort, never place on low-contrast. Two lockups only: **bare emblem** (avatars, favicons, merch) and **emblem + wordmark horizontal** (banners, cover art, press). Make a heavier-weight variant for sub-32px sizes.
 
@@ -89,7 +89,7 @@ Specimen: `motion/motion.html` demonstrates all primitives with a reduced-motion
 
 ## ICONOGRAPHY
 
-- **No icon library dependency.** Icons are a small, hand-tuned **monoline set** drawn inline as SVG to match the mark: `stroke-width: 1.6`, `round` caps and joins, 24×24 viewBox. They live with each UI kit (`ui_kits/*/Icons.jsx`) and share one factory pattern.
+- **No icon library dependency.** Icons are a small, hand-tuned **monoline set** drawn inline as SVG to match the mark: `stroke-width: 1.6`, `round` caps and joins, 24×24 viewBox. They live with each UI kit (`ui_kits/app/AppIcons.jsx`, `ui_kits/site/SiteIcons.jsx`) and share one factory pattern.
 - **Why monoline:** the logo is a monoline geometric mark, so icons must echo that weight and rounding. A filled or heavy icon set would clash.
 - **Closest off-the-shelf match:** if you need a CDN set instead of the local one, **Lucide** is the nearest equivalent (same ~1.5–2px monoline, rounded geometric construction). Substitute Lucide and keep `stroke-width` ~1.6. *(Flagged: the kits ship the local set, not Lucide, to avoid a runtime dependency.)*
 - **Emoji:** never. **Unicode** is used only for genuine musical glyphs in metadata (e.g. `♭`, `♯` in keys like `A♭ min`).
@@ -124,6 +124,6 @@ Specimen: `motion/motion.html` demonstrates all primitives with a reduced-motion
 - `brand/` — stroke-construction emblem SVGs (animatable), favicon, lockups, fidelity sheets.
 - `motion/` — motion.css + motion.js (draw-on, crossfade-wipe, playhead, hover/press), motion.html specimen, sting.html (standalone 2.4s sting).
 
-**Assets** — `assets/logo/` (official outline SVGs, ellipse avatar circles, legacy PNGs, contact sheet WebP), `assets/img/` (photographic backgrounds, WebP primary + JPG fallback).
+**Assets** — `assets/logo/` (official outline SVGs, ellipse avatar circles, legacy PNGs, contact sheet WebP), `assets/img/` (photographic backgrounds — WebP referenced everywhere; JPG copies retained for tools that cannot decode WebP, wire `<picture>` fallbacks in production if you need them).
 
 **Skill** — `SKILL.md` makes this folder usable as a downloadable Agent Skill. `NOTE.md` covers the generated `_ds_*` files.

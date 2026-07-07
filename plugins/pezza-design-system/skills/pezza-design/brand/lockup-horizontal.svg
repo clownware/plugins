@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.062 20.799" fill="none" role="img" aria-label="Pezza">
+  <!-- Pezza horizontal lockup: emblem (official-outline-derived stroke construction) +
+       PEZZA wordmark (Space Grotesk Bold, ALL CAPS, 0.18em tracking, outlined). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+  <g fill="currentColor" stroke="none">
+    <path transform="translate(22.724 15.017) scale(0.013193 -0.013193)" d="M66 0V700H354Q420 700 470.5 673.5Q521 647 549.5 599.0Q578 551 578 485V471Q578 406 548.5 357.5Q519 309 468.5 282.5Q418 256 354 256H198V0ZM198 376H341Q388 376 417.0 402.0Q446 428 446 473V483Q446 528 417.0 554.0Q388 580 341 580H198Z"/>
+    <path transform="translate(33.067 15.017) scale(0.013193 -0.013193)" d="M66 0V700H516V580H198V413H488V293H198V120H522V0Z"/>
+    <path transform="translate(42.751 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/>
+    <path transform="translate(52.724 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/>
+    <path transform="translate(62.698 15.017) scale(0.013193 -0.013193)" d="M18 0 202 700H432L616 0H480L442 154H192L154 0ZM223 276H411L326 617H308Z"/>
+  </g>
+</svg>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pezza emblem — official vector vs stroke construction</title>
+<style>
+  * { box-sizing: border-box; margin: 0; }
+  body { font-family: "Space Grotesk", -apple-system, sans-serif; background: #FAFAFA; color: #111; padding: 40px; }
+  h1 { font-size: 22px; letter-spacing: 0.02em; margin-bottom: 4px; }
+  .meta { font-family: "Space Mono", monospace; font-size: 12px; color: #666; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 32px; }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.08em; color: #444; margin: 36px 0 12px; }
+  table { border-collapse: collapse; }
+  th, td { padding: 12px 18px; text-align: center; vertical-align: middle; border: 1px solid #E4E4E4; }
+  th { font-family: "Space Mono", monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #666; font-weight: 400; }
+  tr.dark td.swatch { background: #0E0E0E; color: #FFFFFF; }
+  tr.light td.swatch { background: #FFFFFF; color: #111111; }
+  td.swatch img, td.swatch svg { display: block; margin: 0 auto; }
+  .label { font-family: "Space Mono", monospace; font-size: 11px; color: #888; }
+  .lockup-row { display: flex; gap: 24px; margin-top: 8px; }
+  .lockup-cell { flex: 1; border: 1px solid #E4E4E4; padding: 32px; display: flex; align-items: center; justify-content: center; }
+  .lockup-cell.dark { background: #0E0E0E; color: #FFFFFF; }
+  .lockup-cell.light { background: #FFFFFF; color: #111111; }
+  .stats { font-family: "Space Mono", monospace; font-size: 12px; line-height: 1.7; color: #444; background: #FFF; border: 1px solid #E4E4E4; padding: 16px 20px; margin-top: 8px; max-width: 760px; }
+</style>
+</head>
+<body>
+<h1>Pezza emblem — official vector vs stroke construction</h1>
+<div class="meta">Phase 1 review gate, rev 2 · derived from official Figma outline · IoU 0.991 at 580px</div>
+
+<h2>Dark background — official filled vector vs animatable stroke construction</h2>
+<table>
+  <tr><th></th><th>16px</th><th>32px</th><th>64px</th><th>256px</th></tr>
+  <tr class="dark"><th>Official SVG (filled outline)</th><td class="swatch"><img src="../assets/logo/emblem-white.svg" width="14" alt=""></td><td class="swatch"><img src="../assets/logo/emblem-white.svg" width="29" alt=""></td><td class="swatch"><img src="../assets/logo/emblem-white.svg" width="57" alt=""></td><td class="swatch"><img src="../assets/logo/emblem-white.svg" width="229" alt=""></td></tr>
+  <tr class="dark"><th>Stroke construction</th><td class="swatch"><svg width="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="29" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="57" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="229" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td></tr>
+  <tr class="dark"><th>Favicon (heavier)</th><td class="swatch"><svg width="15" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 19.616 21.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). Heavier stroke (2.75) per brand rule: heavier weight below 32px. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2.75"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="31" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 19.616 21.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). Heavier stroke (2.75) per brand rule: heavier weight below 32px. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2.75"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="60" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 19.616 21.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). Heavier stroke (2.75) per brand rule: heavier weight below 32px. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2.75"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><span class="label">n/a — sub-32px construction</span></td></tr>
+</table>
+
+<h2>Light background</h2>
+<table>
+  <tr><th></th><th>16px</th><th>32px</th><th>64px</th><th>256px</th></tr>
+  <tr class="light"><th>Official SVG (filled outline)</th><td class="swatch"><img src="../assets/logo/emblem-black.svg" width="14" alt=""></td><td class="swatch"><img src="../assets/logo/emblem-black.svg" width="29" alt=""></td><td class="swatch"><img src="../assets/logo/emblem-black.svg" width="57" alt=""></td><td class="swatch"><img src="../assets/logo/emblem-black.svg" width="229" alt=""></td></tr>
+  <tr class="light"><th>Stroke construction</th><td class="swatch"><svg width="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="29" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="57" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="229" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td></tr>
+  <tr class="light"><th>Favicon (heavier)</th><td class="swatch"><svg width="15" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 19.616 21.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). Heavier stroke (2.75) per brand rule: heavier weight below 32px. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2.75"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="31" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 19.616 21.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). Heavier stroke (2.75) per brand rule: heavier weight below 32px. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2.75"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="60" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 19.616 21.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). Heavier stroke (2.75) per brand rule: heavier weight below 32px. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2.75"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><span class="label">n/a</span></td></tr>
+</table>
+
+<h2>Accent variant (digital only)</h2>
+<table><tr class="dark"><th>SVG accent</th><td class="swatch"><svg width="57" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="#00E5C0" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td><td class="swatch"><svg width="120" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.616 20.799" fill="none" role="img" aria-label="Pezza emblem">
+  <!-- Pezza emblem - stroke construction derived from the official vector outline.
+       ONE continuous path (the mark is drawn without lifting the pen).
+       Path length: 82.12 user units (for stroke-dashoffset draw-on timing). -->
+  <path id="mark" data-length="82.12" stroke="#00E5C0" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+</svg></td></tr></table>
+
+<h2>Horizontal lockup (outlined text)</h2>
+<div class="lockup-row">
+  <div class="lockup-cell dark"><svg width="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.062 20.799" fill="none" role="img" aria-label="Pezza">
+  <!-- Pezza horizontal lockup: emblem (official-outline-derived stroke construction) +
+       PEZZA wordmark (Space Grotesk Bold, ALL CAPS, 0.18em tracking, outlined). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+  <g fill="currentColor" stroke="none">
+    <path transform="translate(22.724 15.017) scale(0.013193 -0.013193)" d="M66 0V700H354Q420 700 470.5 673.5Q521 647 549.5 599.0Q578 551 578 485V471Q578 406 548.5 357.5Q519 309 468.5 282.5Q418 256 354 256H198V0ZM198 376H341Q388 376 417.0 402.0Q446 428 446 473V483Q446 528 417.0 554.0Q388 580 341 580H198Z"/>
+    <path transform="translate(33.067 15.017) scale(0.013193 -0.013193)" d="M66 0V700H516V580H198V413H488V293H198V120H522V0Z"/>
+    <path transform="translate(42.751 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/>
+    <path transform="translate(52.724 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/>
+    <path transform="translate(62.698 15.017) scale(0.013193 -0.013193)" d="M18 0 202 700H432L616 0H480L442 154H192L154 0ZM223 276H411L326 617H308Z"/>
+  </g>
+</svg></div>
+  <div class="lockup-cell light"><svg width="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.062 20.799" fill="none" role="img" aria-label="Pezza">
+  <!-- Pezza horizontal lockup: emblem (official-outline-derived stroke construction) +
+       PEZZA wordmark (Space Grotesk Bold, ALL CAPS, 0.18em tracking, outlined). -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+  <g fill="currentColor" stroke="none">
+    <path transform="translate(22.724 15.017) scale(0.013193 -0.013193)" d="M66 0V700H354Q420 700 470.5 673.5Q521 647 549.5 599.0Q578 551 578 485V471Q578 406 548.5 357.5Q519 309 468.5 282.5Q418 256 354 256H198V0ZM198 376H341Q388 376 417.0 402.0Q446 428 446 473V483Q446 528 417.0 554.0Q388 580 341 580H198Z"/>
+    <path transform="translate(33.067 15.017) scale(0.013193 -0.013193)" d="M66 0V700H516V580H198V413H488V293H198V120H522V0Z"/>
+    <path transform="translate(42.751 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/>
+    <path transform="translate(52.724 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/>
+    <path transform="translate(62.698 15.017) scale(0.013193 -0.013193)" d="M18 0 202 700H432L616 0H480L442 154H192L154 0ZM223 276H411L326 617H308Z"/>
+  </g>
+</svg></div>
+</div>
+
+<h2>Construction notes</h2>
+<div class="stats">
+  Source of truth: official Figma vector outline (assets/logo/emblem-white.svg / emblem-black.svg).<br>
+  The stroke construction is ONE continuous path — the mark never lifts the pen:<br>
+  &nbsp;&nbsp;bar cap, crossfade diagonal, bottom bar, counter-diagonal, stem, stem cap.<br>
+  &nbsp;&nbsp;#mark path length 82.12 user units (stroke-dashoffset timing base).<br>
+  Stroke width 15.578 px in the 145 x 162 frame, normalized to 2 user units.<br>
+  X crossing at (85.11, 71.79) px. Corner radii (centerline): 15.9 / 12.4 / 12.75 / 12.8.<br>
+  Fidelity vs official vector: IoU 0.991 at 580 px render; residuals are corner-curve<br>
+  differences (Figma two-cubic corners vs circular arcs), sub-pixel at display sizes.<br>
+  Filled outlines cannot animate via stroke-dashoffset; the stroke construction exists<br>
+  so the motion idiom (draw-on, sting) runs on real path geometry.
+</div>
+</body>
+</html>

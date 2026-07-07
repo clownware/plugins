@@ -8,9 +8,21 @@ The brand system for **Pezza** — a personal identity spanning two registers:
 The whole system hangs off one idea: **a monoline geometric monogram with an X-crossfader at its heart.** The X is a crossfader — that's both the logo and the animation language.
 
 ## Sources & assets
-- `assets/logo/emblem-white.png` — the primary mark (white, transparent). Use on dark / photographic backgrounds.
-- `assets/logo/emblem-black.png` — black variant for light backgrounds (generated from the white master).
-- `assets/logo/emblem-accent.png` — Crossfade Cyan variant (digital/non-photo only — used sparingly).
+
+**SVG is the primary mark format.** Two vector forms exist and both matter:
+
+- **Official filled outlines** (`assets/logo/emblem-white.svg`, `emblem-black.svg`) — the canonical Figma-exported shapes. Use for static placement where exact brand fidelity is required.
+- **Stroke construction** (`brand/emblem.svg`) — the mark rebuilt as ONE continuous stroked path (the pen never lifts: bar, crossfade diagonal, bottom bar, counter-diagonal, stem). Matches the official outline at IoU 0.991. This is the animatable form — filled outlines cannot draw on via `stroke-dashoffset`; this can. `#mark` path length: 82.12 user units.
+
+Brand files:
+
+- `brand/emblem.svg` — stroke-construction master, `currentColor`, theme-agnostic.
+- `brand/emblem-mono-white.svg` / `brand/emblem-mono-black.svg` — fixed-color stroke variants for dark / light backgrounds.
+- `brand/emblem-accent.svg` — Crossfade Cyan variant (digital/non-photo only — used sparingly).
+- `brand/favicon.svg` — heavier-stroke construction (2.75 vs 2) per the sub-32px weight rule; use for favicons and tiny UI.
+- `brand/lockup-horizontal.svg` — emblem + PEZZA wordmark (Space Grotesk Bold, ALL CAPS, 0.18em tracking, text outlined for portability). `brand/lockup-horizontal-editable.svg` is the live-text companion for editing.
+- `assets/logo/ellipse-white.svg` / `ellipse-black.svg` — circular avatar/app-icon backgrounds for the emblem.
+- `assets/logo/emblem-white.png` / `emblem-black.png` / `emblem-accent.png` — legacy rasters for contexts that can't take SVG.
 - `assets/logo/brand-contact-sheet.png` — the original brand board showing the mark over desert / water / galaxy / smoke / ice photography.
 - `assets/img/bg-*.jpg` — photographic backgrounds (galaxy, desert, sunset, smoke) cropped from the contact sheet.
 

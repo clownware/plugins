@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 71.062 20.799" fill="none" role="img" aria-label="Pezza">
+  <!-- EDITABLE REFERENCE (live text, requires Space Grotesk installed/loaded).
+       Ship lockup-horizontal.svg (outlined) for portability; edit here, re-outline there. -->
+  <path id="mark" data-length="82.12" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+  <text x="22.724" y="15.017" fill="currentColor" stroke="none"
+        font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="13.193"
+        letter-spacing="2.375">PEZZA</text>
+</svg>

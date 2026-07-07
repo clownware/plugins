@@ -82,7 +82,8 @@
   "fontFamily": {
     "display": "'Space Grotesk', 'Helvetica Neue', Arial, sans-serif",
     "ui": "'Space Grotesk', 'Helvetica Neue', Arial, sans-serif",
-    "mono": "'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace"
+    "mono": "'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace",
+    "text": "'Inter', 'Helvetica Neue', Arial, sans-serif"
   },
   "fontSize": {
     "xs": "0.6875rem",

@@ -13,7 +13,8 @@ If the user invokes this skill without any other guidance, ask them what they wa
 ## Quick orientation
 - **Two registers:** light monochrome **web-app** surface, and dark **photographic DJ/producer** identity. Pick the right one for the task.
 - **One mark, white, over photography.** Never recolor (except the single Crossfade Cyan accent for digital), fill, or distort. `assets/logo/emblem-white.png` (dark bg), `emblem-black.png` (light bg).
-- **Type:** Space Grotesk (display/UI, wordmark = ALL CAPS wide tracking), Space Mono (all metadata — BPM, key, catalog, counts, dates).
+- **Type:** Space Grotesk (display/UI, wordmark = ALL CAPS wide tracking), Space Mono (all metadata — BPM, key, catalog, counts, dates), Inter (long-form prose only, via the `.prose` scope).
+- **Prose links:** ink + 1px underline at rest; accent only on hover/active. Accent is the cursor state, never the resting state.
 - **Color:** grayscale Ink ramp + one accent (`#00E5C0`) used like a cursor. Photography carries the color.
 - **Tokens:** link `styles.css`; use the CSS custom properties, don't hardcode hexes.
 - **Icons:** local monoline SVG set (1.6 stroke, rounded). No emoji. Nearest CDN match is Lucide.

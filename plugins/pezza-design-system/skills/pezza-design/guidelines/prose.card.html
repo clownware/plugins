@@ -1,0 +1,44 @@
+<!-- @dsCard group="Type" viewport="900x520" name="Prose" subtitle="Long-form layer — Inter body, Grotesk headings, mono code" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html,body{margin:0}
+  body{display:flex; box-sizing:border-box; min-height:100vh;}
+  .pane{flex:1; padding:var(--space-6); box-sizing:border-box;}
+  .pane.light{background:hsl(var(--bg-app));}
+  .pane.on-dark{background:hsl(var(--bg-app));}
+  .spec{font:var(--type-meta); letter-spacing:var(--tracking-wider); text-transform:uppercase; color:hsl(var(--text-faint)); margin-bottom:var(--space-4);}
+</style>
+</head>
+<body>
+  <div class="pane light">
+    <div class="spec">.prose · light</div>
+    <article class="prose">
+      <h3>Mixing in key, explained</h3>
+      <p>Harmonic mixing is just <a href="#">interval math</a> dressed up for the booth. Two tracks a fifth apart share most of their scale tones, so the blend holds.</p>
+      <blockquote><p>The crossfader is an argument between two truths. Win it slowly.</p></blockquote>
+      <pre data-lang="ts"><code><span class="tok-kw">const</span> <span class="tok-fn">next</span> = <span class="tok-fn">camelot</span>(<span class="tok-str">"8A"</span>).<span class="tok-fn">adjacent</span>();
+<span class="tok-com">// ["7A", "9A", "8B"] - safe moves</span></code></pre>
+      <figure>
+        <figcaption>FIG 01 · CAMELOT WHEEL · 8A NEIGHBORS</figcaption>
+      </figure>
+    </article>
+  </div>
+  <div class="pane on-dark" data-theme="dark">
+    <div class="spec">.prose · dark</div>
+    <article class="prose">
+      <h3>Mixing in key, explained</h3>
+      <p>Harmonic mixing is just <a href="#">interval math</a> dressed up for the booth. Two tracks a fifth apart share most of their scale tones, so the blend holds.</p>
+      <blockquote><p>The crossfader is an argument between two truths. Win it slowly.</p></blockquote>
+      <pre data-lang="ts"><code><span class="tok-kw">const</span> <span class="tok-fn">next</span> = <span class="tok-fn">camelot</span>(<span class="tok-str">"8A"</span>).<span class="tok-fn">adjacent</span>();
+<span class="tok-com">// ["7A", "9A", "8B"] - safe moves</span></code></pre>
+      <figure>
+        <figcaption>FIG 01 · CAMELOT WHEEL · 8A NEIGHBORS</figcaption>
+      </figure>
+    </article>
+  </div>
+</body>
+</html>

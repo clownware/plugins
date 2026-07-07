@@ -5,6 +5,7 @@
      mark's construction). Wordmark = ALL CAPS, wide tracking.
    - Metadata/technical: Space Mono — tracklists, BPM, key,
      catalog numbers, release credits, timestamps.
+   - Long-form prose: Inter (articles/journal via .prose scope).
    Scale numbering follows the chassis ladder (xs…8xl); px values
    are Pezza's own (preserved through the renumber).
    ============================================================ */
@@ -13,6 +14,7 @@
   --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
   --font-ui:      'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
   --font-mono:    'Space Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
+  --font-text:    'Inter', 'Helvetica Neue', Arial, sans-serif;  /* long-form prose ONLY — UI stays Grotesk */
 
   /* —— Weights —— */
   --weight-regular: 400;

@@ -52,7 +52,9 @@ Brand files:
 - **Status** hues (ok/warn/err) exist but are muted and rare — the brand is not colorful.
 - **Two themes:** light (`--bg-app: ink-50`) for the app/product surface; dark/stage (`[data-theme="dark"]` or `.on-dark`, `--bg-app: ink-1000`) for the music identity. Dark is the *native* register.
 
-**Type.** Space Grotesk for everything visible (geometric grotesque echoing the mark's construction; its `a`/`G` keep it human). Space Mono for the metadata layer. Wordmark = caps + `--tracking-wider` (0.18em). Display sizes go large (up to 96px on cover art / heroes); UI min ~14px.
+**Type.** Three faces, three jobs. Space Grotesk for everything visible in UI and display (geometric grotesque echoing the mark's construction; its `a`/`G` keep it human). Space Mono for the metadata layer. **Inter for long-form body copy only** (`--font-text`, applied via the `.prose` scope — articles, journal entries, liner notes); UI never uses Inter. Wordmark = caps + `--tracking-wider` (0.18em). Display sizes go large (up to 96px on cover art / heroes); UI min ~14px.
+
+**Prose links.** Inside `.prose`, resting links are ink with a 1px underline; hover/active brightens to accent. The accent is the cursor state, not the resting state — this preserves accent discipline on link-dense pages.
 
 **Backgrounds.** Either flat ink (app) or **full-bleed photography** (music). Photographic backgrounds always get a **protection gradient** (top-transparent → `ink-1000` at ~85%) so the white mark and text stay legible. Imagery vibe: cinematic, slightly faded, mixed warm/cool — desert, water, galaxy, smoke, ice. The mark sits centered with a soft `drop-shadow` over busy photos.
 
@@ -67,6 +69,16 @@ Brand files:
 **Hover / press.** Hover = subtle background fill (`--bg-sunken`) or border darken; links brighten toward white/accent. Press = scale down (`0.97` buttons, `0.92` icon buttons) — quick and confident. No bounce.
 
 **Motion — "the X is a crossfader."** Easings: `--ease-out` (most UI), `--ease-crossfade` (slide-overs, the switch knob, anything that "wipes"). Durations 120/220/420ms. The brand animation idiom is strokes that *draw on*, the X that *wipes/scratches*, two triangles that separate and recombine on a beat — built for a 2–3s logo sting (video intros, OBS/Twitch stingers). No infinite decorative loops in product UI.
+
+**MOTION IN PRACTICE.** Four primitives live in `motion/` (`motion.css` + `motion.js`, opt-in import; tokens come from `tokens/effects.css`). Every one is gated behind `prefers-reduced-motion` (final state or plain fade). No infinite loops in product UI — looping exists only in explicitly marked sting/demo contexts.
+
+- **draw-on** — the mark draws as one continuous stroke via `stroke-dasharray`/`stroke-dashoffset` (`#mark` length 82.12uu, authored as `data-length`). 900ms budget, `--ease-out`, multi-path stagger 140ms via `--draw-index`. JS: `drawOn(svg)`.
+- **crossfade-wipe** — panels and view swaps enter behind a moving vertical edge (the crossfader move): `clip-path` inset animation, `--ease-crossfade`, `--dur-slow`. The edge is ink — the accent never decorates transitions. JS: `crossfadeWipe(el, show)`.
+- **logo-sting** — the 2.4s composition (`--dur-intro`) ships standalone in `motion/sting.html` for video/OBS capture: triangles crossfade in and hand off, the X wipes, the stroke draws, the wordmark tracks in. Black ground, self-contained, loop toggle. This is the one permitted looping context.
+- **playhead** — the accent analog of a glow border: a 2px cyan sweep along one edge of the now-playing/featured element, positioned by a registered `@property --playhead-p`. One per view, max. In product, drive it from real playback progress (`playheadSet(el, fraction)`); the self-running sweep is demo-only.
+- **hover/press utilities** — `.hover-fill` (sunken fill), `.hover-border` (border darken), `.pressable` (scale 0.97), `.pressable-icon` (scale 0.92). `--dur-fast`, no bounce.
+
+Specimen: `motion/motion.html` demonstrates all primitives with a reduced-motion toggle.
 
 **Transparency & blur.** Used for the sticky site nav (`rgba(ink-1000,0.6)` + `blur(12px)`) and photo protection gradients. Not used as a general "glassmorphism" style.
 
@@ -91,7 +103,8 @@ Brand files:
 - `tokens/colors.css` — Ink ramp, Crossfade Cyan accent, status, light + dark semantic aliases.
 - `tokens/typography.css` — families, scale, weights, tracking, role shorthands.
 - `tokens/spacing.css` — spacing, radii, borders, shadows, motion (easings/durations), layout.
-- `tokens/fonts.css` — Space Grotesk + Space Mono (Google Fonts).
+- `tokens/fonts.css` — Space Grotesk + Space Mono + Inter (Google Fonts).
+- `prose.css` — opt-in `.prose` long-form layer (Inter body, Grotesk headings, mono code + captions).
 - `guidelines/*.card.html` — foundation specimen cards (Brand, Colors, Type, Spacing) shown in the Design System tab.
 
 **Components** (`window.PezzaDesignSystem_8fc740`)

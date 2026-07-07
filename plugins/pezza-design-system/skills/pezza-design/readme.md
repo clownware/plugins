@@ -23,10 +23,10 @@ Brand files:
 - `brand/lockup-horizontal.svg` — emblem + PEZZA wordmark (Space Grotesk Bold, ALL CAPS, 0.18em tracking, text outlined for portability). `brand/lockup-horizontal-editable.svg` is the live-text companion for editing.
 - `assets/logo/ellipse-white.svg` / `ellipse-black.svg` — circular avatar/app-icon backgrounds for the emblem.
 - `assets/logo/emblem-white.png` / `emblem-black.png` / `emblem-accent.png` — legacy rasters for contexts that can't take SVG.
-- `assets/logo/brand-contact-sheet.png` — the original brand board showing the mark over desert / water / galaxy / smoke / ice photography.
+- `assets/logo/brand-contact-sheet.webp` — the original brand board showing the mark over desert / water / galaxy / smoke / ice photography.
 - `assets/img/bg-*.jpg` — photographic backgrounds (galaxy, desert, sunset, smoke) cropped from the contact sheet.
 
-> ⚠️ **Font substitution flag:** No brand font files were supplied. Per the brand brief, the system uses **Space Grotesk** (wordmark/display/UI) and **Space Mono** (metadata) loaded from Google Fonts — both libre/OFL, so they travel everywhere with zero licensing friction. If you intend a premium pairing instead (Neue Montréal / Söhne), supply the files and I'll swap them in.
+> **FLAG — font substitution:** No brand font files were supplied. Per the brand brief, the system uses **Space Grotesk** (wordmark/display/UI) and **Space Mono** (metadata) loaded from Google Fonts — both libre/OFL, so they travel everywhere with zero licensing friction. If you intend a premium pairing instead (Neue Montréal / Söhne), supply the files and I'll swap them in.
 
 ---
 
@@ -38,6 +38,7 @@ Brand files:
 - **Person:** Address the user directly ("Search…", "Add item", "Play EP"). On the artist side, statements are declarative and unsigned ("Four tracks of deep, weightless techno").
 - **Length:** Short. Labels are 1–2 words. Descriptions are one sentence. No paragraphs in UI.
 - **The metadata register is the signature.** Anything technical — BPM, key, catalog #, durations, quantities, expiry, timestamps, counts — is set in **Space Mono**, often uppercase, often spaced. This is what makes the system read as "producer / maker" rather than generic. Examples: `124 BPM`, `CAT# PZA-007`, `A♭ min`, `2 bottles · exp. AUG`, `24BIT/44.1K`.
+- **The metadata register bridges domains.** Dev and portfolio values — commit hashes, Lighthouse scores, stack labels, dates — are set in the same mono register as BPM and catalog numbers: `ASTRO 6 · 100/100 LH · 2026-07`, `main @ 4927e37`, stack pills. One voice across music and code is what makes the portfolio read as the same person. `MetaLabel` packages the register as a component.
 - **Numbers earn their place.** Don't decorate with stats. A number appears because it's a real quantity (tempo, count, date).
 - **Emoji:** none. The brand is monochrome and typographic; emoji would break it. Use the monoline icon set instead.
 - **Tone words:** weightless, deep, clean, technical, nocturnal. Avoid: playful, bubbly, salesy.
@@ -102,21 +103,27 @@ Specimen: `motion/motion.html` demonstrates all primitives with a reduced-motion
 - `styles.css` — global entry (import this one file). `@import`s everything below.
 - `tokens/colors.css` — Ink ramp, Crossfade Cyan accent, status, light + dark semantic aliases.
 - `tokens/typography.css` — families, scale, weights, tracking, role shorthands.
-- `tokens/spacing.css` — spacing, radii, borders, shadows, motion (easings/durations), layout.
+- `tokens/spacing.css` — spacing, radii, borders, layout.
+- `tokens/effects.css` — shadows, glow, `--protect-gradient`, motion easings/durations.
+- `tokens/base.json` — token bridge into the Astro Performance Starter pipeline (hand-synced with the CSS).
 - `tokens/fonts.css` — Space Grotesk + Space Mono + Inter (Google Fonts).
 - `prose.css` — opt-in `.prose` long-form layer (Inter body, Grotesk headings, mono code + captions).
-- `guidelines/*.card.html` — foundation specimen cards (Brand, Colors, Type, Spacing) shown in the Design System tab.
+- `guidelines/*.card.html` — foundation specimen cards (Brand, Colors, Type incl. Prose, Spacing) shown in the Design System tab.
 
 **Components** (`window.PezzaDesignSystem_8fc740`)
 - Core — `Button`, `IconButton` (`components/core/`)
 - Forms — `Input`, `Select`, `Switch`, `Checkbox` (`components/forms/`)
-- Display — `Card`, `Badge`, `Tag`, `Avatar` (`components/display/`)
+- Display — `Card`, `Badge`, `Tag`, `Avatar`, `MetaLabel`, `PhotoHero` (`components/display/`)
 - Music — `WaveBar`, `MetaRow` (`components/music/`) — the brand-specific producer primitives
 
 **UI kits**
 - `ui_kits/app/` — **generic web-app shell** (sidebar, overview, items grid/list, add slide-over). The starter for any personal app.
 - `ui_kits/site/` — **DJ / producer site** (hero, waveform set player, discography, live dates).
 
-**Assets** — `assets/logo/` (marks), `assets/img/` (photographic backgrounds).
+**Brand & motion**
+- `brand/` — stroke-construction emblem SVGs (animatable), favicon, lockups, fidelity sheets.
+- `motion/` — motion.css + motion.js (draw-on, crossfade-wipe, playhead, hover/press), motion.html specimen, sting.html (standalone 2.4s sting).
 
-**Skill** — `SKILL.md` makes this folder usable as a downloadable Agent Skill.
+**Assets** — `assets/logo/` (official outline SVGs, ellipse avatar circles, legacy PNGs, contact sheet WebP), `assets/img/` (photographic backgrounds, WebP primary + JPG fallback).
+
+**Skill** — `SKILL.md` makes this folder usable as a downloadable Agent Skill. `NOTE.md` covers the generated `_ds_*` files.

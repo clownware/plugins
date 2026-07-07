@@ -1,9 +1,9 @@
 /* Pezza — DJ/producer site. Dark, photographic. Hero, player, discography, dates. */
 const BG = {
-  galaxy: '../../assets/img/bg-galaxy.jpg',
-  desert: '../../assets/img/bg-desert.jpg',
-  sunset: '../../assets/img/bg-sunset.jpg',
-  smoke:  '../../assets/img/bg-smoke-wide.jpg',
+  galaxy: '../../assets/img/bg-galaxy.webp',
+  desert: '../../assets/img/bg-desert.webp',
+  sunset: '../../assets/img/bg-sunset.webp',
+  smoke:  '../../assets/img/bg-smoke-wide.webp',
 };
 
 function SiteNav() {

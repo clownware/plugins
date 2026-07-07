@@ -22,6 +22,11 @@
       "name": "clownware-astro-tools",
       "source": "./plugins/astro-tools",
       "description": "Astro + Preact stack skills \u2014 component scaffolding and template-aware PR descriptions \u2014 following astro-performance-starter conventions with fallbacks for other Astro projects."
+    },
+    {
+      "name": "pezza-design-system",
+      "source": "./plugins/pezza-design-system",
+      "description": "The Pezza brand design system as a skill \u2014 design guidelines, color/type/spacing tokens, logo and photography assets, React component primitives, and two UI kit starters (web-app shell and DJ/producer site) \u2014 for generating on-brand interfaces, artifacts, and production code."
     }
   ]
 }

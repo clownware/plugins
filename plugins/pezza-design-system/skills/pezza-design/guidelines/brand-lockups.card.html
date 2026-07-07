@@ -1,0 +1,41 @@
+<!-- @dsCard group="Brand" viewport="700x300" name="Emblem & Lockups" subtitle="Bare emblem + horizontal wordmark lockup" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html,body{margin:0}
+  body{
+    background:var(--ink-1000); color:var(--ink-0);
+    font-family:var(--font-display);
+    display:flex; gap:var(--space-7); align-items:center;
+    padding:var(--space-6) var(--space-7); box-sizing:border-box;
+  }
+  .lockup{display:flex; align-items:center; gap:var(--space-4);}
+  .emblem{height:84px; width:auto; display:block;}
+  .wordmark{
+    font-weight:var(--weight-bold);
+    font-size:48px; letter-spacing:var(--tracking-wider);
+    line-height:1; margin:0; padding-left:2px;
+  }
+  .divider{width:1px; align-self:stretch; background:var(--ink-700);}
+  .stack{display:flex; flex-direction:column; gap:var(--space-3); align-items:center;}
+  .cap{font:var(--type-meta); color:var(--ink-400); letter-spacing:var(--tracking-wide);}
+</style>
+</head>
+<body>
+  <div class="stack">
+    <img class="emblem" src="../assets/logo/emblem-white.png" alt="Pezza emblem" />
+    <span class="cap">EMBLEM</span>
+  </div>
+  <div class="divider"></div>
+  <div class="stack">
+    <div class="lockup">
+      <img class="emblem" src="../assets/logo/emblem-white.png" alt="" />
+      <h1 class="wordmark">PEZZA</h1>
+    </div>
+    <span class="cap">HORIZONTAL LOCKUP</span>
+  </div>
+</body>
+</html>

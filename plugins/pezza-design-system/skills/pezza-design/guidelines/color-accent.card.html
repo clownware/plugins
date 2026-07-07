@@ -1,0 +1,37 @@
+<!-- @dsCard group="Colors" viewport="700x180" name="Accent · Crossfade Cyan" subtitle="The single electric hue — used like a cursor, never as a fill field" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-mono); padding:var(--space-5); box-sizing:border-box;
+    background:var(--ink-1000); display:flex; gap:var(--space-4); align-items:stretch;}
+  .chip{flex:1; border-radius:var(--radius-md); padding:var(--space-3); display:flex; flex-direction:column; justify-content:flex-end; min-height:104px;}
+  .name{font-size:var(--text-2xs); letter-spacing:var(--tracking-mono); color:#fff; mix-blend-mode:difference;}
+  .hex{font-size:11px; color:#fff; mix-blend-mode:difference; opacity:.8;}
+  .demo{flex:1.4; border-radius:var(--radius-md); background:var(--ink-900); border:1px solid var(--ink-800);
+    display:flex; flex-direction:column; justify-content:center; gap:10px; padding:var(--space-4);}
+  .wave{height:34px; display:flex; align-items:center; gap:3px;}
+  .wave i{width:3px; background:var(--accent); border-radius:2px; box-shadow:var(--glow-accent);}
+  a{color:var(--accent); font-family:var(--font-display); text-decoration:none; font-size:var(--text-sm); letter-spacing:.04em;}
+  .ring{align-self:flex-start; font-family:var(--font-display); color:var(--ink-0); font-size:var(--text-sm);
+    padding:8px 14px; border-radius:var(--radius-sm); background:var(--ink-800); outline:2px solid var(--accent); outline-offset:2px;}
+</style>
+</head>
+<body>
+  <div class="chip" style="background:var(--accent)"><span class="name">--accent</span><span class="hex">#00E5C0</span></div>
+  <div class="chip" style="background:var(--accent-bright)"><span class="name">--accent-bright</span><span class="hex">#2BF5D6</span></div>
+  <div class="chip" style="background:var(--accent-dim)"><span class="name">--accent-dim</span><span class="hex">#0BA98F</span></div>
+  <div class="demo">
+    <div class="wave" id="w"></div>
+    <a href="#">→ used for links &amp; waveforms</a>
+    <span class="ring">focus ring</span>
+  </div>
+  <script>
+    const h=[8,16,24,14,30,20,10,26,18,32,12,22,28,14,8,20,30,16,24,10,18,26,12,22];
+    document.getElementById('w').innerHTML=h.map(v=>`<i style="height:${v}px"></i>`).join('');
+  </script>
+</body>
+</html>

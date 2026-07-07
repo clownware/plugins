@@ -1,0 +1,26 @@
+<!-- @dsCard group="Spacing" viewport="700x160" name="Spacing Scale" subtitle="4px base unit — same grid DNA as the monoline mark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html,body{margin:0}
+  body{background:var(--ink-0); font-family:var(--font-mono); padding:var(--space-5) var(--space-6); box-sizing:border-box;
+    display:flex; flex-direction:column; gap:10px;}
+  .row{display:flex; align-items:center; gap:var(--space-4);}
+  .tok{width:74px; font-size:var(--text-2xs); color:var(--ink-500);}
+  .px{width:44px; font-size:var(--text-2xs); color:var(--ink-400); text-align:right;}
+  .bar{height:14px; background:var(--accent); border-radius:2px;}
+</style>
+</head>
+<body>
+  <div class="row"><span class="tok">space-1</span><span class="px">4</span><div class="bar" style="width:4px"></div></div>
+  <div class="row"><span class="tok">space-2</span><span class="px">8</span><div class="bar" style="width:8px"></div></div>
+  <div class="row"><span class="tok">space-4</span><span class="px">16</span><div class="bar" style="width:16px"></div></div>
+  <div class="row"><span class="tok">space-5</span><span class="px">24</span><div class="bar" style="width:24px"></div></div>
+  <div class="row"><span class="tok">space-6</span><span class="px">32</span><div class="bar" style="width:32px"></div></div>
+  <div class="row"><span class="tok">space-7</span><span class="px">48</span><div class="bar" style="width:48px"></div></div>
+  <div class="row"><span class="tok">space-8</span><span class="px">64</span><div class="bar" style="width:64px"></div></div>
+</body>
+</html>

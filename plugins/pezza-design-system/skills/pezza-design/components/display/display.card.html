@@ -1,0 +1,70 @@
+<!-- @dsCard group="Components" viewport="700x240" name="Cards, Badges, Tags & Avatars" subtitle="Display primitives" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  html,body{margin:0}
+  body{background:var(--bg-app); padding:var(--space-6); box-sizing:border-box; font-family:var(--font-ui);}
+  .wrap{display:flex; gap:var(--space-6); align-items:flex-start;}
+  .col{display:flex; flex-direction:column; gap:14px;}
+  .lbl{font:var(--type-meta); color:var(--text-muted); letter-spacing:var(--tracking-wide); text-transform:uppercase;}
+  .row{display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel" data-presets="react">
+    const { Card, Badge, Tag, Avatar } = window.PezzaDesignSystem_8fc740;
+    function Demo(){
+      return (
+        <div className="wrap">
+          <div className="col" style={{width:240}}>
+            <span className="lbl">Card</span>
+            <Card padding="md" interactive>
+              <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-start',gap:12}}>
+                <div>
+                  <div style={{font:'var(--weight-semi) var(--text-lg)/1.2 var(--font-display)',color:'var(--text-strong)'}}>Olive oil</div>
+                  <div style={{fontFamily:'var(--font-mono)',fontSize:'var(--text-2xs)',color:'var(--text-muted)',marginTop:6}}>2 bottles · exp. AUG</div>
+                </div>
+                <Badge tone="warn" dot>Low</Badge>
+              </div>
+            </Card>
+          </div>
+          <div className="col">
+            <span className="lbl">Badges</span>
+            <div className="row">
+              <Badge>Neutral</Badge>
+              <Badge tone="ink">Ink</Badge>
+              <Badge tone="accent">124 BPM</Badge>
+              <Badge tone="ok" dot>Stocked</Badge>
+              <Badge tone="warn" dot>Low</Badge>
+              <Badge tone="err" dot>Expired</Badge>
+            </div>
+            <span className="lbl">Tags</span>
+            <div className="row">
+              <Tag>A♭ min</Tag>
+              <Tag>House</Tag>
+              <Tag removable>Techno</Tag>
+              <Tag mono={false}>Pantry</Tag>
+            </div>
+            <span className="lbl">Avatars</span>
+            <div className="row">
+              <Avatar initials="CP" />
+              <Avatar src="../../assets/logo/emblem-white.png" style={{background:'var(--ink-1000)',padding:0}} />
+              <Avatar emblem shape="square" size={44} src="../../assets/logo/emblem-white.png" />
+              <Avatar initials="DJ" shape="square" />
+            </div>
+          </div>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo/>);
+  </script>
+</body>
+</html>

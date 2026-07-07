@@ -1,0 +1,46 @@
+<!-- @dsCard group="Colors" viewport="700x140" name="Semantic & Status" subtitle="Muted status hues + surface/text aliases for light and dark" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-mono); padding:var(--space-4); box-sizing:border-box; background:var(--ink-0);
+    display:flex; gap:var(--space-5);}
+  .group{display:flex; flex-direction:column; gap:8px;}
+  .ttl{font-size:9px; letter-spacing:.14em; color:var(--ink-400); text-transform:uppercase;}
+  .row{display:flex; gap:8px;}
+  .sw{display:flex; flex-direction:column; align-items:center; gap:5px;}
+  .chip{width:54px; height:54px; border-radius:var(--radius-sm); border:1px solid var(--ink-100);}
+  .n{font-size:9px; color:var(--ink-500);}
+</style>
+</head>
+<body>
+  <div class="group">
+    <span class="ttl">Status</span>
+    <div class="row">
+      <div class="sw"><div class="chip" style="background:var(--ok)"></div><span class="n">ok</span></div>
+      <div class="sw"><div class="chip" style="background:var(--warn)"></div><span class="n">warn</span></div>
+      <div class="sw"><div class="chip" style="background:var(--err)"></div><span class="n">err</span></div>
+      <div class="sw"><div class="chip" style="background:var(--info)"></div><span class="n">info</span></div>
+    </div>
+  </div>
+  <div class="group">
+    <span class="ttl">Surfaces · light</span>
+    <div class="row">
+      <div class="sw"><div class="chip" style="background:var(--bg-app)"></div><span class="n">app</span></div>
+      <div class="sw"><div class="chip" style="background:var(--bg-surface)"></div><span class="n">surface</span></div>
+      <div class="sw"><div class="chip" style="background:var(--bg-sunken)"></div><span class="n">sunken</span></div>
+    </div>
+  </div>
+  <div class="group on-dark" data-theme="dark">
+    <span class="ttl">Surfaces · dark</span>
+    <div class="row">
+      <div class="sw"><div class="chip" style="background:var(--bg-app)"></div><span class="n">app</span></div>
+      <div class="sw"><div class="chip" style="background:var(--bg-surface)"></div><span class="n">surface</span></div>
+      <div class="sw"><div class="chip" style="background:var(--bg-raised)"></div><span class="n">raised</span></div>
+    </div>
+  </div>
+</body>
+</html>

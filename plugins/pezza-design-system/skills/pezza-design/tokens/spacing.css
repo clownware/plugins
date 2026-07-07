@@ -1,0 +1,60 @@
+/* ============================================================
+   PEZZA · SPACING, RADII, SHADOW, MOTION
+   Built on a grid — same DNA as the monoline mark. 4px base unit.
+   ============================================================ */
+:root {
+  /* —— Spacing scale (4px base) —— */
+  --space-0:  0;
+  --space-1:  0.25rem;  /* 4 */
+  --space-2:  0.5rem;   /* 8 */
+  --space-3:  0.75rem;  /* 12 */
+  --space-4:  1rem;     /* 16 */
+  --space-5:  1.5rem;   /* 24 */
+  --space-6:  2rem;     /* 32 */
+  --space-7:  3rem;     /* 48 */
+  --space-8:  4rem;     /* 64 */
+  --space-9:  6rem;     /* 96 */
+  --space-10: 8rem;     /* 128 */
+
+  /* —— Radii — restrained. The mark uses rounded terminals, so
+     UI rounds gently; nothing pill-soft except true pills. —— */
+  --radius-xs:  3px;
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
+  --radius-pill: 999px;
+  --radius-round: 50%;
+
+  /* —— Hairline / border widths —— */
+  --border-w:      1px;
+  --border-w-2:    1.5px;
+  --stroke-mark:   2px;   /* monoline weight reference */
+
+  /* —— Shadows — minimal. The brand is flat/photographic; depth
+     comes from contrast, not heavy drop shadows. —— */
+  --shadow-none: none;
+  --shadow-sm:   0 1px 2px rgba(10,10,11,0.06);
+  --shadow-md:   0 4px 16px rgba(10,10,11,0.08);
+  --shadow-lg:   0 12px 40px rgba(10,10,11,0.16);
+  --shadow-pop:  0 8px 32px rgba(10,10,11,0.24);
+  /* glow for accent/waveform moments on dark */
+  --glow-accent: 0 0 0 1px rgba(0,229,192,0.4), 0 0 24px rgba(0,229,192,0.25);
+
+  /* —— Motion. The X is a crossfader: strokes draw, triangles
+     separate & recombine. Easings favor quick, confident moves. —— */
+  --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);   /* @kind other */
+  --ease-inout:   cubic-bezier(0.65, 0, 0.35, 1);  /* @kind other */
+  --ease-crossfade: cubic-bezier(0.4, 0, 0.1, 1);  /* @kind other */
+  --dur-fast:   120ms;   /* @kind other */
+  --dur-base:   220ms;   /* @kind other */
+  --dur-slow:   420ms;   /* @kind other */
+  --dur-intro:  2400ms;  /* @kind other */
+
+  /* —— Layout —— */
+  --container:   1200px;
+  --container-narrow: 720px;
+  --gutter:      var(--space-5);
+  /* clear space around the mark = one stroke-square (~ mark height / 5) */
+  --mark-clearspace: 0.2;  /* @kind other */
+}

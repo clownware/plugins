@@ -1,0 +1,8 @@
+{
+  "name": "pezza-design-system",
+  "description": "The Pezza brand design system as a skill: design guidelines, color/type/spacing tokens, logo and photography assets, React component primitives, and two UI kit starters (web-app shell and DJ/producer site). Generates on-brand interfaces, artifacts, and production code.",
+  "version": "0.1.0",
+  "author": {
+    "name": "clownware"
+  }
+}

@@ -1,0 +1,80 @@
+/* ============================================================
+   PEZZA · COLOR TOKENS
+   Monochrome by design. The mark is white; photography carries
+   the color. One electric accent (Crossfade Cyan) used sparingly
+   for non-photo digital contexts: links, waveforms, focus rings.
+   ============================================================ */
+:root {
+  /* —— Ink scale (near-black → white). The system is built on a
+     true grayscale ramp so the white mark always reads. —— */
+  --ink-1000: #0A0A0B;   /* deepest — app/stage background */
+  --ink-900:  #111113;
+  --ink-800:  #18181B;   /* raised surface on dark */
+  --ink-700:  #232327;
+  --ink-600:  #34343A;
+  --ink-500:  #56565E;   /* muted text on light, borders on dark */
+  --ink-400:  #7C7C85;
+  --ink-300:  #A6A6AE;
+  --ink-200:  #CFCFD4;
+  --ink-150:  #E2E2E6;
+  --ink-100:  #EFEFF1;   /* hairline on light */
+  --ink-50:   #F7F7F8;   /* app background on light */
+  --ink-0:    #FFFFFF;   /* the mark, paper */
+
+  /* —— Accent: Crossfade Cyan. The single electric hue. Use it
+     like a cursor — small, deliberate, never as a fill field. —— */
+  --accent:        #00E5C0;
+  --accent-bright: #2BF5D6;  /* hover / glow */
+  --accent-dim:    #0BA98F;  /* on light backgrounds for contrast */
+  --accent-ink:    #04201C;  /* text/icon sitting ON the accent */
+
+  /* —— Semantic status (kept muted; the brand is not colorful) —— */
+  --ok:    #3DD68C;
+  --warn:  #E8B23A;
+  --err:   #F2585B;
+  --info:  var(--accent);
+
+  /* ===== SEMANTIC ALIASES — default (light) theme ===== */
+  --bg-app:        var(--ink-50);
+  --bg-surface:    var(--ink-0);
+  --bg-raised:     var(--ink-0);
+  --bg-sunken:     var(--ink-100);
+  --bg-inverse:    var(--ink-1000);
+
+  --text-strong:   var(--ink-1000);
+  --text-body:     var(--ink-800);
+  --text-muted:    var(--ink-500);
+  --text-faint:    var(--ink-400);
+  --text-onAccent: var(--accent-ink);
+  --text-inverse:  var(--ink-0);
+
+  --border-hair:   var(--ink-100);
+  --border-soft:   var(--ink-150);
+  --border-strong: var(--ink-300);
+  --border-focus:  var(--accent);
+
+  --link:          var(--accent-dim);
+  --waveform:      var(--accent);
+}
+
+/* ===== DARK / STAGE theme — the native register of the brand =====
+   Apply on <html data-theme="dark"> or any .on-dark scope. */
+[data-theme="dark"], .on-dark {
+  --bg-app:        var(--ink-1000);
+  --bg-surface:    var(--ink-900);
+  --bg-raised:     var(--ink-800);
+  --bg-sunken:     var(--ink-1000);
+  --bg-inverse:    var(--ink-0);
+
+  --text-strong:   var(--ink-0);
+  --text-body:     var(--ink-150);
+  --text-muted:    var(--ink-400);
+  --text-faint:    var(--ink-500);
+  --text-inverse:  var(--ink-1000);
+
+  --border-hair:   var(--ink-800);
+  --border-soft:   var(--ink-700);
+  --border-strong: var(--ink-600);
+
+  --link:          var(--accent);
+}

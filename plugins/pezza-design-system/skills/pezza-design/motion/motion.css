@@ -1,0 +1,170 @@
+/* ============================================================
+   PEZZA · MOTION — the X is a crossfader.
+   Four primitives: draw-on, crossfade-wipe, logo-sting (see
+   sting.html), playhead. Plus hover/press utilities.
+   Opt-in: import this file only where motion is wanted; tokens
+   (easings/durations) come from tokens/effects.css.
+   Every animation is gated behind prefers-reduced-motion.
+   No infinite loops in product UI — looping is permitted only in
+   explicitly marked sting/demo contexts (.motion-demo-loop).
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. DRAW-ON — the emblem strokes draw in via stroke-dashoffset.
+   Markup: an inline <svg> containing path#mark (brand/emblem.svg).
+   Apply .draw-on to the svg; JS helper sets --draw-len from the
+   path's data-length (82.12 for the emblem) or getTotalLength().
+   Stagger multiple paths with --draw-index (0, 1, 2 …).
+   Total budget: 900ms or less.
+   ------------------------------------------------------------ */
+.draw-on path {
+  stroke-dasharray: var(--draw-len, 82.12);
+  stroke-dashoffset: var(--draw-len, 82.12);
+  animation: pz-draw-on var(--draw-dur, 900ms) var(--ease-out)
+             calc(var(--draw-index, 0) * 140ms) forwards;
+}
+@keyframes pz-draw-on {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ------------------------------------------------------------
+   2. CROSSFADE-WIPE — content enters/exits behind a moving
+   vertical edge: the crossfader move. Utility class for panels,
+   slide-overs, view swaps. The edge is INK, not accent — the
+   accent never decorates transitions.
+   ------------------------------------------------------------ */
+.crossfade-wipe-in {
+  animation: pz-wipe-in var(--dur-slow) var(--ease-crossfade) both;
+}
+.crossfade-wipe-out {
+  animation: pz-wipe-out var(--dur-slow) var(--ease-crossfade) both;
+}
+@keyframes pz-wipe-in {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@keyframes pz-wipe-out {
+  from { clip-path: inset(0 0 0 0); }
+  to   { clip-path: inset(0 0 0 100%); }
+}
+/* the moving edge: a hairline that leads the wipe */
+.crossfade-wipe-edge {
+  position: relative;
+}
+.crossfade-wipe-edge::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: hsl(var(--border-strong));
+  left: 0;
+  animation: pz-wipe-edge var(--dur-slow) var(--ease-crossfade) both;
+  pointer-events: none;
+}
+@keyframes pz-wipe-edge {
+  from { left: 0; opacity: 1; }
+  99%  { opacity: 1; }
+  to   { left: 100%; opacity: 0; }
+}
+
+/* ------------------------------------------------------------
+   3. LOGO-STING — the 2-3s brand composition lives standalone in
+   motion/sting.html (video/OBS capture; the one permitted looping
+   context). Not shipped as a product-UI class on purpose.
+   ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------
+   4. PLAYHEAD — the accent analog of a glow-border: a thin cyan
+   sweep along ONE edge of a now-playing / featured element.
+   Position is a registered @property so it animates/transitions
+   smoothly. ONE per view, max — the accent is a cursor.
+   Product usage: drive --playhead-p from real playback progress
+   via motion.js playheadSet(el, fraction). The self-running sweep
+   (.playhead--demo) loops and is for demo/sting contexts only.
+   ------------------------------------------------------------ */
+@property --playhead-p {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+.playhead {
+  position: relative;
+}
+.playhead::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    transparent max(0%, calc(var(--playhead-p) - 14%)),
+    hsl(var(--accent) / .9) var(--playhead-p),
+    transparent min(100%, calc(var(--playhead-p) + 4%))
+  );
+  transition: --playhead-p var(--dur-base) var(--ease-out);
+}
+.motion-demo-loop .playhead--demo::after {
+  animation: pz-playhead-sweep 4s linear infinite;
+}
+@keyframes pz-playhead-sweep {
+  from { --playhead-p: 0%; }
+  to   { --playhead-p: 100%; }
+}
+
+/* ------------------------------------------------------------
+   HOVER / PRESS utilities — codify the readme rules.
+   Hover = sunken fill or border darken. Press = scale, no bounce.
+   ------------------------------------------------------------ */
+.hover-fill {
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+.hover-fill:hover { background-color: hsl(var(--bg-sunken)); }
+
+.hover-border {
+  transition: border-color var(--dur-fast) var(--ease-out);
+}
+.hover-border:hover { border-color: hsl(var(--border-strong)); }
+
+.pressable {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.pressable:active { transform: scale(0.97); }
+
+.pressable-icon {
+  transition: transform var(--dur-fast) var(--ease-out);
+}
+.pressable-icon:active { transform: scale(0.92); }
+
+/* ------------------------------------------------------------
+   REDUCED MOTION — nothing moves; everything lands in its final
+   state (or reduces to an opacity fade where a cue is needed).
+   .reduce-motion mirrors the media query for the specimen toggle.
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  .draw-on path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .crossfade-wipe-in, .crossfade-wipe-out {
+    animation: pz-fade var(--dur-base) linear both;
+    clip-path: none;
+  }
+  .crossfade-wipe-edge::after { animation: none; opacity: 0; }
+  .motion-demo-loop .playhead--demo::after { animation: none; }
+  .playhead::after { transition: none; }
+  .pressable:active, .pressable-icon:active { transform: none; }
+}
+.reduce-motion .draw-on path { animation: none; stroke-dashoffset: 0; }
+.reduce-motion .crossfade-wipe-in,
+.reduce-motion .crossfade-wipe-out { animation: pz-fade var(--dur-base) linear both; clip-path: none; }
+.reduce-motion .crossfade-wipe-edge::after { animation: none; opacity: 0; }
+.reduce-motion .playhead--demo::after { animation: none; }
+.reduce-motion .playhead::after { transition: none; }
+.reduce-motion .pressable:active,
+.reduce-motion .pressable-icon:active { transform: none; }
+
+@keyframes pz-fade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

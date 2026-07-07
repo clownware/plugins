@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>PEZZA STING - 2.4s</title>
+<style>
+  /* Self-contained brand sting for video/OBS capture. Black ground.
+     The ONE permitted looping context (toggle below). No external requests. */
+  * { box-sizing: border-box; margin: 0; }
+  html, body { height: 100%; }
+  body {
+    background: #000;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 32px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .stage { width: min(72vw, 900px); position: relative; }
+  svg { display: block; width: 100%; overflow: visible; }
+
+  /* —— phase A (0-600ms): the two triangles crossfade in from
+     opposite sides and meet at the X — the crossfader move —— */
+  .tri { fill: #FFFFFF; opacity: 0; }
+  .run .tri-top    { animation: tri-in-l 600ms cubic-bezier(0.16,1,0.3,1) 0ms both; }
+  .run .tri-bottom { animation: tri-in-r 600ms cubic-bezier(0.16,1,0.3,1) 60ms both; }
+  @keyframes tri-in-l {
+    0%   { transform: translateX(-14px); opacity: 0; }
+    55%  { opacity: .92; }
+    80%  { transform: translateX(0); opacity: .92; }
+    100% { transform: translateX(0); opacity: 0; }
+  }
+  @keyframes tri-in-r {
+    0%   { transform: translateX(14px); opacity: 0; }
+    55%  { opacity: .92; }
+    80%  { transform: translateX(0); opacity: .92; }
+    100% { transform: translateX(0); opacity: 0; }
+  }
+
+  /* —— phase B (500-900ms): the X wipe — a vertical edge scratches
+     across the emblem cell as the triangles hand off to the stroke —— */
+  .edge {
+    position: absolute; top: -2%; bottom: -2%;
+    width: 2px; background: #FFFFFF; opacity: 0;
+    left: 0;
+  }
+  .run .edge { animation: edge-sweep 400ms cubic-bezier(0.4,0,0.1,1) 500ms both; }
+  @keyframes edge-sweep {
+    0%   { left: 0%;  opacity: .9; }
+    100% { left: 26%; opacity: 0; }
+  }
+
+  /* —— phase C (600-1500ms): the strokes draw —— */
+  #mark {
+    stroke-dasharray: 82.12;
+    stroke-dashoffset: 82.12;
+  }
+  .run #mark { animation: draw 900ms cubic-bezier(0.16,1,0.3,1) 600ms forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+
+  /* —— phase D (1500-2400ms): the wordmark tracks in —— */
+  .L { opacity: 0; }
+  .run .L {
+    animation: track-in 500ms cubic-bezier(0.16,1,0.3,1)
+               calc(1500ms + var(--i) * 90ms) forwards;
+  }
+  @keyframes track-in {
+    from { transform: translateX(18px); opacity: 0; }
+    to   { transform: translateX(0);   opacity: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .run .tri-top, .run .tri-bottom, .run .edge { animation: none; opacity: 0; }
+    .run #mark { animation: none; stroke-dashoffset: 0; }
+    .run .L { animation: none; opacity: 1; transform: none; }
+  }
+
+  .chrome {
+    display: flex; gap: 24px; align-items: center;
+    color: #666; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+  }
+  .chrome button, .chrome label {
+    background: none; border: 1px solid #333; color: #999;
+    font: inherit; letter-spacing: inherit; text-transform: inherit;
+    padding: 8px 14px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center;
+  }
+  .chrome button:hover, .chrome label:hover { border-color: #666; color: #FFF; }
+</style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <svg viewBox="0 0 71.062 20.799" fill="none" aria-label="Pezza">
+      <!-- crossfader triangles (from the mark's own geometry) -->
+      <polygon class="tri tri-top"    points="4.25,3.04 16.21,3.88 10.91,7.96" />
+      <polygon class="tri tri-bottom" points="10.94,10.46 16.34,14.45 5.57,14.6" />
+      <!-- the mark: one continuous stroke, length 82.12 -->
+      <path id="mark" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" d="M 6.192 1.0 L 15.583 1.0 A 2.041 2.041 0 0 1 16.831 4.657 L 5.064 13.747 A 1.592 1.592 0 0 0 6.037 16.599 L 15.948 16.599 A 1.637 1.637 0 0 0 16.92 13.645 L 3.62 3.819 A 1.643 1.643 0 0 0 1.0 5.14 L 0.999 19.799"/>
+      <!-- wordmark: outlined Space Grotesk Bold, tracks in per letter -->
+      <g fill="#FFFFFF" stroke="none">
+      <g class="L" style="--i:0"><path transform="translate(22.724 15.017) scale(0.013193 -0.013193)" d="M66 0V700H354Q420 700 470.5 673.5Q521 647 549.5 599.0Q578 551 578 485V471Q578 406 548.5 357.5Q519 309 468.5 282.5Q418 256 354 256H198V0ZM198 376H341Q388 376 417.0 402.0Q446 428 446 473V483Q446 528 417.0 554.0Q388 580 341 580H198Z"/></g>
+      <g class="L" style="--i:1"><path transform="translate(33.067 15.017) scale(0.013193 -0.013193)" d="M66 0V700H516V580H198V413H488V293H198V120H522V0Z"/></g>
+      <g class="L" style="--i:2"><path transform="translate(42.751 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/></g>
+      <g class="L" style="--i:3"><path transform="translate(52.724 15.017) scale(0.013193 -0.013193)" d="M46 0V168L392 566V582H56V700H530V532L184 134V118H532V0Z"/></g>
+      <g class="L" style="--i:4"><path transform="translate(62.698 15.017) scale(0.013193 -0.013193)" d="M18 0 202 700H432L616 0H480L442 154H192L154 0ZM223 276H411L326 617H308Z"/></g>
+      </g>
+    </svg>
+    <div class="edge"></div>
+  </div>
+  <div class="chrome">
+    <span>PEZZA STING · 2.4S</span>
+    <button id="replay" type="button">Replay</button>
+    <label><input id="loop" type="checkbox"> Loop (capture)</label>
+  </div>
+<script>
+  const stage = document.getElementById("stage");
+  const loop = document.getElementById("loop");
+  let timer = null;
+  function run() {
+    stage.classList.remove("run");
+    void stage.getBoundingClientRect();
+    stage.classList.add("run");
+  }
+  document.getElementById("replay").addEventListener("click", run);
+  loop.addEventListener("change", () => {
+    clearInterval(timer); timer = null;
+    if (loop.checked) { run(); timer = setInterval(run, 3400); }
+  });
+  run();
+</script>
+</body>
+</html>

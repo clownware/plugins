@@ -23,6 +23,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/test-audit` | Coverage gaps ranked by risk, CI enforcement vs observation, test quality |
 | `/design-audit` | Token-bridge sync, computed WCAG contrast, the system's own rules vs its code |
 | `/skill-audit` | SKILL.md quality: dead shell fallbacks, triggering, collisions — by executing, not reading |
+| `/audit-fix` | Applies an audit report: mechanical fixes with exact-match edits, re-verified by the report's own methods; decisions stay decisions |
 | `/adr` | Architecture Decision Records, numbered and templated from the repo's own conventions |
 | `/pr-description` | PR descriptions from the branch diff, template-aware |
 | `/root-cause-debug` | Pair-debugging pipeline: root causes, never band-aids |

@@ -7,21 +7,12 @@ Specs graduate to a skill directory when work starts; entries here stay one scre
 Every new skill inherits the [house authoring standards](MAINTAINING.md#skill-authoring-standards)
 regardless of what it does.
 
+## Graduated
+
+- **`audit-fix`** — shipped in code-tools v0.8.0; validated by a blind run against the
+  design-audit report at the pre-fix commit (see MAINTAINING standard 5).
+
 ## Next — motivated by concrete pain already felt
-
-### `audit-fix` (code-tools)
-
-The audit skills are assessment-only by design; applying their findings is a separate
-job we have now done by hand twice (skill-audit and design-audit fix passes).
-
-- **Trigger:** "apply the audit findings", "run the fix pass", "make the recommended fixes",
-  a pasted audit report.
-- **Pipeline:** parse the report's priority list → separate mechanical items from
-  maintainer decisions → apply mechanical items with exact-match edits (assert before
-  replace) → re-run the report's own verification methods (contrast math, sweeps,
-  render checks) → present maintainer decisions as decisions, never silently resolved.
-- **Done when:** given either of the two real audit reports from this repo's history,
-  it reproduces the fix commits' content without touching a decision item.
 
 ### `a11y-audit` (code-tools)
 

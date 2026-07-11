@@ -11,6 +11,8 @@ regardless of what it does.
 
 - **`audit-fix`** — shipped in code-tools v0.8.0; validated by a blind run against the
   design-audit report at the pre-fix commit (see MAINTAINING standard 5).
+- **`plugin-release`** — shipped in code-tools v0.9.0; blind dry-run validation also
+  surfaced the empty-delta guard (refuse to cut a release the git log doesn't support).
 
 ## Next — motivated by concrete pain already felt
 
@@ -28,20 +30,6 @@ motivating case.
   browser tool is available.
 - **Done when:** it catches the Checkbox case and a seeded focus-trap in a fixture,
   with zero false positives on the fixed versions.
-
-### `plugin-release` (code-tools)
-
-Releasing an in-repo plugin takes a five-step ritual (bump `plugin.json`, sync the
-marketplace description, sync the README table, validate JSON, conventional commit).
-Done by hand six times in one week; every step is mechanizable.
-
-- **Trigger:** "release <plugin>", "bump <plugin>", "cut a version".
-- **Pipeline:** read current version → semver bump from the change type → sync
-  description strings across `plugin.json` / `marketplace.json` / README table →
-  validate all JSON → `chore(release)` or `feat`-typed commit with a body summarizing
-  the delta since the last bump.
-- **Done when:** a release of any in-repo plugin is one invocation, and a dry-run mode
-  prints the diff without committing.
 
 ## Later — worth doing, not yet urgent
 

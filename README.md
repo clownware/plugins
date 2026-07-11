@@ -24,6 +24,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/design-audit` | Token-bridge sync, computed WCAG contrast, the system's own rules vs its code |
 | `/skill-audit` | SKILL.md quality: dead shell fallbacks, triggering, collisions — by executing, not reading |
 | `/audit-fix` | Applies an audit report: mechanical fixes with exact-match edits, re-verified by the report's own methods; decisions stay decisions |
+| `/plugin-release` | Cuts an in-repo plugin release: semver bump, three-surface description sync, JSON validation, conventional commit; --dry-run prints the diff |
 | `/adr` | Architecture Decision Records, numbered and templated from the repo's own conventions |
 | `/pr-description` | PR descriptions from the branch diff, template-aware |
 | `/root-cause-debug` | Pair-debugging pipeline: root causes, never band-aids |

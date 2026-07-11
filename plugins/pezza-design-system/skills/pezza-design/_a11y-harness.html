@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>a11y harness</title>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+</head><body><div id="root"></div>
+<script>
+window.RESULT = "pending";
+Promise.all([
+  fetch("components/forms/Checkbox.jsx").then(r => r.text()),
+  fetch("components/music/MetaRow.jsx").then(r => r.text()),
+]).then(([cb, mr]) => {
+  const prep = (src) => Babel.transform(
+    src.replace(/import React from 'react';/, "").replace(/export function/g, "function"),
+    { presets: ["react"] }).code;
+  const React = window.React;
+  const mods = {};
+  eval(prep(cb) + "; mods.Checkbox = Checkbox;");
+  eval(prep(mr) + "; mods.MetaRow = MetaRow;");
+  let rowClicks = 0;
+  const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(React.createElement("div", null,
+    React.createElement(mods.Checkbox, { label: "kb-test" }),
+    React.createElement(mods.MetaRow, { index: 1, title: "Track", bpm: 124, onClick: () => rowClicks++ }),
+    React.createElement(mods.MetaRow, { index: 2, title: "Static" })
+  ));
+  setTimeout(() => {
+    const btn = document.querySelector('[role="checkbox"]');
+    const row = document.querySelector('[role="button"]');
+    const staticRows = [...document.querySelectorAll('#root > div > div')].filter(d => !d.hasAttribute('role'));
+    const res = {};
+    res.checkboxIsButton = btn && btn.tagName === "BUTTON";
+    btn.focus(); res.checkboxFocusable = document.activeElement === btn;
+    const before = btn.getAttribute("aria-checked");
+    btn.click(); res.checkboxTogglesOnActivate = btn.getAttribute("aria-checked") !== before;
+    res.rowHasRoleAndTabindex = row && row.tabIndex === 0;
+    row.focus(); res.rowFocusable = document.activeElement === row;
+    row.dispatchEvent(new KeyboardEvent("keydown", { key: "Enter", bubbles: true }));
+    res.rowEnterActivates = rowClicks === 1;
+    row.dispatchEvent(new KeyboardEvent("keydown", { key: " ", bubbles: true }));
+    res.rowSpaceActivates = rowClicks === 2;
+    res.staticRowNotFakeButton = staticRows.length === 1;
+    window.RESULT = res;
+  }, 300);
+}).catch(e => { window.RESULT = "ERROR: " + e.message; });
+</script></body></html>

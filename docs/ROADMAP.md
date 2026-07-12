@@ -32,7 +32,19 @@ regardless of what it does.
 *(empty — the full original slate has shipped; propose the next round when real
 pain motivates it)*
 
-## Open decisions (tracked, unscheduled)
+## Open decisions (tracked as GitHub issues)
+
+Deferred and found work now lives in the issue tracker: decisions
+([#2](https://github.com/clownware/plugins/issues/2) pr-description rename,
+[#3](https://github.com/clownware/plugins/issues/3) license policy,
+[#4](https://github.com/clownware/plugins/issues/4) Bash-grant experiment),
+test debt ([#5](https://github.com/clownware/plugins/issues/5) fixture
+persistence/realism, [#6](https://github.com/clownware/plugins/issues/6)
+unvalidated coverage paths), and pezza follow-ups
+([#7](https://github.com/clownware/plugins/issues/7) generated-file fixes,
+[#8](https://github.com/clownware/plugins/issues/8) brand fonts,
+[#9](https://github.com/clownware/plugins/issues/9) faint-on-raised contrast).
+Summaries below for the decisions; the issues are canonical.
 
 - **`pr-description` name collision** — both plugins ship a skill with this name;
   descriptions now differentiate them, but a rename (`astro-pr-description`) remains

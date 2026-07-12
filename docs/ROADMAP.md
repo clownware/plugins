@@ -16,20 +16,21 @@ regardless of what it does.
 - **`a11y-audit`** — shipped in code-tools v0.10.0; blind validation caught all seeded
   fixture defects and the real pre-fix Checkbox/MetaRow with zero false positives on
   the fixed twins (including the legitimate-modal focus-trap exemption).
+- **`skill-validate`** — shipped in code-tools v0.11.0; validated recursively by its own
+  first production run (an agent followed it, blind sub-agents included, to validate
+  deps-audit). Its observed stall mode (idling with unscored children) is codified.
+- **`deps-audit`** — shipped in code-tools v0.11.0; 5/5 seeded defects, 5/5 correct
+  absences, zero false positives, with config-referenced-dependency discrimination.
+- **`perf-audit`** — shipped in code-tools v0.11.0; 5/5 seeds including running the
+  fixture's own failing gate; enforced/observed/decorative classification exact.
+- **`perf-budget-check`** — shipped in astro-tools v0.3.0; the blind run correctly
+  refused to report stale-build numbers its own author's ground-truth run had
+  accepted, and stopped gracefully on a non-starter repo.
 
 ## Later — worth doing, not yet urgent
 
-- **`deps-audit` (code-tools)** — lockfile health: unused/duplicate dependencies,
-  last-publish dates, known advisories, license inventory. Assessment-only, same
-  report shape as the other audits.
-- **`perf-audit` (code-tools)** — budgets declared vs enforced (the never-exercised
-  sweep applied to performance): bundle size vs stated limits, unminified assets,
-  render-blocking patterns; runs the repo's own perf tooling when present.
-- **`skill-validate` (code-tools)** — codify the blind-validation harness used to ship
-  skill-audit and design-audit: spawn an agent that executes a skill against a target
-  with known ground truth, score reproduction, report gaps. The skill that tests skills.
-- **`perf-budget-check` (astro-tools)** — assert the astro-performance-starter's
-  Lighthouse/bundle budgets on the current branch and diff against `main`.
+*(empty — the full original slate has shipped; propose the next round when real
+pain motivates it)*
 
 ## Open decisions (tracked, unscheduled)
 
@@ -39,5 +40,9 @@ regardless of what it does.
 - **`license` frontmatter policy** — astro-tools skills carry `license: MIT`,
   code-tools skills carry none; pick one convention and apply it in a single pass.
 - **`Bash` in `allowed-tools` for pre-fetch-only skills** — possibly removable where
-  the body never shells out, but pre-fetch execution may depend on the grant; needs a
-  controlled test before trimming (flagged by skill-audit, deliberately not applied).
+  the body never shells out, but pre-fetch execution may depend on the grant. The
+  controlled experiment is prepared and blocked only on a logged-in CLI: two probe
+  skills exist at the session scratchpad's `bashprobe/.claude/skills/` (one with the
+  Bash grant, one without, each with an `echo`-marker pre-fetch); from that directory
+  run `claude -p "/probe-withbash"` then `claude -p "/probe-nobash"` and compare
+  whether the marker output appears. If both execute, the grant is trimmable.

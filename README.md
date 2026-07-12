@@ -24,8 +24,11 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/design-audit` | Token-bridge sync, computed WCAG contrast, the system's own rules vs its code |
 | `/a11y-audit` | Functional accessibility: keyboard operability, focus traps, names/ARIA integrity — zero-false-positive bar |
 | `/skill-audit` | SKILL.md quality: dead shell fallbacks, triggering, collisions — by executing, not reading |
+| `/deps-audit` | Dependency health: unused/duplicate deps, lockfile drift, freshness, OSV advisories, licenses |
+| `/perf-audit` | Budgets declared vs enforced, sizes vs stated limits, shipped-asset hygiene |
 | `/audit-fix` | Applies an audit report: mechanical fixes with exact-match edits, re-verified by the report's own methods; decisions stay decisions |
 | `/plugin-release` | Cuts an in-repo plugin release: semver bump, three-surface description sync, JSON validation, conventional commit; --dry-run prints the diff |
+| `/skill-validate` | Blind-agent validation harness: pinned ground truth, reproduction/discrimination/fidelity scoring |
 | `/adr` | Architecture Decision Records, numbered and templated from the repo's own conventions |
 | `/pr-description` | PR descriptions from the branch diff, template-aware |
 | `/root-cause-debug` | Pair-debugging pipeline: root causes, never band-aids |
@@ -37,6 +40,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 |-------|--------------|
 | `/component-scaffold` | Astro/Preact components following project patterns (atomic layout aware) |
 | `/pr-description` | PR descriptions for astro-performance-starter template repos |
+| `/perf-budget-check` | Runs the starter's own budget gates (sizes, overrides, images) and interprets the verdicts |
 
 **pezza-design-system**
 

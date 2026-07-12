@@ -13,23 +13,9 @@ regardless of what it does.
   design-audit report at the pre-fix commit (see MAINTAINING standard 5).
 - **`plugin-release`** — shipped in code-tools v0.9.0; blind dry-run validation also
   surfaced the empty-delta guard (refuse to cut a release the git log doesn't support).
-
-## Next — motivated by concrete pain already felt
-
-### `a11y-audit` (code-tools)
-
-design-audit computes contrast; it deliberately stops before functional accessibility.
-Its own found-work (a `<span role="checkbox">` that no keyboard can operate) is the
-motivating case.
-
-- **Trigger:** "accessibility audit", "a11y review", "is this keyboard accessible",
-  "WCAG check" (beyond color).
-- **Pipeline:** interactive-element sweep (role/tabindex/handlers on non-focusable
-  elements) → ARIA validity and name computation → focus order and visible focus →
-  media/motion/zoom checks → live render pass with keyboard-only navigation when a
-  browser tool is available.
-- **Done when:** it catches the Checkbox case and a seeded focus-trap in a fixture,
-  with zero false positives on the fixed versions.
+- **`a11y-audit`** — shipped in code-tools v0.10.0; blind validation caught all seeded
+  fixture defects and the real pre-fix Checkbox/MetaRow with zero false positives on
+  the fixed twins (including the legitimate-modal focus-trap exemption).
 
 ## Later — worth doing, not yet urgent
 

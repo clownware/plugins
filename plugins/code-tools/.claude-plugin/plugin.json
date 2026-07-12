@@ -1,7 +1,7 @@
 {
   "name": "clownware-code-tools",
-  "description": "Universal dev workflow skills: architecture/deployment-readiness auditing, security auditing, test-suite auditing, skill auditing, design-system auditing, audit-fix application, plugin releasing, ADR authoring, PR descriptions, root-cause debugging, and test scaffolding. Each skill probes the repo it runs in and degrades gracefully.",
-  "version": "0.9.0",
+  "description": "Universal dev workflow skills: architecture/deployment-readiness auditing, security auditing, test-suite auditing, skill auditing, design-system auditing, accessibility auditing, audit-fix application, plugin releasing, ADR authoring, PR descriptions, root-cause debugging, and test scaffolding. Each skill probes the repo it runs in and degrades gracefully.",
+  "version": "0.10.0",
   "author": {
     "name": "clownware"
   }

@@ -22,6 +22,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/security-audit` | Auth/session, injection, platform vulnerabilities — verified against code before reporting |
 | `/test-audit` | Coverage gaps ranked by risk, CI enforcement vs observation, test quality |
 | `/design-audit` | Token-bridge sync, computed WCAG contrast, the system's own rules vs its code |
+| `/a11y-audit` | Functional accessibility: keyboard operability, focus traps, names/ARIA integrity — zero-false-positive bar |
 | `/skill-audit` | SKILL.md quality: dead shell fallbacks, triggering, collisions — by executing, not reading |
 | `/audit-fix` | Applies an audit report: mechanical fixes with exact-match edits, re-verified by the report's own methods; decisions stay decisions |
 | `/plugin-release` | Cuts an in-repo plugin release: semver bump, three-surface description sync, JSON validation, conventional commit; --dry-run prints the diff |

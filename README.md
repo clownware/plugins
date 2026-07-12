@@ -6,7 +6,7 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 
 | Plugin | What it is | Source |
 |--------|------------|--------|
-| `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`product_dev/plugin`](https://github.com/clownware/product_dev/tree/main/plugin) |
+| `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`product-dev/plugin`](https://github.com/clownware/product-dev/tree/main/plugin) |
 | `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. | [`plugins/code-tools`](plugins/code-tools) |
 | `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. | [`plugins/astro-tools`](plugins/astro-tools) |
 | `pezza-design-system` | The Pezza brand design system as a skill: guidelines, HSL-channel tokens, animatable brand SVGs, prose layer, motion system, React primitives, two UI kits. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
@@ -88,7 +88,7 @@ To register the marketplace and pre-enable the plugin declaratively, add this to
 ## How this marketplace works
 
 - **The catalog is `.claude-plugin/marketplace.json`.** It lists every plugin and where its code lives.
-- **Project-coupled plugins are developed in their own repositories** and referenced by `git-subdir` (repo URL + subdirectory path). product-dev, for example, is developed in `product_dev` and lives in that repo's `plugin/` folder.
+- **Project-coupled plugins are developed in their own repositories** and referenced by `git-subdir` (repo URL + subdirectory path). product-dev, for example, is developed in `product-dev` and lives in that repo's `plugin/` folder.
 - **Universal plugins with no home project live in this repo** under `plugins/<name>/` and are referenced by relative path. code-tools and astro-tools are hosted this way.
 - **Releasing an externally-hosted plugin does not touch this repo.** Bump the `version` field in the plugin's own `plugin.json` — followers receive the update on their next `/plugin update`. For in-repo plugins, the version bump is a commit here.
 

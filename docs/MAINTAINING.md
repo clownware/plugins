@@ -69,7 +69,7 @@ To let a plugin develop freely on `main` while users install a frozen release, a
 ```json
 "source": {
   "source": "git-subdir",
-  "url": "https://github.com/clownware/product_dev",
+  "url": "https://github.com/clownware/product-dev",
   "path": "plugin",
   "ref": "v0.2.0"
 }

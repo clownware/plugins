@@ -8,7 +8,7 @@
       "name": "product-dev",
       "source": {
         "source": "git-subdir",
-        "url": "https://github.com/clownware/product_dev",
+        "url": "https://github.com/clownware/product-dev",
         "path": "plugin"
       },
       "description": "AI-assisted product development framework \u2014 vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning. Ships 5 commands (/idea, /problem, /spec, /compile, /summary), 4 skills, and a tech-spec-writer subagent."

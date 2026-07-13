@@ -83,7 +83,7 @@ To register the marketplace and pre-enable the plugin declaratively, add this to
 
 `extraKnownMarketplaces` makes the marketplace known; `enabledPlugins` declares intent to use the plugin. This does **not** auto-download — on next launch Claude Code prompts you to install, or run `claude plugin install product-dev@clownware` (or `/reload-plugins`) to pick it up. Same behavior in CLI, desktop, and Cowork.
 
-> **Private repos:** both this marketplace and the plugin sources are private. Installers need git credentials configured (SSH key, or a `GITHUB_TOKEN` with repo read access). `GITHUB_TOKEN` is also used for auto-updates.
+> **Install access:** this marketplace and its plugin sources are public repositories, so no special credentials are required. `git` fetches each plugin from its referenced repo. A `GITHUB_TOKEN` is only needed if you fork a plugin source into a private repo, or to raise API rate limits during auto-updates.
 
 ## How this marketplace works
 

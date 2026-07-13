@@ -128,4 +128,4 @@ absence produced a real, verified bug — none are style preferences.
 
 ## Access notes
 
-Both this marketplace and the plugin sources are currently **private**. Anyone adding the marketplace or installing a plugin needs git credentials with read access to the referenced repos (SSH key, or a `GITHUB_TOKEN`). To make a plugin frictionless to install publicly, make its **source repo** public — this catalog repo can remain private or be made public independently.
+This marketplace and its plugin sources are **public** repositories. Adding the marketplace or installing a plugin needs only standard `git` read access to the referenced public repos — no special credentials. If you fork a plugin's **source repo** private, installers of that plugin will then need git credentials with read access (SSH key, or a `GITHUB_TOKEN`).

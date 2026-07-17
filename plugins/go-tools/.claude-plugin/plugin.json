@@ -1,0 +1,8 @@
+{
+  "name": "clownware-go-tools",
+  "description": "Go + templ + sqlc stack skills: templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding, performance-budget gate checks, and task-ci-aware PR descriptions, following go-performance-starter conventions with fallbacks for other Go projects.",
+  "version": "0.1.0",
+  "author": {
+    "name": "clownware"
+  }
+}

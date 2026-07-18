@@ -29,6 +29,11 @@
       "description": "Go + templ + sqlc stack skills \u2014 templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions \u2014 following go-performance-starter conventions with fallbacks for other Go projects. Plus a format-on-edit hook that runs goimports/gofmt and templ fmt on files Claude edits."
     },
     {
+      "name": "clownware-rust-tools",
+      "source": "./plugins/rust-tools",
+      "description": "Rust stack skills — table-driven test scaffolding and CI-aware quality-gate checks (/gate-check: cargo fmt/clippy/test/deny and special CI legs) — following the tunes_protocol and gittunes workspace conventions with fallbacks for other Rust projects. Plus a format-on-edit hook that runs rustfmt (edition-detected) on files Claude edits."
+    },
+    {
       "name": "pezza-design-system",
       "source": "./plugins/pezza-design-system",
       "description": "The Pezza brand design system as a skill \u2014 design guidelines, color/type/spacing tokens, logo and photography assets, React component primitives, and two UI kit starters (web-app shell and DJ/producer site) \u2014 for generating on-brand interfaces, artifacts, and production code."

@@ -1,0 +1,9 @@
+{
+  "name": "clownware-rust-tools",
+  "description": "Rust stack skills: table-driven test scaffolding and CI-aware quality-gate checks (cargo fmt/clippy/test/deny, fuzz targets), following the tunes_protocol and gittunes workspace conventions with fallbacks for other Rust projects. Also ships a format-on-edit hook that runs rustfmt (edition-detected from the nearest Cargo.toml) on files Claude edits.",
+  "version": "0.1.0",
+  "hooks": "./hooks/hooks.json",
+  "author": {
+    "name": "clownware"
+  }
+}

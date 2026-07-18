@@ -31,24 +31,15 @@ regardless of what it does.
   mutable third-party pin with secret, ENV-baked secret, deploy race, lint-drift),
   5/5 negative controls unflagged, zero false positives, plus one unseeded true
   finding (wrangler entrypoint pointing at a missing file).
+- **`rust-tools` plugin** — shipped v0.1.0 (rustfmt format-on-edit hook,
+  test-scaffold, gate-check). All 8 pre-fetch probes and the hook verified in
+  bash+zsh across tunes_protocol/gittunes/unrelated contexts, including
+  workspace-edition detection; hook script shellcheck-clean under the new CI job.
 
 ## Later — worth doing, not yet urgent
 
-- **`devops-audit`** (code-tools) — the audit suite's missing dimension. Fourteen local
-  repos carry GitHub Actions workflows and none of the existing audits look at them.
-  Scope: workflow hygiene (action pinning, least-privilege `permissions:`, secret
-  handling, cache/concurrency correctness), deploy configs (Dockerfile: multi-stage,
-  non-root, pinned bases; `wrangler.jsonc`; `fly.toml`), release/migration workflow
-  safety (the Go starter's `db-migrate.yml`/`release.yml` class), and local-vs-CI gate
-  drift (`quality:ci` vs what `ci.yml` actually enforces — the divergence theme
-  test-audit already probes for tests, generalized). Assessment-only, findings verified
-  against the actual configs, blind-validated per standard 5.
-- **`rust-tools` plugin** — pattern-completes astro-tools/go-tools for the two active
-  Rust repos (gittunes, tunes_protocol). A `cargo fmt` format-on-edit hook (the
-  rustfmt analog of the Biome/goimports hooks), a table-driven test scaffold, and a
-  gate-interpretation skill for `clippy`/`cargo deny`/fuzz targets, following
-  workspace conventions with fallbacks for other Rust projects. Smaller than the
-  other stack plugins; hooks-first since that's the proven highest-value piece.
+*(empty — the 2026-07 round (devops-audit, rust-tools, plugin CI validation) has
+shipped; propose the next round when real pain motivates it)*
 
 ## Open decisions (tracked as GitHub issues)
 

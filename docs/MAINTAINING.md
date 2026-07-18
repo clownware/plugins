@@ -82,7 +82,7 @@ Updating the pin (e.g. `v0.2.0` → `v0.3.0`) is the one time a routine release 
 
 ## Validation
 
-Every push and PR runs [`.github/workflows/validate.yml`](../.github/workflows/validate.yml), which checks that `marketplace.json` is well-formed and every entry has a valid source. Keep it green.
+Every push and PR runs [`.github/workflows/validate.yml`](../.github/workflows/validate.yml), which checks that `marketplace.json` is well-formed and every entry has a valid source, and — for the in-repo plugins under `plugins/` — that each `plugin.json` is well-formed (kebab name, semver, description), hook configs parse and reference existing executable scripts, every skill directory has a SKILL.md with `name`/`description` frontmatter, hook scripts pass shellcheck, and every relative catalog source exists. Keep it green.
 
 Before a plugin's first release, also run the authoritative structural check on the **plugin repo** (not this one):
 

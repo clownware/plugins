@@ -55,7 +55,9 @@ else
   session_cwd=$(printf '%s' "$payload" | python3 -c 'import json,sys
 print(json.load(sys.stdin).get("cwd","") or "")' 2>/dev/null)
 fi
-[ -n "$session_cwd" ] && [ -d "$session_cwd" ] && cd "$session_cwd"
+if [ -n "$session_cwd" ] && [ -d "$session_cwd" ]; then
+  cd "$session_cwd" || exit 0
+fi
 git rev-parse --is-inside-work-tree >/dev/null 2>&1 || exit 0
 
 if command -v gitleaks >/dev/null 2>&1; then

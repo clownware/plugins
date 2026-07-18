@@ -49,10 +49,6 @@ regardless of what it does.
   gate-interpretation skill for `clippy`/`cargo deny`/fuzz targets, following
   workspace conventions with fallbacks for other Rust projects. Smaller than the
   other stack plugins; hooks-first since that's the proven highest-value piece.
-- **CI validation for in-repo plugins** — `validate.yml` guards only the catalog;
-  plugin structure (plugin.json/hooks.json well-formedness, hook scripts executable,
-  shellcheck-clean) is checked only by hand-run `claude plugin validate`. Add a static
-  CI job for the `plugins/**` path — no CLI login required in Actions.
 
 ## Open decisions (tracked as GitHub issues)
 

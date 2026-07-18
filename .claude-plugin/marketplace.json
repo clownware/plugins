@@ -16,7 +16,7 @@
     {
       "name": "clownware-code-tools",
       "source": "./plugins/code-tools",
-      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), accessibility auditing (/a11y-audit), dependency auditing (/deps-audit), performance auditing (/perf-audit), audit-fix application (/audit-fix), plugin releasing (/plugin-release), skill validation (/skill-validate), ADR authoring, PR descriptions, root-cause debugging, and test scaffolding \u2014 that probe the repo they run in and degrade gracefully. Plus a git guard hook: blocks --no-verify and secret-scans staged changes before every commit."
+      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), accessibility auditing (/a11y-audit), dependency auditing (/deps-audit), performance auditing (/perf-audit), devops/CI-CD auditing (/devops-audit), audit-fix application (/audit-fix), plugin releasing (/plugin-release), skill validation (/skill-validate), ADR authoring, PR descriptions, root-cause debugging, and test scaffolding \u2014 that probe the repo they run in and degrade gracefully. Plus a git guard hook: blocks --no-verify and secret-scans staged changes before every commit."
     },
     {
       "name": "clownware-astro-tools",

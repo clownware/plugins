@@ -27,6 +27,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/skill-audit` | SKILL.md quality: dead shell fallbacks, triggering, collisions — by executing, not reading |
 | `/deps-audit` | Dependency health: unused/duplicate deps, lockfile drift, freshness, OSV advisories, licenses |
 | `/perf-audit` | Budgets declared vs enforced, sizes vs stated limits, shipped-asset hygiene |
+| `/devops-audit` | CI/CD + deploy configs: action pinning, injection, secret handling, release/migration safety, local-vs-CI gate drift |
 | `/audit-fix` | Applies an audit report: mechanical fixes with exact-match edits, re-verified by the report's own methods; decisions stay decisions |
 | `/plugin-release` | Cuts an in-repo plugin release: semver bump, three-surface description sync, JSON validation, conventional commit; --dry-run prints the diff |
 | `/skill-validate` | Blind-agent validation harness: pinned ground truth, reproduction/discrimination/fidelity scoring |

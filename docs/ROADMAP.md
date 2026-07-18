@@ -26,6 +26,11 @@ regardless of what it does.
 - **`perf-budget-check`** — shipped in astro-tools v0.3.0; the blind run correctly
   refused to report stale-build numbers its own author's ground-truth run had
   accepted, and stopped gracefully on a non-starter repo.
+- **`devops-audit`** — shipped in code-tools v0.14.0; blind run against a seeded
+  fixture: 6/6 planted defects (pull_request_target+checkout, run: injection,
+  mutable third-party pin with secret, ENV-baked secret, deploy race, lint-drift),
+  5/5 negative controls unflagged, zero false positives, plus one unseeded true
+  finding (wrangler entrypoint pointing at a missing file).
 
 ## Later — worth doing, not yet urgent
 

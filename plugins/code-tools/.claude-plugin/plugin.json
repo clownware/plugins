@@ -1,7 +1,7 @@
 {
   "name": "clownware-code-tools",
-  "description": "Universal dev workflow skills: architecture/deployment-readiness auditing, security auditing, test-suite auditing, skill auditing, design-system auditing, accessibility auditing, dependency auditing, performance auditing, audit-fix application, plugin releasing, skill validation, ADR authoring, PR descriptions, root-cause debugging, and test scaffolding. Each skill probes the repo it runs in and degrades gracefully. Also ships a git guard hook: blocks --no-verify commits/pushes and secret-scans staged changes (gitleaks, with a pattern fallback) before every commit.",
-  "version": "0.13.0",
+  "description": "Universal dev workflow skills: architecture/deployment-readiness auditing, security auditing, test-suite auditing, skill auditing, design-system auditing, accessibility auditing, dependency auditing, performance auditing, devops/CI-CD auditing, audit-fix application, plugin releasing, skill validation, ADR authoring, PR descriptions, root-cause debugging, and test scaffolding. Each skill probes the repo it runs in and degrades gracefully. Also ships a git guard hook: blocks --no-verify commits/pushes and secret-scans staged changes (gitleaks, with a pattern fallback) before every commit.",
+  "version": "0.14.0",
   "hooks": "./hooks/hooks.json",
   "author": {
     "name": "clownware"

@@ -29,8 +29,25 @@ regardless of what it does.
 
 ## Later — worth doing, not yet urgent
 
-*(empty — the full original slate has shipped; propose the next round when real
-pain motivates it)*
+- **`devops-audit`** (code-tools) — the audit suite's missing dimension. Fourteen local
+  repos carry GitHub Actions workflows and none of the existing audits look at them.
+  Scope: workflow hygiene (action pinning, least-privilege `permissions:`, secret
+  handling, cache/concurrency correctness), deploy configs (Dockerfile: multi-stage,
+  non-root, pinned bases; `wrangler.jsonc`; `fly.toml`), release/migration workflow
+  safety (the Go starter's `db-migrate.yml`/`release.yml` class), and local-vs-CI gate
+  drift (`quality:ci` vs what `ci.yml` actually enforces — the divergence theme
+  test-audit already probes for tests, generalized). Assessment-only, findings verified
+  against the actual configs, blind-validated per standard 5.
+- **`rust-tools` plugin** — pattern-completes astro-tools/go-tools for the two active
+  Rust repos (gittunes, tunes_protocol). A `cargo fmt` format-on-edit hook (the
+  rustfmt analog of the Biome/goimports hooks), a table-driven test scaffold, and a
+  gate-interpretation skill for `clippy`/`cargo deny`/fuzz targets, following
+  workspace conventions with fallbacks for other Rust projects. Smaller than the
+  other stack plugins; hooks-first since that's the proven highest-value piece.
+- **CI validation for in-repo plugins** — `validate.yml` guards only the catalog;
+  plugin structure (plugin.json/hooks.json well-formedness, hook scripts executable,
+  shellcheck-clean) is checked only by hand-run `claude plugin validate`. Add a static
+  CI job for the `plugins/**` path — no CLI login required in Actions.
 
 ## Open decisions (tracked as GitHub issues)
 

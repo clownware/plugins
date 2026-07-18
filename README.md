@@ -7,8 +7,9 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 | Plugin | What it is | Source |
 |--------|------------|--------|
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`product-dev/plugin`](https://github.com/clownware/product-dev/tree/main/plugin) |
-| `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. | [`plugins/code-tools`](plugins/code-tools) |
-| `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. | [`plugins/astro-tools`](plugins/astro-tools) |
+| `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. Ships a git guard hook (blocks `--no-verify`, secret-scans commits). | [`plugins/code-tools`](plugins/code-tools) |
+| `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. Ships a Biome format-on-edit hook. | [`plugins/astro-tools`](plugins/astro-tools) |
+| `clownware-go-tools` | Go + templ + sqlc stack skills following go-performance-starter conventions. Ships a goimports/templ format-on-edit hook. | [`plugins/go-tools`](plugins/go-tools) |
 | `pezza-design-system` | The Pezza brand design system as a skill: guidelines, HSL-channel tokens, animatable brand SVGs, prose layer, motion system, React primitives, two UI kits. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
 
 ## Skills at a glance
@@ -34,6 +35,10 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/root-cause-debug` | Pair-debugging pipeline: root causes, never band-aids |
 | `/test-scaffold` | Test stubs for JS/TS (vitest/jest), matching the project's conventions |
 
+Hook: a `PreToolUse` git guard on every Bash call — denies `git commit`/`git push
+--no-verify` (the repo's hooks are the quality gate), and secret-scans staged changes
+before any commit (gitleaks when installed, high-confidence token patterns otherwise).
+
 **clownware-astro-tools**
 
 | Skill | What it does |
@@ -41,6 +46,23 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/component-scaffold` | Astro/Preact components following project patterns (atomic layout aware) |
 | `/pr-description` | PR descriptions for astro-performance-starter template repos |
 | `/perf-budget-check` | Runs the starter's own budget gates (sizes, overrides, images) and interprets the verdicts |
+
+Hook: a `PostToolUse` formatter — after Claude edits or writes a file, runs Biome on
+just that file (gated on a `biome.json` at or above it), so diffs never fail the
+project's format gate.
+
+**clownware-go-tools**
+
+| Skill | What it does |
+|-------|--------------|
+| `/templ-component-scaffold` | templ pages/partials/components with typed props (ADR-017) |
+| `/test-scaffold` | Table-driven `_test.go` stubs, stdlib-first (ADR-023) |
+| `/sqlc-query-scaffold` | sqlc query + repository seam, never raw SQL (ADR-003) |
+| `/perf-budget-check` | Runs the starter's `task test:performance` gates and interprets the verdicts |
+| `/pr-description` | PR descriptions aware of the `task ci` quality gate and the ADR constitution |
+
+Hook: a `PostToolUse` formatter — after Claude edits or writes a `.go` or `.templ`
+file, runs goimports/gofmt or `templ fmt` on just that file.
 
 **pezza-design-system**
 

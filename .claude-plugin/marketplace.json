@@ -16,17 +16,17 @@
     {
       "name": "clownware-code-tools",
       "source": "./plugins/code-tools",
-      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), accessibility auditing (/a11y-audit), dependency auditing (/deps-audit), performance auditing (/perf-audit), audit-fix application (/audit-fix), plugin releasing (/plugin-release), skill validation (/skill-validate), ADR authoring, PR descriptions, root-cause debugging, and test scaffolding \u2014 that probe the repo they run in and degrade gracefully."
+      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), accessibility auditing (/a11y-audit), dependency auditing (/deps-audit), performance auditing (/perf-audit), audit-fix application (/audit-fix), plugin releasing (/plugin-release), skill validation (/skill-validate), ADR authoring, PR descriptions, root-cause debugging, and test scaffolding \u2014 that probe the repo they run in and degrade gracefully. Plus a git guard hook: blocks --no-verify and secret-scans staged changes before every commit."
     },
     {
       "name": "clownware-astro-tools",
       "source": "./plugins/astro-tools",
-      "description": "Astro + Preact stack skills \u2014 component scaffolding, template-aware PR descriptions, and performance-budget gate checks (/perf-budget-check) \u2014 following astro-performance-starter conventions with fallbacks for other Astro projects."
+      "description": "Astro + Preact stack skills \u2014 component scaffolding, template-aware PR descriptions, and performance-budget gate checks (/perf-budget-check) \u2014 following astro-performance-starter conventions with fallbacks for other Astro projects. Plus a format-on-edit hook that runs Biome on every file Claude edits in Biome-configured projects."
     },
     {
       "name": "clownware-go-tools",
       "source": "./plugins/go-tools",
-      "description": "Go + templ + sqlc stack skills \u2014 templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions \u2014 following go-performance-starter conventions with fallbacks for other Go projects."
+      "description": "Go + templ + sqlc stack skills \u2014 templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions \u2014 following go-performance-starter conventions with fallbacks for other Go projects. Plus a format-on-edit hook that runs goimports/gofmt and templ fmt on files Claude edits."
     },
     {
       "name": "pezza-design-system",

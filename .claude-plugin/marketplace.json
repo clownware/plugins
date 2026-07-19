@@ -11,7 +11,7 @@
         "url": "https://github.com/clownware/product-dev",
         "path": "plugin"
       },
-      "description": "AI-assisted product development framework \u2014 vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning, plus a reverse pass (/optimize) that audits existing products: extracts problem/personas/journeys/value-props from the repo, validates with the owner, runs an optional live-site browser audit, and produces a prioritized optimization spec. Ships 6 commands (/idea, /problem, /spec, /compile, /summary, /optimize), 5 skills, and 2 subagents (tech-spec-writer, ux-extractor)."
+      "description": "AI-assisted product development framework \u2014 vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning, plus a reverse pass (/optimize) that audits existing products: extracts problem/personas/journeys/value-props from the repo, validates with the owner, verifies with optional live-site browser and build-and-run runtime audits, and produces a prioritized optimization spec. Ships 6 commands (/idea, /problem, /spec, /compile, /summary, /optimize), 5 skills, and 2 subagents (tech-spec-writer, ux-extractor)."
     },
     {
       "name": "clownware-code-tools",

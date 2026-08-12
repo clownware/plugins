@@ -17,7 +17,7 @@ Write a pull request description for the current branch.
 !`BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); out=$(git diff "$BASE"...HEAD --stat 2>/dev/null); echo "${out:-(no diff found)}"`
 
 **Full diff:**
-!`BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); d=$(git diff "$BASE"...HEAD 2>/dev/null); if [ -z "$d" ]; then echo "(no diff found)"; else printf %s "$d" | head -c 20000; if [ ${#d} -gt 20000 ]; then printf "\n[diff truncated at 20k chars - run git diff \"$BASE\"...HEAD for the rest]\n"; fi; fi`
+!`BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); d=$(git diff "$BASE"...HEAD 2>/dev/null); if [ -z "$d" ]; then echo "(no diff found)"; elif [ ${#d} -gt 20000 ]; then printf '%.20000s' "$d"; printf '\n[diff truncated at 20k chars - run git diff "%s"...HEAD for the rest]\n' "$BASE"; else printf '%s\n' "$d"; fi`
 
 ## Steps
 

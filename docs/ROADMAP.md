@@ -35,6 +35,15 @@ regardless of what it does.
   test-scaffold, gate-check). All 8 pre-fetch probes and the hook verified in
   bash+zsh across tunes_protocol/gittunes/unrelated contexts, including
   workspace-edition detection; hook script shellcheck-clean under the new CI job.
+- **`go-tools` blind validation (#11)** — v0.3.1: all five skills validated blind
+  per house standard 5, 10/10 runs (hit context go-performance-starter@50a8fee +
+  non-starter miss context each). All pinned criteria met: scaffolds compiled and
+  passed `task ci`, gates reported verbatim matching an independently pinned run,
+  miss contexts stopped on the pre-fetch fallbacks with zero invented tooling.
+  The pr-description hit run's ADR step caught a real ADR-027 contradiction the
+  probe branch accidentally seeded — an unplanned true positive. Three doc gaps
+  found and fixed (stale `IsHTMXRequest` reference, sibling-test-coverage check,
+  hardcoded `git diff main` on a master-based starter).
 
 ## Later — worth doing, not yet urgent
 
@@ -47,13 +56,13 @@ Deferred and found work now lives in the issue tracker: decisions
 ([#4](https://github.com/clownware/plugins/issues/4) Bash-grant experiment),
 test debt ([#5](https://github.com/clownware/plugins/issues/5) fixture
 persistence/realism, [#6](https://github.com/clownware/plugins/issues/6)
-unvalidated coverage paths), pezza follow-ups
+unvalidated coverage paths), and pezza follow-ups
 ([#7](https://github.com/clownware/plugins/issues/7) generated-file fixes,
-[#8](https://github.com/clownware/plugins/issues/8) brand fonts), and
-validation follow-through ([#11](https://github.com/clownware/plugins/issues/11)
-go-tools blind validation). Resolved 2026-08-12: #2 (renamed the stack variants
+[#8](https://github.com/clownware/plugins/issues/8) brand fonts).
+Resolved 2026-08-12: #2 (renamed the stack variants
 to `astro-pr-description`/`go-pr-description`), #3 (dropped the `license`
-frontmatter; repo LICENSE governs), #9 (added the `ink-350` ramp step).
+frontmatter; repo LICENSE governs), #9 (added the `ink-350` ramp step),
+#11 (go-tools blind validation — see Graduated).
 Summaries below for the decisions; the issues are canonical.
 
 - **`Bash` in `allowed-tools` for pre-fetch-only skills** — possibly removable where

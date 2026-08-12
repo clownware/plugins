@@ -40,11 +40,11 @@ Run `task test:performance` (binary size + gzipped asset budgets + the `internal
 
 ### 3. Attribute any overage
 
-For a binary overage, the usual movers are a heavy new dependency or dropped `-ldflags="-s -w"` — check `go build` flags and recent `go.mod` additions (`git diff main -- go.mod`). For an asset overage, identify the largest gzipped contributor under the built CSS/JS output. State the basis in every number: binary is raw stripped bytes; JS/CSS budgets are **gzipped** — never mix the two.
+For a binary overage, the usual movers are a heavy new dependency or dropped `-ldflags="-s -w"` — check `go build` flags and recent `go.mod` additions (`git diff <base> -- go.mod`, base = main or master, whichever the repo uses). For an asset overage, identify the largest gzipped contributor under the built CSS/JS output. State the basis in every number: binary is raw stripped bytes; JS/CSS budgets are **gzipped** — never mix the two.
 
 ### 4. Report
 
-Compact and decision-shaped: **verdict line** (all gates green / N failing) → per-gate table (gate, verdict, actual vs limit, headroom) → what on this branch moved the numbers (`git diff main --stat` when main is local) → next actions, separating "shrink the artifact" from "raise the budget". A budget raise is an ADR-000 change and a halt-worthy decision under this repo's constitution — present it as a decision needing a written why, not a quick edit.
+Compact and decision-shaped: **verdict line** (all gates green / N failing) → per-gate table (gate, verdict, actual vs limit, headroom) → what on this branch moved the numbers (`git diff <base> --stat` when the base branch — main or master — is local) → next actions, separating "shrink the artifact" from "raise the budget". A budget raise is an ADR-000 change and a halt-worthy decision under this repo's constitution — present it as a decision needing a written why, not a quick edit.
 
 ## Rules
 

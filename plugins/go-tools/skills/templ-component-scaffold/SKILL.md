@@ -18,7 +18,7 @@ Scaffold a new templ view for this project: $ARGUMENTS
 ## Before scaffolding
 
 1. Read one existing example of the kind you are creating (from the pre-fetched list) to match style.
-2. Read `internal/view/props.go` (`BaseProps`, `NewBaseProps`) and `internal/view/render.go` (`Render`, `IsHTMXRequest`).
+2. Read `internal/view/props.go` (`BaseProps`, `NewBaseProps`) and `internal/view/render.go` for the helpers this repo actually ships (`Render` at minimum; an HTMX-request helper may or may not exist — never reference one that isn't there).
 
 ## Decide the kind
 
@@ -42,5 +42,5 @@ If the pre-fetched layout differs from this table, follow the existing layout in
 
 1. Add the props struct to `internal/view/props.go` (or alongside the component) with concrete fields.
 2. Run the templ generate step from the pre-fetched context to produce the `*_templ.go`. Never hand-edit generated files.
-3. If it's a page, wire the handler to call `view.Render(w, r, status, pages.Foo(props))`, branching on `view.IsHTMXRequest(r)` when a partial variant exists.
+3. If it's a page, wire the handler to call `view.Render(w, r, status, pages.Foo(props))`, branching on the repo's HTMX-request helper (only if `render.go` ships one) when a partial variant exists.
 4. Run `task ci` before claiming done (falls back to `go build ./... && go test ./...` if there is no Taskfile).

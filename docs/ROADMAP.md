@@ -44,22 +44,18 @@ shipped; propose the next round when real pain motivates it)*
 ## Open decisions (tracked as GitHub issues)
 
 Deferred and found work now lives in the issue tracker: decisions
-([#2](https://github.com/clownware/plugins/issues/2) pr-description rename,
-[#3](https://github.com/clownware/plugins/issues/3) license policy,
-[#4](https://github.com/clownware/plugins/issues/4) Bash-grant experiment),
+([#4](https://github.com/clownware/plugins/issues/4) Bash-grant experiment),
 test debt ([#5](https://github.com/clownware/plugins/issues/5) fixture
 persistence/realism, [#6](https://github.com/clownware/plugins/issues/6)
-unvalidated coverage paths), and pezza follow-ups
+unvalidated coverage paths), pezza follow-ups
 ([#7](https://github.com/clownware/plugins/issues/7) generated-file fixes,
-[#8](https://github.com/clownware/plugins/issues/8) brand fonts,
-[#9](https://github.com/clownware/plugins/issues/9) faint-on-raised contrast).
+[#8](https://github.com/clownware/plugins/issues/8) brand fonts), and
+validation follow-through ([#11](https://github.com/clownware/plugins/issues/11)
+go-tools blind validation). Resolved 2026-08-12: #2 (renamed the stack variants
+to `astro-pr-description`/`go-pr-description`), #3 (dropped the `license`
+frontmatter; repo LICENSE governs), #9 (added the `ink-350` ramp step).
 Summaries below for the decisions; the issues are canonical.
 
-- **`pr-description` name collision** — both plugins ship a skill with this name;
-  descriptions now differentiate them, but a rename (`astro-pr-description`) remains
-  the cleaner fix at the cost of breaking `/pr-description` muscle memory.
-- **`license` frontmatter policy** — astro-tools skills carry `license: MIT`,
-  code-tools skills carry none; pick one convention and apply it in a single pass.
 - **`Bash` in `allowed-tools` for pre-fetch-only skills** — possibly removable where
   the body never shells out, but pre-fetch execution may depend on the grant. The
   controlled experiment is prepared and blocked only on a logged-in CLI: two probe

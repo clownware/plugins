@@ -46,7 +46,7 @@ before any commit (gitleaks when installed, high-confidence token patterns other
 | Skill | What it does |
 |-------|--------------|
 | `/component-scaffold` | Astro/Preact components following project patterns (atomic layout aware) |
-| `/pr-description` | PR descriptions for astro-performance-starter template repos |
+| `/astro-pr-description` | PR descriptions for astro-performance-starter template repos |
 | `/perf-budget-check` | Runs the starter's own budget gates (sizes, overrides, images) and interprets the verdicts |
 
 Hook: a `PostToolUse` formatter — after Claude edits or writes a file, runs Biome on
@@ -61,7 +61,7 @@ project's format gate.
 | `/test-scaffold` | Table-driven `_test.go` stubs, stdlib-first (ADR-023) |
 | `/sqlc-query-scaffold` | sqlc query + repository seam, never raw SQL (ADR-003) |
 | `/perf-budget-check` | Runs the starter's `task test:performance` gates and interprets the verdicts |
-| `/pr-description` | PR descriptions aware of the `task ci` quality gate and the ADR constitution |
+| `/go-pr-description` | PR descriptions aware of the `task ci` quality gate and the ADR constitution |
 
 Hook: a `PostToolUse` formatter — after Claude edits or writes a `.go` or `.templ`
 file, runs goimports/gofmt or `templ fmt` on just that file.

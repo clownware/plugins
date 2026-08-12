@@ -2,7 +2,6 @@
 name: templ-component-scaffold
 description: "Scaffolds a new templ page, partial, or component in internal/view/ following the typed-props conventions from go-performance-starter (ADR-017). Use in Go projects with templ when asked to create a templ page/partial/component, add a view, build a UI element, or scaffold a screen."
 allowed-tools: Bash, Read, Write, Glob, Grep
-license: MIT
 ---
 
 Scaffold a new templ view for this project: $ARGUMENTS

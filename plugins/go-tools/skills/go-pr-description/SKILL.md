@@ -1,8 +1,7 @@
 ---
-name: pr-description
+name: go-pr-description
 description: "Writes pull request descriptions for Go projects built on the go-performance-starter, aware of the task ci quality gate and the docs/adr constitution. Use when creating a PR, writing a PR, drafting a PR description, or summarizing changes for a pull request in a Go project."
 allowed-tools: Bash, Read, Grep, Glob
-license: MIT
 ---
 
 Write a pull request description for the current branch.

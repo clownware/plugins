@@ -1,8 +1,7 @@
 ---
-name: pr-description
+name: astro-pr-description
 description: "Writes pull request descriptions following the project's PR template, for Astro projects built on the astro-performance-starter template. Use when creating a PR, writing a PR, or summarizing changes for a pull request in an Astro project."
 allowed-tools: Bash, Read, Grep, Glob
-license: MIT
 ---
 
 Write a pull request description for the current branch.

@@ -2,7 +2,6 @@
 name: component-scaffold
 description: "Scaffolds new Astro or Preact components following project patterns. Use in Astro projects when asked to create a component, scaffold a component, or add a new component."
 allowed-tools: Bash, Read, Write, Glob
-license: MIT
 ---
 
 Scaffold a new component for this project: $ARGUMENTS

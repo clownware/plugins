@@ -18,6 +18,7 @@
   --ink-600:  240 5.5% 21.6%; /* @kind color */
   --ink-500:  240 4.4% 35.3%; /* @kind color */ /* muted text on light, borders on dark */
   --ink-400:  240 3.6% 50.4%; /* @kind color */
+  --ink-350:  240 4.1% 54%; /* @kind color */ /* dark-faint step: 4.84:1 on ink-800 raised (ink-400 was 4.28:1) */
   --ink-300:  240 4.7% 66.7%; /* @kind color */
   --ink-200:  240 5.5% 82.2%; /* @kind color */
   --ink-150:  240 7.4% 89.4%; /* @kind color */
@@ -83,7 +84,7 @@
   --text-strong:   var(--ink-0); /* @kind color */
   --text-body:     var(--ink-150); /* @kind color */
   --text-muted:    var(--ink-300); /* @kind color */
-  --text-faint:    var(--ink-400); /* @kind color */ /* 4.8:1 on ink-1000; borderline 4.3:1 on ink-800 raised surfaces */
+  --text-faint:    var(--ink-350); /* @kind color */ /* AA on every dark surface: 5.42:1 on ink-1000, 5.16:1 on ink-900, 4.84:1 on ink-800 raised */
   --text-onAccent: var(--accent-ink); /* @kind color */ /* theme-invariant: sits on accent */
   --text-inverse:  var(--ink-1000); /* @kind color */
 

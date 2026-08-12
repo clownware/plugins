@@ -31,7 +31,7 @@ Read ONE existing `_test.go` from the pre-fetched list (prefer one in or near th
 
 ### 3. Determine the test file location
 
-Go requires the test beside the source: `path/to/foo.go` → `path/to/foo_test.go`. If it already exists, read it and only add missing cases — never overwrite.
+Go requires the test beside the source: `path/to/foo.go` → `path/to/foo_test.go`. If it already exists, read it and only add missing cases — never overwrite. Also grep the package's *other* `_test.go` files for existing `Test<Func>` coverage of the target's functions — sibling test files sometimes already cover them; report that instead of stubbing duplicates.
 
 ### 4. Generate the table-driven test
 

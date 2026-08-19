@@ -9,9 +9,16 @@ on:
       - ".github/workflows/validate.yml"
       - "plugins/**"
 
+# Cancel superseded runs on the same PR; never cancel default-branch pushes.
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   validate:
     runs-on: ubuntu-latest
+    # Without a cap a hung step runs to GitHub's 360-minute default.
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
 
@@ -84,6 +91,7 @@ jobs:
 
   validate-plugins:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v7
 

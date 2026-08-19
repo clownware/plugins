@@ -2,6 +2,7 @@
   "name": "clownware-go-tools",
   "description": "Go + templ + sqlc stack skills: templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding, performance-budget gate checks, and task-ci-aware PR descriptions, following go-performance-starter conventions with fallbacks for other Go projects. Also ships a format-on-edit hook that runs goimports/gofmt and templ fmt on files Claude edits.",
   "version": "0.3.2",
+  "license": "Apache-2.0",
   "author": {
     "name": "clownware"
   }

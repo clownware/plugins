@@ -2,6 +2,7 @@
   "name": "clownware-astro-tools",
   "description": "Astro + Preact stack skills: component scaffolding, template-aware PR descriptions, and performance-budget gate checks, following astro-performance-starter conventions with fallbacks for other Astro projects. Also ships a format-on-edit hook that runs Biome on every file Claude edits in Biome-configured projects.",
   "version": "0.5.1",
+  "license": "Apache-2.0",
   "author": {
     "name": "clownware"
   }

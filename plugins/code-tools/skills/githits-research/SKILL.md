@@ -1,6 +1,6 @@
 ---
 name: githits-research
-description: House conventions for evidence-grade OSS research with GitHits MCP. Use whenever a claim about external open-source code needs to be true — harness/library architecture surveys, "how does upstream X actually work", pattern-borrowing research, dependency upgrade or vulnerability evidence, or validating secondhand claims (blog posts, another AI's analysis) against real source. Complements the vendor githits-mcp skill (tool mechanics) with citation, provenance, and multi-repo fan-out rules.
+description: House conventions for evidence-grade OSS research with GitHits MCP. Use whenever a claim about external open-source code needs to be true — harness/library architecture surveys, "how does upstream X actually work", pattern-borrowing research, dependency upgrade or vulnerability evidence, or validating secondhand claims (blog posts, another AI's analysis) against real source. Also use DURING implementation when correctness depends on external code you cannot see: writing against a dependency API you are not certain of (or a version newer than training data), debugging an error that traces into a dependency, vetting a new dependency before adding it, or changing anything against a pinned upstream fork or submodule. Complements the vendor githits-mcp skill (tool mechanics) with citation, provenance, and multi-repo fan-out rules.
 ---
 
 # GitHits research conventions
@@ -23,6 +23,27 @@ absent, `npx githits` is the CLI fallback.
   `/deps-audit`): `pkg_changelog`, `pkg_vulns`, `pkg_upgrade_review`.
 - Never for local workspaces, private repos, or uncommitted changes - it
   indexes public OSS only.
+
+## During implementation
+
+Routine scaffolding follows the repo's own conventions and project skills;
+do not consult the index per component. Consult it mid-implementation when
+correctness depends on external code you cannot see:
+
+- **Uncertain or version-sensitive APIs.** Before writing against a
+  dependency method, option, or config shape you are not sure exists - or
+  when the pinned version postdates training data - verify with `docs_*`
+  or `code_read` at the pinned version instead of inventing a signature.
+- **Errors that trace into a dependency.** A stack frame inside a package
+  or an unfamiliar error string: `code_grep` the dependency source for the
+  message, `get_example` for rare cross-project occurrences (pairs with
+  `/root-cause-debug`).
+- **Adding a dependency.** `pkg_info` for maintenance and adoption
+  evidence before recommending it - last publish date, deprecations,
+  advisories - not memory.
+- **Pinned upstream forks and submodules.** Before patching, rebasing, or
+  upgrading a pinned upstream, read the actual pinned-ref source, not the
+  current HEAD and not recollection of the project.
 
 ## Citation and provenance rules
 

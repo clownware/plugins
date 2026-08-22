@@ -1,6 +1,6 @@
 ---
 name: githits-research
-description: House conventions for evidence-grade OSS research with GitHits MCP. Use whenever a claim about external open-source code needs to be true — harness/library architecture surveys, "how does upstream X actually work", pattern-borrowing research, dependency upgrade or vulnerability evidence, or validating secondhand claims (blog posts, another AI's analysis) against real source. Also use DURING implementation when correctness depends on external code you cannot see: writing against a dependency API you are not certain of (or a version newer than training data), debugging an error that traces into a dependency, vetting a new dependency before adding it, or changing anything against a pinned upstream fork or submodule. Complements the vendor githits-mcp skill (tool mechanics) with citation, provenance, and multi-repo fan-out rules.
+description: House conventions for evidence-grade OSS research with GitHits MCP. Use whenever a claim about external open-source code needs to be true — harness/library architecture surveys, "how does upstream X actually work", pattern-borrowing research, dependency upgrade or vulnerability evidence, or validating secondhand claims (blog posts, another AI's analysis) against real source. Also use DURING implementation when correctness depends on external code you cannot see: writing against a dependency API you are not certain of (or a version newer than training data), debugging an error that traces into a dependency, vetting a new dependency before adding it, or changing anything against a pinned upstream fork or submodule. Also use when ESTABLISHING conventions rather than following them: authoring a starter, template, design system, CI/quality-gate setup, or greenfield architecture, where "how do the best real-world projects do this" is the actual question. Complements the vendor githits-mcp skill (tool mechanics) with citation, provenance, and multi-repo fan-out rules.
 ---
 
 # GitHits research conventions
@@ -24,11 +24,22 @@ absent, `npx githits` is the CLI fallback.
 - Never for local workspaces, private repos, or uncommitted changes - it
   indexes public OSS only.
 
+## Following conventions vs establishing them
+
+The dividing line for implementation-time use is not "coding vs research"
+but whether the conventions already exist. Following them (a component in
+a repo with a starter, a query in an established data layer): the repo is
+the authority; do not consult the index per file. Establishing them
+(authoring a starter, template, design system, CI gate set, or greenfield
+architecture): every structural choice is a "how do the best real-world
+projects do this" question - `get_example` for cross-project evidence,
+`docs_*`/`code_read` at the pinned framework version, because model-memory
+"best practice" can be a major version stale for fast-moving frameworks.
+
 ## During implementation
 
-Routine scaffolding follows the repo's own conventions and project skills;
-do not consult the index per component. Consult it mid-implementation when
-correctness depends on external code you cannot see:
+Consult the index mid-implementation when correctness depends on external
+code you cannot see:
 
 - **Uncertain or version-sensitive APIs.** Before writing against a
   dependency method, option, or config shape you are not sure exists - or

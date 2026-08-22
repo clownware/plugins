@@ -36,6 +36,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/pr-description` | PR descriptions from the branch diff, template-aware |
 | `/root-cause-debug` | Pair-debugging pipeline: root causes, never band-aids |
 | `/test-scaffold` | Test stubs for JS/TS (vitest/jest), matching the project's conventions |
+| `githits-research` | House conventions for evidence-grade OSS research with GitHits: pinned-ref citations, verified-vs-claimed discipline, multi-repo fan-out recipe |
 
 Hook: a `PreToolUse` git guard on every Bash call — denies `git commit`/`git push
 --no-verify` (the repo's hooks are the quality gate), and secret-scans staged changes

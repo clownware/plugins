@@ -1,0 +1,27 @@
+import { describe, expect, it } from 'vitest';
+import { parseCount } from './parse';
+
+describe('parseCount', () => {
+  it.each([
+    ['0', 0],
+    ['42', 42],
+    ['00042', 42],
+    ['9007199254740991', Number.MAX_SAFE_INTEGER],
+  ])('parses valid input %s', (input, expected) => {
+    expect(parseCount(input)).toBe(expected);
+  });
+
+  it.each(['', '-1', '+1', '1.5', ' 1', '1 ', '1\n', '1e3', 'abc', '１２']) (
+    'rejects invalid input %j',
+    (input) => {
+      expect(() => parseCount(input)).toThrow('invalid count');
+    },
+  );
+
+  it.each(['9007199254740992', '9007199254740993', '9'.repeat(400)])(
+    'rejects unsafe integer input %s',
+    (input) => {
+      expect(() => parseCount(input)).toThrow('unsafe count');
+    },
+  );
+});

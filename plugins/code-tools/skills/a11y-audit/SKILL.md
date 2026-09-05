@@ -8,9 +8,9 @@ Audit this repository's functional accessibility. Focus, if given: $ARGUMENTS
 
 ## Surface inventory (pre-fetched)
 
-**Markup/component files:** !`out=$(find . \( -name "*.html" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.vue" -o -name "*.svelte" \) -not -path "*/node_modules/*" -not -path "*/.git/*" 2>/dev/null | wc -l | tr -d ' '); echo "$out files (0 means no markup surface — say so and stop)"`
+**Markup/component files:** !`out=$(find . \( -name "*.html" -o -name "*.jsx" -o -name "*.tsx" -o -name "*.vue" -o -name "*.svelte" -o -name "*.astro" -o -name "*.templ" \) -not -path "*/node_modules/*" -not -path "*/.git/*" 2>/dev/null | wc -l | tr -d ' '); echo "$out files (0 means no recognized markup — inspect the target layout before deciding there is no surface)"`
 **Framework hints:** !`out=$(grep -lE '"react"|"preact"|"vue"|"svelte"' package.json 2>/dev/null; find . -maxdepth 2 -name "*.jsx" -o -maxdepth 2 -name "*.vue" 2>/dev/null | head -1); echo "${out:-plain HTML or undetected — sweep both attribute spellings}"`
-**Interactive-handler density:** !`out=$(grep -rlE 'onClick|onclick=|@click|on:click' --include='*.html' --include='*.jsx' --include='*.tsx' --include='*.vue' --include='*.svelte' . 2>/dev/null | grep -v node_modules | head -8); echo "${out:-none found}"`
+**Interactive-handler density:** !`out=$(grep -rlE 'onClick|onclick=|@click|on:click' --include='*.html' --include='*.jsx' --include='*.tsx' --include='*.vue' --include='*.svelte' --include='*.astro' --include='*.templ' . 2>/dev/null | grep -v node_modules | head -8); echo "${out:-none found}"`
 
 ## Scope
 

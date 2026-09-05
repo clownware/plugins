@@ -1,10 +1,13 @@
 ---
 name: test-scaffold
-description: "Generates test file stubs for JavaScript/TypeScript source files (vitest or jest). Use when asked to write tests for, scaffold tests, generate test file, or add test coverage for a file or function in a JS/TS project."
+description: "Generates JavaScript/TypeScript (Vitest or Jest) test stubs when explicitly asked to scaffold tests, create a test skeleton, or list placeholder cases. Does not apply to requests for working tests or increased coverage; those need executable assertions."
 allowed-tools: Bash, Read, Write, Glob, Grep
 ---
 
 Generate test stubs for: $ARGUMENTS
+
+If the user requests working tests or coverage, follow that request with executable
+assertions using the project conventions; the stub-only workflow below does not apply.
 
 ## Project test context (pre-fetched)
 

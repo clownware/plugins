@@ -1,6 +1,6 @@
 ---
 name: plugin-release
-description: "Cuts a release of an in-repo Claude Code plugin in a marketplace repository: semver bump in plugin.json, description/skill-table sync across marketplace.json and the README, JSON validation, and a conventional commit summarizing the delta since the last bump. Supports --dry-run (prints the diff, reverts, commits nothing). Use when asked to release a plugin, bump a plugin's version, cut a version, or ship a plugin update."
+description: "Cuts a release of an in-repo Claude Code plugin in a marketplace repository: semver bump in plugin.json, description/skill-table sync across marketplace.json and the README, JSON validation, and a conventional commit summarizing the delta since the last bump. Supports --dry-run (previews changes in a temporary copy without changing the working tree or index). Use when asked to release a plugin, bump a plugin's version, cut a version, or ship a plugin update."
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
@@ -32,8 +32,11 @@ release commit should contain the release and nothing else.
   summary's conventional type — `feat` → minor, `fix`/`docs`/`chore` → patch,
   anything marked breaking → major. If there is no summary and no bump type, derive
   the delta first (step 2) and propose a bump — do not guess silently.
-- **Dry-run**: if $ARGUMENTS contains `--dry-run`, apply everything, show
-  `git diff`, then revert the files — no commit, clean tree afterward.
+- **Dry-run**: if $ARGUMENTS contains `--dry-run`, snapshot the current contents of
+  only the release files into a temporary directory outside the repository. Make
+  a second copy for proposed edits and apply the bump and documentation sync
+  there. Compare the before/after copies to produce the proposed diff. Never
+  edit the working tree or index, including when either already contains changes.
 
 ### 2. Derive the delta since the last bump
 
@@ -77,9 +80,11 @@ pattern (this repo uses `feat(<scope>): <summary>; vX.Y.Z` for feature releases 
 Do not push unless the user's instruction or session pattern says pushes are wanted;
 say which you did.
 
-For `--dry-run`: print the full diff, then `git checkout -- <files>` and confirm the
-tree is clean. The dry-run's value is the diff being exactly what the real run would
-commit.
+For `--dry-run`: print the diff between the temporary before/after copies, with
+repository-relative filenames. Verify the original files and index are unchanged
+from their pre-run state, then remove only the temporary directory created for
+this preview. Never use Git restore/checkout/reset as preview cleanup. A dirty
+working tree must remain dirty with exactly the same user changes.
 
 ## Rules
 

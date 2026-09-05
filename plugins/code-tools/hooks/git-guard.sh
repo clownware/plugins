@@ -3,8 +3,10 @@
 #   1. git commit/push with --no-verify is denied — hooks are the contract.
 #   2. git commit scans staged changes for secrets first (gitleaks when
 #      installed, high-confidence token patterns otherwise) and denies on a hit.
-# Anything that isn't a git command, or any environment where the payload
-# can't be parsed, is a silent allow — the guard must never break Bash.
+# Best-effort convenience guard, not a shell security boundary. Recognizes
+# direct git paths and simple env/command wrappers; aliases, substitutions,
+# quoted executable paths and arbitrary shell programs are not interpreted.
+# Keep repository/server gates authoritative. Unparseable payloads allow.
 set -uo pipefail
 
 payload=$(cat)
@@ -34,7 +36,7 @@ print(json.dumps({"hookSpecificOutput":{"hookEventName":"PreToolUse","permission
 }
 
 is_git=false
-printf '%s' "$cmd" | grep -qE '(^|[;&|(]|&&|\|\|)[[:space:]]*git[[:space:]]' && is_git=true
+printf '%s' "$cmd" | grep -qE '(^|[;&|(]|&&|\|\|)[[:space:]]*((env[[:space:]]+(-i[[:space:]]+)?([A-Za-z_][A-Za-z0-9_]*=[^[:space:];&|]+[[:space:]]+)*)|(command[[:space:]]+))?([[:alnum:]_./-]+/)?git[[:space:]]' && is_git=true
 [ "$is_git" = true ] || exit 0
 
 # Policy 1: never bypass the repo's own hooks. Catches --no-verify on

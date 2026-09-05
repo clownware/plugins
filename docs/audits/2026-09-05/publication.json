@@ -1,0 +1,12 @@
+{
+  "status": "accepted",
+  "published_at": 1788617732,
+  "endpoint": "https://ops.chris-d8c.workers.dev/ingest",
+  "report_sha256": "403b7cb1a0ec912222251468c4debf7534bff256e7f877e969ed9ddd65a339bb",
+  "response": {
+    "ok": true,
+    "entities": 39,
+    "signals": 195
+  },
+  "verification": "HTTP 202 and exact entity/signal counts acknowledged; dashboard readback requires authenticated UI."
+}

@@ -109,7 +109,7 @@ absence produced a real, verified bug — none are style preferences.
    miss, and an unrelated directory. Zero blank outputs, zero stderr leaks.
 
 3. **Descriptions carry trigger phrases, not just capability summaries** — skills
-   undertrigger by default. Name the stack when the skill is stack-specific, so it
+   need positive and negative discovery tests on the supported host/model. Name the stack when the skill is stack-specific, so it
    doesn't fire (or collide with a sibling) in the wrong repo.
 
 4. **Audit skills are assessment-only.** They report ranked findings cited `file:line`,

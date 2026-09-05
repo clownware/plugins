@@ -1,0 +1,32 @@
+{
+  "cargo check --offline": {
+    "exit": 0,
+    "stderr": "    Checking skill-audit-fixture v0.1.0 (/private/tmp/skill-audit-20260905/rust)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.34s\n"
+  },
+  "cargo test --offline --no-run": {
+    "exit": 101,
+    "stderr": "   Compiling skill-audit-fixture v0.1.0 (/private/tmp/skill-audit-20260905/rust)\nerror[E0308]: mismatched types\n --> src/lib.rs:2:71\n  |\n2 | #[cfg(test)] mod tests { #[test] #[ignore] fn sample() { let x: u32 = \"wrong\"; } }\n  |                                                                 ---   ^^^^^^^ expected `u32`, found `&str`\n  |                                                                 |\n  |                                                                 expected due to this\n\nFor more information about this error, try `rustc --explain E0308`.\nerror: could not compile `skill-audit-fixture` (lib test) due to 1 previous error\n"
+  },
+  "git commit --no-verify": {
+    "exit": 0,
+    "stdout": "{\"hookSpecificOutput\":{\"hookEventName\":\"PreToolUse\",\"permissionDecision\":\"deny\",\"permissionDecisionReason\":\"Blocked: git commit/push with --no-verify. This repo's hooks are the quality gate \u2014 fix what the hook rejects instead of bypassing it.\"}}\n"
+  },
+  "/usr/bin/git commit --no-verify": {
+    "exit": 0,
+    "stdout": ""
+  },
+  "env git commit --no-verify": {
+    "exit": 0,
+    "stdout": ""
+  },
+  "release dry run": {
+    "before": "{\"version\":\"1.0.0\",\"userNote\":\"keep\"}\n",
+    "after": "{\"version\":\"1.0.0\"}\n",
+    "user_edit_preserved": false
+  },
+  "astro surface probe": {
+    "exit": 0,
+    "stdout": "0 files (0 means no markup surface \u2014 say so and stop)\n",
+    "line": 11
+  }
+}

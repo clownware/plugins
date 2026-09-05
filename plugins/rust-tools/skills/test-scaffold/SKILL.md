@@ -1,10 +1,13 @@
 ---
 name: test-scaffold
-description: "Generates table-driven Rust test stubs (#[cfg(test)] modules with case tables) following the tunes_protocol/gittunes workspace conventions. Use in Rust projects when asked to write tests for, scaffold tests, generate a test module, or add test coverage for a Rust source file, function, or crate."
+description: "Generates Rust test stubs when explicitly asked to scaffold tests, create a test skeleton, or list placeholder cases. Does not apply to requests for working tests or increased coverage; those need executable assertions."
 allowed-tools: Bash, Read, Write, Edit, Glob, Grep
 ---
 
 Generate table-driven test stubs for: $ARGUMENTS
+
+If the user requests working tests or coverage, follow that request with executable
+assertions using the project conventions; the stub-only workflow below does not apply.
 
 ## Project test context (pre-fetched)
 
@@ -67,7 +70,10 @@ mod tests {
 
 ### 5. Verify it compiles
 
-`cargo check -p <crate>` (or plain `cargo check`). The scaffold must compile; ignored tests must not fail the suite.
+Run `cargo test -p <crate> --no-run` (or `cargo test --no-run` outside a workspace),
+using the target crate's normal feature and target flags. This compiles test bodies,
+including ignored tests; plain `cargo check` does not. Report missing toolchains or
+dependencies as unvalidated compilation, never a pass.
 
 ## Rules
 

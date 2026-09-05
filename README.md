@@ -30,7 +30,7 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 | `/perf-audit` | Budgets declared vs enforced, sizes vs stated limits, shipped-asset hygiene |
 | `/devops-audit` | CI/CD + deploy configs: action pinning, injection, secret handling, release/migration safety, local-vs-CI gate drift |
 | `/audit-fix` | Applies an audit report: mechanical fixes with exact-match edits, re-verified by the report's own methods; decisions stay decisions |
-| `/plugin-release` | Cuts an in-repo plugin release: semver bump, three-surface description sync, JSON validation, conventional commit; --dry-run prints the diff |
+| `/plugin-release` | Cuts an in-repo plugin release: semver bump, three-surface description sync, JSON validation, conventional commit; --dry-run previews the diff from a temporary copy and leaves the tree untouched |
 | `/skill-validate` | Blind-agent validation harness: pinned ground truth, reproduction/discrimination/fidelity scoring |
 | `/adr` | Architecture Decision Records, numbered and templated from the repo's own conventions |
 | `/pr-description` | PR descriptions from the branch diff, template-aware |

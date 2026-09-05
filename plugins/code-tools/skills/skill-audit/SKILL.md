@@ -21,13 +21,23 @@ Read every SKILL.md in full before reporting anything — findings about collisi
 For each skill check:
 
 - `name` present and matching its directory name
-- `description` present (it is the only thing the triggering mechanism ever sees)
-- `allowed-tools` scoped to what the body actually does: Write/Edit only if the skill writes files, Agent only if it fans out subagents. Over-scoping widens the blast radius of a misfire; under-scoping breaks the skill at runtime.
+- `description` present, concise, and discriminating (discovery metadata varies by host)
+- Parse the frontmatter as YAML before checking fields; a regex match does not
+  prove metadata will load.
+- Interpret tool metadata according to the target host and version. In Claude
+  Code, `allowed-tools` grants approvals; it is not an exclusive tool list.
+  Review unnecessary grants separately from actual restrictions and host
+  permissions. Do not infer missing tools or broken execution solely from an
+  omitted grant; verify the effective tool surface when runtime access is available.
 - consistency across sibling skills (e.g. a `license` field on some but not others)
 
 ### 2. Descriptions and triggering
 
-The description must carry both what the skill does and the concrete phrases that should trigger it — Claude undertriggers skills, so vague descriptions mean the skill never fires. Check each for:
+The description should name the task and its boundaries. Check discovery with
+positive and nearby negative requests on each supported host/model; neither
+undertriggering nor overtriggering is a permanent model-independent default.
+When runtime tests are unavailable, report description quality as a static
+assessment and actual triggering as unvalidated. Check each for:
 
 - trigger phrases a real user would type, not just a capability summary
 - **collisions**: two skills (across plugins too) with the same name or near-identical descriptions give the trigger mechanism no basis to choose. Differentiators must live in the description, not the body — the body is only read after triggering.

@@ -1,0 +1,58 @@
+{
+  "git commit --no-verify": {
+    "exit": 0,
+    "decision": "deny"
+  },
+  "/usr/bin/git commit --no-verify": {
+    "exit": 0,
+    "decision": "deny"
+  },
+  "env git commit --no-verify": {
+    "exit": 0,
+    "decision": "deny"
+  },
+  "env -i git push --no-verify": {
+    "exit": 0,
+    "decision": "deny"
+  },
+  "command git push --no-verify": {
+    "exit": 0,
+    "decision": "deny"
+  },
+  "git -C /tmp commit --no-verify": {
+    "exit": 0,
+    "decision": "deny"
+  },
+  "git push -n": {
+    "exit": 0,
+    "decision": "allow"
+  },
+  "echo git commit --no-verify": {
+    "exit": 0,
+    "decision": "allow"
+  },
+  "astro/templ surface probe (bash)": {
+    "exit": 0,
+    "stdout": "2 files (0 means no recognized markup \u2014 inspect the target layout before deciding there is no surface)",
+    "stderr": "",
+    "line": 11
+  },
+  "astro/templ surface probe (zsh)": {
+    "exit": 0,
+    "stdout": "2 files (0 means no recognized markup \u2014 inspect the target layout before deciding there is no surface)",
+    "stderr": "",
+    "line": 11
+  },
+  "cargo check --offline": {
+    "exit": 0,
+    "stderr": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s\n"
+  },
+  "cargo test --offline --no-run": {
+    "exit": 101,
+    "stderr": "bfc562aff7/scratchpad/rust-fixture)\nerror[E0308]: mismatched types\n --> src/lib.rs:2:71\n  |\n2 | #[cfg(test)] mod tests { #[test] #[ignore] fn sample() { let x: u32 = \"wrong\"; } }\n  |                                                                 ---   ^^^^^^^ expected `u32`, found `&str`\n  |                                                                 |\n  |                                                                 expected due to this\n\nFor more information about this error, try `rustc --explain E0308`.\nerror: could not compile `skill-audit-fixture` (lib test) due to 1 previous error\n"
+  },
+  "release dry run": {
+    "re_executed": false,
+    "note": "Instruction-only fix: the dry-run now works on temporary copies and forbids git restore/checkout/reset as cleanup. Verified by reading plugins/code-tools/skills/plugin-release/SKILL.md; no agent execution in this pass."
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "/Users/chrispezza/Dev/clownware/plugins/plugins/astro-tools",
+    "exit": 0,
+    "output": "Validating plugin manifest: /Users/chrispezza/Dev/clownware/plugins/plugins/astro-tools/.claude-plugin/plugin.json\n\n\u2714 Validation passed\n"
+  },
+  {
+    "path": "/Users/chrispezza/Dev/clownware/plugins/plugins/code-tools",
+    "exit": 0,
+    "output": "Validating plugin manifest: /Users/chrispezza/Dev/clownware/plugins/plugins/code-tools/.claude-plugin/plugin.json\n\n\u2714 Validation passed\n"
+  },
+  {
+    "path": "/Users/chrispezza/Dev/clownware/plugins/plugins/go-tools",
+    "exit": 0,
+    "output": "Validating plugin manifest: /Users/chrispezza/Dev/clownware/plugins/plugins/go-tools/.claude-plugin/plugin.json\n\n\u2714 Validation passed\n"
+  },
+  {
+    "path": "/Users/chrispezza/Dev/clownware/plugins/plugins/pezza-design-system",
+    "exit": 0,
+    "output": "Validating plugin manifest: /Users/chrispezza/Dev/clownware/plugins/plugins/pezza-design-system/.claude-plugin/plugin.json\n\n\u2714 Validation passed\n"
+  },
+  {
+    "path": "/Users/chrispezza/Dev/clownware/plugins/plugins/rust-tools",
+    "exit": 0,
+    "output": "Validating plugin manifest: /Users/chrispezza/Dev/clownware/plugins/plugins/rust-tools/.claude-plugin/plugin.json\n\n\u2714 Validation passed\n"
+  },
+  {
+    "path": "/Users/chrispezza/Dev/clownware/product-dev/plugin",
+    "exit": 0,
+    "output": "Validating plugin manifest: /Users/chrispezza/Dev/clownware/product-dev/plugin/.claude-plugin/plugin.json\n\n\u2714 Validation passed\n"
+  }
+]

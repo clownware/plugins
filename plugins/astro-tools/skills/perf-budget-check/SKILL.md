@@ -26,10 +26,12 @@ repo: stop and point at `/perf-audit`.
 
 ### 1. Ensure the thing being measured exists
 
-Size gates measure `dist/`. If `dist/` is missing or older than the newest source
-change (`git log -1 --format=%ct -- src/` vs the dist mtime), build first —
-`pnpm run build` — and say you did. Never measure a stale build silently; that is
-how a passing report lies.
+Size gates measure `dist/`. Run the repository's build command before the size
+gates and say you did. A build may be reused only if the repository's own cache
+or content fingerprint verifies all current build inputs, including uncommitted
+source, configuration, public assets, and dependencies. Commit timestamps and
+directory mtimes do not establish freshness. If a current build cannot be
+produced or verified, report the size gates as not run rather than passing stale output.
 
 ### 2. Run the gates, capture everything
 

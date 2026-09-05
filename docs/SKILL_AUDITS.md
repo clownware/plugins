@@ -5,6 +5,11 @@ Its JSON record defines the rubric, scope, findings, source hashes, and per-enti
 scores. The Markdown report is the readable companion. Scoring is a reviewed
 judgment, not an automated lint score or a measured model success rate.
 
+The post-fix verification, run against the release commits that closed all eleven
+findings, is [2026-09-05-post-fix](audits/2026-09-05-post-fix/REPORT.md). A
+subsequent complete audit like this one clears resolved findings in ops by sending
+an empty findings summary at severity 0 for every entity it re-reviews.
+
 ## Publish a reviewed audit
 
 Generate and inspect the payload first:

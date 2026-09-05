@@ -1,0 +1,38 @@
+[
+  {
+    "plugin": "clownware-astro-tools",
+    "version": "0.5.2",
+    "skill_count": 3,
+    "errors": []
+  },
+  {
+    "plugin": "clownware-code-tools",
+    "version": "0.15.3",
+    "skill_count": 17,
+    "errors": []
+  },
+  {
+    "plugin": "clownware-go-tools",
+    "version": "0.3.3",
+    "skill_count": 5,
+    "errors": []
+  },
+  {
+    "plugin": "pezza-design-system",
+    "version": "0.5.3",
+    "skill_count": 1,
+    "errors": []
+  },
+  {
+    "plugin": "clownware-rust-tools",
+    "version": "0.1.2",
+    "skill_count": 2,
+    "errors": []
+  },
+  {
+    "plugin": "product-dev",
+    "version": "0.5.0",
+    "skill_count": 5,
+    "errors": []
+  }
+]

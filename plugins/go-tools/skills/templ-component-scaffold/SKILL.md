@@ -36,7 +36,10 @@ If the pre-fetched layout differs from this table, follow the existing layout in
 - Pages call `@layouts.Base(props.BaseProps) { ... }`. Partials and components render standalone so HTMX fragments are correct.
 - Accessibility: semantic HTML, labelled inputs, ARIA only where semantics fall short. Mobile-first responsive Tailwind.
 - Prefer server-rendered HTMX; add Alpine.js only for light client-only interactivity. Pages must work as progressive enhancement.
-- Styling via Tailwind utility classes / existing semantic color tokens — no inline styles, no hardcoded colors.
+- Read the target's stylesheet configuration and a nearby view before styling.
+  Use Tailwind and semantic tokens only where the project already uses them;
+  otherwise follow its existing CSS or styling API. Do not introduce a new styling
+  dependency or starter class names as part of scaffolding.
 
 ## After scaffolding
 

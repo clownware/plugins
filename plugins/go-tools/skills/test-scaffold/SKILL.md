@@ -1,10 +1,13 @@
 ---
 name: test-scaffold
-description: "Generates table-driven Go test stubs (_test.go) following go-performance-starter's testing conventions (ADR-023). Use in Go projects when asked to write tests for, scaffold tests, generate a test file, or add test coverage for a Go source file, function, or package."
+description: "Generates Go test stubs when explicitly asked to scaffold tests, create a test skeleton, or list placeholder cases. Does not apply to requests for working tests or increased coverage; those need executable assertions."
 allowed-tools: Bash, Read, Write, Glob, Grep
 ---
 
 Generate table-driven test stubs for: $ARGUMENTS
+
+If the user requests working tests or coverage, follow that request with executable
+assertions using the project conventions; the stub-only workflow below does not apply.
 
 ## Project test context (pre-fetched)
 

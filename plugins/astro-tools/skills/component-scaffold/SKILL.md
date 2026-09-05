@@ -103,11 +103,18 @@ export default function ComponentName({ ...props }: Props) {
 
 ### 5. Apply project conventions
 
-- **Design tokens:** Use semantic Tailwind classes — `text-foreground-primary`, `bg-background-secondary`, `border-border-primary`. Never hardcode colors.
-- **Dark mode:** Handled automatically by token system. No manual `dark:` variants needed.
+Read the target's styles, configuration, and one nearby component first. Follow
+its existing styling system; do not add Tailwind or starter tokens to a project
+that does not use them.
+
+- **Design tokens:** In starter projects, use their semantic Tailwind classes
+  (`text-foreground-primary`, `bg-background-secondary`, `border-border-primary`).
+  Elsewhere use the project's existing CSS, modules, utilities, or token API.
+- **Dark mode:** Follow the target's theme mechanism; starter tokens handle it
+  automatically, while other projects may need explicit theme selectors.
 - **Accessibility:** Include `role`, `aria-*` attributes, and keyboard event handlers where applicable. Generate unique IDs for `aria-labelledby` relationships.
-- **Motion:** Respect `prefers-reduced-motion` with `motion-reduce:` Tailwind variant.
-- **Responsive:** Mobile-first with Tailwind breakpoints.
+- **Motion:** Respect `prefers-reduced-motion` using the project's CSS or utilities.
+- **Responsive:** Follow the project's breakpoints and layout conventions.
 
 ### 6. Output
 

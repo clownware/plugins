@@ -34,18 +34,26 @@
   "astro/templ surface probe (bash)": {
     "exit": 0,
     "stdout": "2 files (0 means no recognized markup \u2014 inspect the target layout before deciding there is no surface)",
-    "stderr": "",
-    "line": 11
+    "stderr": ""
   },
   "astro/templ surface probe (zsh)": {
     "exit": 0,
     "stdout": "2 files (0 means no recognized markup \u2014 inspect the target layout before deciding there is no surface)",
-    "stderr": "",
-    "line": 11
+    "stderr": ""
+  },
+  "security-audit surface probe with piped stdin (bash)": {
+    "exit": 0,
+    "stdout": "./auth.go",
+    "expected": "./auth.go"
+  },
+  "security-audit surface probe with piped stdin (zsh)": {
+    "exit": 0,
+    "stdout": "./auth.go",
+    "expected": "./auth.go"
   },
   "cargo check --offline": {
     "exit": 0,
-    "stderr": "    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.03s\n"
+    "stderr": "    Checking skill-audit-fixture v0.1.0 (/private/tmp/claude-501/-Users-chrispezza-Dev-clownware-plugins/6f755b2e-c942-4da5-aeab-13bfc562aff7/scratchpad/rust-fixture)\n    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.31s\n"
   },
   "cargo test --offline --no-run": {
     "exit": 101,

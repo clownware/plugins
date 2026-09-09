@@ -2,7 +2,7 @@
 
 Run `owned-skills-2026-09-05-post-fix`, baseline `owned-skills-2026-09-05`. Same rubric (`static-review-v1`), same 39 entities. Every baseline finding was fixed and re-verified; no finding is carried forward. Scores remain static review scores, not behavioral success rates.
 
-Source revisions: clownware/plugins `b189084cb739` (branch `audit/owned-skills-2026-09-05`, unpushed); product-dev `bff7e06933ac` (branch `fix/ideation-first-override`, unpushed).
+Source revisions: clownware/plugins `cb2e6fdd7037` and product-dev `469a06d0b705`, both on `main`. This record supersedes an earlier publish of the same run (report sha256 `62c37a0bbc83…`) whose revisions pointed at branch commits rewritten by the rebase-merges of plugins#17 and product-dev#58; it also covers the code-tools 0.15.4 probe fix from plugins#18.
 
 ## Verification
 
@@ -12,7 +12,7 @@ Source revisions: clownware/plugins `b189084cb739` (branch `audit/owned-skills-2
 | `claude plugin validate` | 6/6 plugins pass (baseline 5/6) |
 | Frontmatter parsed with PyYAML | 33/33 skills |
 | `scripts/validate_plugins.py` + regression tests | OK; 8/8 tests |
-| Reproductions re-executed | guard command forms, astro/templ surface probe, cargo fixture — see `reproductions.json` |
+| Reproductions re-executed | guard command forms, astro/templ surface probe, security-audit probe under piped stdin, cargo fixture — see `reproductions.json` |
 | Blind behavioral sample | not repeated |
 
 bash -c and zsh -f -c in empty, marketplace-repo, and unrelated contexts with stdin=/dev/null. Four backtick prose fragments excluded by inspection (skill-audit:48, rust test-scaffold:32). Exit/noise checks do not establish semantic correctness.
@@ -22,7 +22,7 @@ bash -c and zsh -f -c in empty, marketplace-repo, and unrelated contexts with st
 | Plugin | Version | Score | Baseline | Mean skill score |
 |---|---|---|---|---|
 | clownware-astro-tools | 0.5.2 | 100 | 100 | 100.0 |
-| clownware-code-tools | 0.15.3 | 100 | 70 | 100.0 |
+| clownware-code-tools | 0.15.4 | 100 | 70 | 100.0 |
 | clownware-go-tools | 0.3.3 | 100 | 100 | 100.0 |
 | pezza-design-system | 0.5.3 | 100 | 100 | 100.0 |
 | clownware-rust-tools | 0.1.2 | 100 | 100 | 100.0 |
@@ -70,31 +70,31 @@ Plugin-level `sha256` uses a documented tracked-file digest (see `sha256_method`
 
 ## Finding resolution
 
-| ID | Severity | Title | Fixed in | Verification |
+| ID | Severity | Title | Fixed in (main) | Verification |
 |---|---|---|---|---|
-| F01 | high | GitHits frontmatter fails the authoritative validator | ae314c4 | PyYAML parses the frontmatter; claude plugin validate passes code-tools; validate_plugins.py and CI regression test enforce real YAML parsing. |
-| F02 | high | Release dry-run can discard pre-existing edits | ae314c4 | Instruction rewritten to work on temporary copies and forbid git restore/checkout/reset as cleanup. Not re-executed by an agent in this pass. |
-| F03 | medium | Rust scaffold verification does not compile tests | 606dd98 | Fixture re-run: cargo check exit 0, cargo test --no-run exit 101 on the same type error; the skill now mandates the latter (reproductions.json). |
-| F04 | medium | Accessibility inventory misses Astro and templ | ae314c4 | Fixture with index.astro and view.templ returns "2 files" in bash and zsh; stop instruction replaced (reproductions.json, regression test). |
-| F05 | medium | Git guard does not cover common executable forms | ae314c4 | /usr/bin/git, env, env -i, command, and git -C forms now deny; plain git push -n and echo remain allowed (reproductions.json, regression test). Header narrows the guarantee. |
-| F06 | medium | Test-scaffold discovery promises more than the body permits | ae314c4, 45ff760, 606dd98 | Three descriptions limit discovery to explicit scaffolding; bodies redirect working-test requests to executable assertions. Static review; no discovery test run. |
-| F07 | medium | Generic scaffold fallback still mandates starter styling | 41a0029, 45ff760 | Both scaffolds read the target styling system first and make starter classes conditional. Static review; no generated UI evaluated. |
-| F08 | medium | Build freshness rule omits uncommitted edits | 41a0029 | Freshness rule requires a rebuild or repository fingerprint; timestamps excluded; unverifiable builds report as not run. Static review. |
-| F09 | medium | Skill audit treats allowed-tools as a restrictive boundary | ae314c4, 2c08f05 | skill-audit and MAINTAINING.md treat allowed-tools as an approval grant and require per-host discovery tests. Static review. |
-| F10 | low | Pezza mark instructions have an unresolved exception | b189084 | Rule 3 distinguishes altering the stroke master from placing official filled artwork. Static review. |
-| F11 | low | Ideation requires a second user override | product-dev bff7e06 | Escape hatch respects the first explicit override and records open assumptions. Static review; committed on branch fix/ideation-first-override. |
+| F01 | high | GitHits frontmatter fails the authoritative validator | b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc | PyYAML parses the frontmatter; claude plugin validate passes code-tools; validate_plugins.py and CI regression test enforce real YAML parsing. |
+| F02 | high | Release dry-run can discard pre-existing edits | b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc | Instruction rewritten to work on temporary copies and forbid git restore/checkout/reset as cleanup. Not re-executed by an agent in this pass. |
+| F03 | medium | Rust scaffold verification does not compile tests | 00ccbbb647feacea22131d5be144a6b0e5d564c6 | Fixture re-run: cargo check exit 0, cargo test --no-run exit 101 on the same type error; the skill now mandates the latter (reproductions.json). |
+| F04 | medium | Accessibility inventory misses Astro and templ | b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc | Fixture with index.astro and view.templ returns "2 files" in bash and zsh; stop instruction replaced (reproductions.json, regression test). |
+| F05 | medium | Git guard does not cover common executable forms | b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc | /usr/bin/git, env, env -i, command, and git -C forms now deny; plain git push -n and echo remain allowed (reproductions.json, regression test). Header narrows the guarantee. |
+| F06 | medium | Test-scaffold discovery promises more than the body permits | b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc, 54d58206a6cb538a7215ab73a121b9dd5c45a24b, 00ccbbb647feacea22131d5be144a6b0e5d564c6 | Three descriptions limit discovery to explicit scaffolding; bodies redirect working-test requests to executable assertions. Static review; no discovery test run. |
+| F07 | medium | Generic scaffold fallback still mandates starter styling | bab727190ea905559993b91357104520a896c5f1, 54d58206a6cb538a7215ab73a121b9dd5c45a24b | Both scaffolds read the target styling system first and make starter classes conditional. Static review; no generated UI evaluated. |
+| F08 | medium | Build freshness rule omits uncommitted edits | bab727190ea905559993b91357104520a896c5f1 | Freshness rule requires a rebuild or repository fingerprint; timestamps excluded; unverifiable builds report as not run. Static review. |
+| F09 | medium | Skill audit treats allowed-tools as a restrictive boundary | b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc, 9742632e789dc332a690a11087ec2d6891e1d396 | skill-audit and MAINTAINING.md treat allowed-tools as an approval grant and require per-host discovery tests. Static review. |
+| F10 | low | Pezza mark instructions have an unresolved exception | d4d31a2ef2c0a4c4bf15ac8e6707e95852ec5729 | Rule 3 distinguishes altering the stroke master from placing official filled artwork. Static review. |
+| F11 | low | Ideation requires a second user override | product-dev 469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2 | Escape hatch respects the first explicit override and records open assumptions. Static review; committed on branch fix/ideation-first-override. |
 
 ## Still unvalidated
 
 - Behavioral outcomes for every skill; the baseline's single Codex sample was not repeated, and the narrowed test-scaffold descriptions (F06) have had no discovery test on any host/model.
 - The plugin-release dry-run rewrite (F02) was verified by reading, not by an agent execution against a dirty scratch repository.
 - Cross-host portability, unchanged from the baseline.
-- Release availability: the release commits exist only on local branches until pushed and merged; installed copies still trail the source (see `installations` in `audit.json`).
+- Installed copies still trail the source (see `installations` in `audit.json`); the releases are on `main` and available on marketplace refresh.
 
-## Observation (unscored)
+## Observation from the first publish, now resolved
 
-The security-audit surface probe runs `rg` without a path argument. When the host runs pre-fetch commands with a non-terminal, readable stdin, ripgrep searches stdin and blocks; with `/dev/null` it searches the working tree as intended. The baseline harness passed the same probe, and the host's stdin handling was not verified in either run, so this is recorded for follow-up rather than scored.
+The security-audit surface probe ran `rg` without a path. Under a non-terminal stdin ripgrep searched stdin: an open pipe blocked, an empty one reported "none matched" against a directory containing a match. Fixed in `04900fca4d4d` (code-tools 0.15.4) by passing `.`; `reproductions.json` shows the probe returning `./auth.go` under a piped stdin in both shells. Unscored in both publishes because the host's stdin handling was never observed directly.
 
 ## Ops ingestion
 
-`audit.json` is the scored record; `ops-payload.json` is generated by `scripts/publish_skill_audit.py`. Per the signal contract, every entity carries an empty findings summary at severity 0, which clears the baseline findings in the `skill_audit` domain. `publication.json` holds the server acknowledgement.
+`audit.json` is the scored record; `ops-payload.json` is generated by `scripts/publish_skill_audit.py`. Per the signal contract, every entity carries an empty findings summary at severity 0, which clears the baseline findings in the `skill_audit` domain. `publication.json` holds the server acknowledgement for this record and references the superseded one.

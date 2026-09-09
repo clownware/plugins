@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "run_id": "owned-skills-2026-09-05-post-fix",
-  "observed_at": 1788624783,
+  "observed_at": 1788928379,
   "rubric_version": "static-review-v1",
-  "reviewer": "Claude Code session (Claude Fable 5.1); post-fix verification of the 2026-09-05 baseline by the same rubric; no new blind sample",
+  "reviewer": "Claude Code session (Claude Fable 5.1); post-fix verification of the 2026-09-05 baseline by the same rubric at merged main revisions; no new blind sample",
   "baseline_run_id": "owned-skills-2026-09-05",
   "rubric": {
     "baseline": 100,
@@ -28,7 +28,7 @@
       ],
       "recommendation": "Use a YAML block scalar and run a real YAML parser and host validator in CI.",
       "status": "resolved",
-      "resolved_in": "ae314c4",
+      "resolved_in": "b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc",
       "verification": "PyYAML parses the frontmatter; claude plugin validate passes code-tools; validate_plugins.py and CI regression test enforce real YAML parsing."
     },
     {
@@ -41,7 +41,7 @@
       ],
       "recommendation": "Generate the proposed diff in a temporary copy, or restore an exact pre-run snapshot without discarding user changes.",
       "status": "resolved",
-      "resolved_in": "ae314c4",
+      "resolved_in": "b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc",
       "verification": "Instruction rewritten to work on temporary copies and forbid git restore/checkout/reset as cleanup. Not re-executed by an agent in this pass."
     },
     {
@@ -54,7 +54,7 @@
       ],
       "recommendation": "Use cargo test --no-run or cargo check --tests with the owning crate and feature configuration.",
       "status": "resolved",
-      "resolved_in": "606dd98",
+      "resolved_in": "00ccbbb647feacea22131d5be144a6b0e5d564c6",
       "verification": "Fixture re-run: cargo check exit 0, cargo test --no-run exit 101 on the same type error; the skill now mandates the latter (reproductions.json)."
     },
     {
@@ -67,7 +67,7 @@
       ],
       "recommendation": "Include supported template extensions and treat zero probe matches as a hypothesis until the target surface is checked.",
       "status": "resolved",
-      "resolved_in": "ae314c4",
+      "resolved_in": "b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc",
       "verification": "Fixture with index.astro and view.templ returns \"2 files\" in bash and zsh; stop instruction replaced (reproductions.json, regression test)."
     },
     {
@@ -80,7 +80,7 @@
       ],
       "recommendation": "Narrow the documented guarantee; normalize supported invocation forms and retain authoritative checks outside the agent hook.",
       "status": "resolved",
-      "resolved_in": "ae314c4",
+      "resolved_in": "b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc",
       "verification": "/usr/bin/git, env, env -i, command, and git -C forms now deny; plain git push -n and echo remain allowed (reproductions.json, regression test). Header narrows the guarantee."
     },
     {
@@ -95,7 +95,7 @@
       ],
       "recommendation": "Limit discovery to explicit scaffolding, or make complete tests the default when requested and stubs an explicit mode.",
       "status": "resolved",
-      "resolved_in": "ae314c4, 45ff760, 606dd98",
+      "resolved_in": "b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc, 54d58206a6cb538a7215ab73a121b9dd5c45a24b, 00ccbbb647feacea22131d5be144a6b0e5d564c6",
       "verification": "Three descriptions limit discovery to explicit scaffolding; bodies redirect working-test requests to executable assertions. Static review; no discovery test run."
     },
     {
@@ -109,7 +109,7 @@
       ],
       "recommendation": "Read the target styling system and make starter classes conditional on the starter being present.",
       "status": "resolved",
-      "resolved_in": "41a0029, 45ff760",
+      "resolved_in": "bab727190ea905559993b91357104520a896c5f1, 54d58206a6cb538a7215ab73a121b9dd5c45a24b",
       "verification": "Both scaffolds read the target styling system first and make starter classes conditional. Static review; no generated UI evaluated."
     },
     {
@@ -122,7 +122,7 @@
       ],
       "recommendation": "Use the repository build/cache fingerprint or rebuild before reporting working-tree budgets.",
       "status": "resolved",
-      "resolved_in": "41a0029",
+      "resolved_in": "bab727190ea905559993b91357104520a896c5f1",
       "verification": "Freshness rule requires a rebuild or repository fingerprint; timestamps excluded; unverifiable builds report as not run. Static review."
     },
     {
@@ -137,7 +137,7 @@
       ],
       "recommendation": "Audit approval grants separately from restrictions and test triggering per host/model rather than using a permanent assumption.",
       "status": "resolved",
-      "resolved_in": "ae314c4, 2c08f05",
+      "resolved_in": "b48ed50d5edd51dc1f1f28da2c0cfaefd389d0dc, 9742632e789dc332a690a11087ec2d6891e1d396",
       "verification": "skill-audit and MAINTAINING.md treat allowed-tools as an approval grant and require per-host discovery tests. Static review."
     },
     {
@@ -151,7 +151,7 @@
       ],
       "recommendation": "State that official filled artwork is permitted and that the no-fill rule concerns modifying the stroke master.",
       "status": "resolved",
-      "resolved_in": "b189084",
+      "resolved_in": "d4d31a2ef2c0a4c4bf15ac8e6707e95852ec5729",
       "verification": "Rule 3 distinguishes altering the stroke master from placing official filled artwork. Static review."
     },
     {
@@ -164,7 +164,7 @@
       ],
       "recommendation": "Respect the first explicit override while recording unresolved assumptions.",
       "status": "resolved",
-      "resolved_in": "product-dev bff7e06",
+      "resolved_in": "product-dev 469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "verification": "Escape hatch respects the first explicit override and records open assumptions. Static review; committed on branch fix/ideation-first-override."
     }
   ],
@@ -175,10 +175,10 @@
       "name": "clownware-astro-tools:astro-pr-description",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "1864d0f37042b612e71a5fb8080d45b65a7edb885802513b048910a7fe518c94",
       "source_path": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -188,10 +188,10 @@
       "name": "clownware-astro-tools:component-scaffold",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "3350f22feab00304d9750ece760d42d6e2af759388925c0d75a4e3dfc4d3bce3",
       "source_path": "plugins/astro-tools/skills/component-scaffold/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -201,10 +201,10 @@
       "name": "clownware-astro-tools:perf-budget-check",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "66021eadc47b33e2f2eacd70e37d7cd27dd2086e09605593f0b5e829b88e363b",
       "source_path": "plugins/astro-tools/skills/perf-budget-check/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -214,10 +214,10 @@
       "name": "clownware-astro-tools",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "c4d40c7fbc7b2ebcdce871e70b9e3011dd43427fc5829d8efc7f8003629b5087",
       "source_path": "plugins/astro-tools",
-      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end as an installed plugin",
       "portability": "Codex import and host hook behavior not evaluated",
       "version": "0.5.2",
@@ -230,10 +230,10 @@
       "name": "clownware-code-tools:a11y-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "47ff3c6e1aeabbc238df6e0e4dd09943d89a4572233d1088c92bac40dc00eeff",
       "source_path": "plugins/code-tools/skills/a11y-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -243,10 +243,10 @@
       "name": "clownware-code-tools:adr",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "3377e6ceb2add1e708b55f78a12cb6729c03ffe35716f8f69365beb752dcda65",
       "source_path": "plugins/code-tools/skills/adr/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -256,10 +256,10 @@
       "name": "clownware-code-tools:arch-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "7fd7ee54c0c055901d52bb86b5caf2b348b77ec8d20703389d52cdce86cfe53e",
       "source_path": "plugins/code-tools/skills/arch-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -269,10 +269,10 @@
       "name": "clownware-code-tools:audit-fix",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "396f9638b2a135990a631815658361edfc2e83431ae7e58be13868f454bb4ccb",
       "source_path": "plugins/code-tools/skills/audit-fix/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -282,10 +282,10 @@
       "name": "clownware-code-tools:deps-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "f13ac10c8eca417bf372d31aa70364e873ccf4e1c52618f5887e728ff74561c6",
       "source_path": "plugins/code-tools/skills/deps-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -295,10 +295,10 @@
       "name": "clownware-code-tools:design-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "4d524a51b9f65ee73c0717083dc490470551b2339b3aeb78f0923f9935df3d7f",
       "source_path": "plugins/code-tools/skills/design-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -308,10 +308,10 @@
       "name": "clownware-code-tools:devops-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "f67762ecea63bdf4aa92fc11d0add1e4480ac5f015479b3526b852c539cd887d",
       "source_path": "plugins/code-tools/skills/devops-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -321,10 +321,10 @@
       "name": "clownware-code-tools:githits-research",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "ab7c07ba060863086c908dfa0dbab435e3aec4bba63a9ae25019bd97daf1b877",
       "source_path": "plugins/code-tools/skills/githits-research/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; mostly shared instructions/assets; host metadata still needs validation"
     },
@@ -334,10 +334,10 @@
       "name": "clownware-code-tools:perf-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "9b5a4b26761da841f09bb0a7c6a21648f2f92c34d8b4d46c1aab793fa4be192d",
       "source_path": "plugins/code-tools/skills/perf-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -347,10 +347,10 @@
       "name": "clownware-code-tools:plugin-release",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "ae3dd3937901c46aa1a40ac4a2ed6bab94470ae3c0f24c80977178086bb99c5b",
       "source_path": "plugins/code-tools/skills/plugin-release/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -360,10 +360,10 @@
       "name": "clownware-code-tools:pr-description",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "24a0209ed92579bc8e0de8a903e7121f2e73563312e2dedfc4c47df2017ada3b",
       "source_path": "plugins/code-tools/skills/pr-description/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -373,10 +373,10 @@
       "name": "clownware-code-tools:root-cause-debug",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "1ca660de4395a3298a5b9fce04ed105b7abcd67e91d36adcb4490918673ead76",
       "source_path": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -386,10 +386,10 @@
       "name": "clownware-code-tools:security-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
-      "sha256": "1444d50627c59f7b575791f2d1858cbcae32abbe2675d51d52d12755e0cecd51",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
+      "sha256": "0f8af0d0ad46715b6d0f349ed153a0d08b7f330115ffecdfac4a49b2c43ff545",
       "source_path": "plugins/code-tools/skills/security-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -399,10 +399,10 @@
       "name": "clownware-code-tools:skill-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "cd790d6c12d3b2b4bb8a127b39140166df29ba7a547f5a9fc7c598804694b506",
       "source_path": "plugins/code-tools/skills/skill-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -412,10 +412,10 @@
       "name": "clownware-code-tools:skill-validate",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "69ed3c6f802f9927742549972d5c232bcf8811fae8258f17bb13cf1a46d0ba45",
       "source_path": "plugins/code-tools/skills/skill-validate/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -425,10 +425,10 @@
       "name": "clownware-code-tools:test-audit",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "43ecb97cffbd0b97498d60d95a22160551ebf090e90c2e35d7d1a26b16ae54b0",
       "source_path": "plugins/code-tools/skills/test-audit/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -438,10 +438,10 @@
       "name": "clownware-code-tools:test-scaffold",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "3a3e69ea252033aa75690439f5bcd740d121838d2615787e09685463add33488",
       "source_path": "plugins/code-tools/skills/test-scaffold/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -451,13 +451,13 @@
       "name": "clownware-code-tools",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
-      "sha256": "e7b157e024ec9e6be8302a3c2b18207d7725322cfd55d739c0be86204c925374",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
+      "sha256": "e1a6b4d8e306249d0dc60cbdf9bb567e878c8b7b3368acd3801b6ed784b05743",
       "source_path": "plugins/code-tools",
-      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end as an installed plugin",
       "portability": "Codex import and host hook behavior not evaluated",
-      "version": "0.15.3",
+      "version": "0.15.4",
       "mean_skill_review_score": 100.0,
       "sha256_method": "sha256 over sorted \"<relpath>\\t<sha256(file)>\\n\" lines for all 20 tracked files under source_path at revision (differs from the baseline plugin hash, whose method was not recorded)"
     },
@@ -467,10 +467,10 @@
       "name": "clownware-go-tools:go-pr-description",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "eb8dd9d874fad5c173c173794385c9fbc6776effcfab0642e511f87f4b35d255",
       "source_path": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -480,10 +480,10 @@
       "name": "clownware-go-tools:perf-budget-check",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "71706ef56c5c19c3f762ac09c2d52750e22ee51f15ae1e9347b18c83ccd55243",
       "source_path": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -493,10 +493,10 @@
       "name": "clownware-go-tools:sqlc-query-scaffold",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "64cd484b136ce45257de0aafedf5ae51583a2ade5d0081c46ae04710b2b2525e",
       "source_path": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -506,10 +506,10 @@
       "name": "clownware-go-tools:templ-component-scaffold",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "1b59a0598977b09822ae0b681adeb5e28e870d6ad7148f05566394e5b544c264",
       "source_path": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -519,10 +519,10 @@
       "name": "clownware-go-tools:test-scaffold",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "c90511a85f3d935b2d65cb437c95fe78fd1cf5f0199ea9fd0529c061d24351c9",
       "source_path": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -532,10 +532,10 @@
       "name": "clownware-go-tools",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "3b490fdff648d7dcbf11ac0b0a2384aa7db275368795aa3c4122102dbb6c48c2",
       "source_path": "plugins/go-tools",
-      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end as an installed plugin",
       "portability": "Codex import and host hook behavior not evaluated",
       "version": "0.3.3",
@@ -548,10 +548,10 @@
       "name": "pezza-design-system:pezza-design",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "2a7001ccc1d2801bf93cd9aa64a16016a51edcb57d362cd32f729ed851b1b0e1",
       "source_path": "plugins/pezza-design-system/skills/pezza-design/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; mostly shared instructions/assets; host metadata still needs validation"
     },
@@ -561,10 +561,10 @@
       "name": "pezza-design-system",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "3a08bca4887f067d64c7ec61b5ed8430bc91b1d953025493b34b38868db93d38",
       "source_path": "plugins/pezza-design-system",
-      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end as an installed plugin",
       "portability": "Codex import and host hook behavior not evaluated",
       "version": "0.5.3",
@@ -577,10 +577,10 @@
       "name": "clownware-rust-tools:gate-check",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "54b3ab256f248586373129d1f3e1a2ce86eb0dac44907310c1f66f758bb9e0b9",
       "source_path": "plugins/rust-tools/skills/gate-check/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -590,10 +590,10 @@
       "name": "clownware-rust-tools:test-scaffold",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "10c35ed5e65e5bb1a6cd26d0347e9e5889964484625cedadaf29c07d759cab53",
       "source_path": "plugins/rust-tools/skills/test-scaffold/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -603,10 +603,10 @@
       "name": "clownware-rust-tools",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "b189084cb739b9661cf3f1db6acc4bcea1813b42",
+      "revision": "cb2e6fdd70370f3c59417dce79aea13b15a9c83d",
       "sha256": "20030076d8d7a7879f0512a62cb6cb4bef5e6f79d79926f7ef3a6160b01f898c",
       "source_path": "plugins/rust-tools",
-      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end as an installed plugin",
       "portability": "Codex import and host hook behavior not evaluated",
       "version": "0.1.2",
@@ -619,10 +619,10 @@
       "name": "product-dev:product-flow",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "bff7e06933ac4858bedaf918bd14c2374fcae67c",
+      "revision": "469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "sha256": "def6e397565747db072dde9074fde42a035f7a1809faab6fdb3ddf87e969611c",
       "source_path": "plugin/skills/product-flow/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -632,10 +632,10 @@
       "name": "product-dev:product-ideation",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "bff7e06933ac4858bedaf918bd14c2374fcae67c",
+      "revision": "469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "sha256": "ba8dd54480368fec2073183ff195748c90cfcf095257b5696107270e38c96f3b",
       "source_path": "plugin/skills/product-ideation/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -645,10 +645,10 @@
       "name": "product-dev:status",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "bff7e06933ac4858bedaf918bd14c2374fcae67c",
+      "revision": "469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "sha256": "9fad3c8f9a25355a16de5e1426c9262d3058caf91f19ff1ef1596c5063d494ae",
       "source_path": "plugin/skills/status/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -658,10 +658,10 @@
       "name": "product-dev:tech-spec",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "bff7e06933ac4858bedaf918bd14c2374fcae67c",
+      "revision": "469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "sha256": "b5953bf4ed599ba0f4a073cc6bcd571b0dc7f6a7fbd1eb3b5f12eb12d2f405aa",
       "source_path": "plugin/skills/tech-spec/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -671,10 +671,10 @@
       "name": "product-dev:ux-optimization",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "bff7e06933ac4858bedaf918bd14c2374fcae67c",
+      "revision": "469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "sha256": "8e7278e2e3e6d273def9dfe1f64f672430e286d627faea5b47200782bce61314",
       "source_path": "plugin/skills/ux-optimization/SKILL.md",
-      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Full SKILL.md read; YAML validation; all actual inline prefetches run in 2 shells \u00d7 3 contexts where present. Supporting resources sampled; not a complete asset/script audit. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end; static entrypoint review only; the 2026-09-05 baseline Codex sample was not repeated",
       "portability": "Codex/Claude parity not evaluated; Claude execution syntax or tool metadata needs adapter review"
     },
@@ -684,10 +684,10 @@
       "name": "product-dev",
       "review_score": 100,
       "finding_ids": [],
-      "revision": "bff7e06933ac4858bedaf918bd14c2374fcae67c",
+      "revision": "469a06d0b7051ff4592d9fcb7e3cbed1c0929bf2",
       "sha256": "6b732448a543fc6fa5d257ae002693502884179741b3245038143028a4f0cadb",
       "source_path": "plugin",
-      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the release revision; probes re-run; reproductions re-executed where executable.",
+      "review_scope": "Manifest and entrypoints; authoritative Claude validator; hook shell syntax; targeted git-guard payload cases. Package score excludes skill findings except structural validation. Product scripts/assets not comprehensively executed. Post-fix: re-read in full at the merged main revision; probes re-run; reproductions re-executed where executable.",
       "behavior": "not evaluated end-to-end as an installed plugin",
       "portability": "Codex import and host hook behavior not evaluated",
       "version": "0.5.0",
@@ -702,15 +702,15 @@
       "installed_claude_versions": [
         "0.4.0"
       ],
-      "interpretation": "Source-versus-local-install drift only; the release commits are on an unpushed branch, so remote availability is pending."
+      "interpretation": "Source-versus-local-install drift only; the release commits are merged to main, so remote availability is immediate on marketplace refresh."
     },
     {
       "plugin": "clownware-code-tools",
-      "local_source_version": "0.15.3",
+      "local_source_version": "0.15.4",
       "installed_claude_versions": [
         "0.14.0"
       ],
-      "interpretation": "Source-versus-local-install drift only; the release commits are on an unpushed branch, so remote availability is pending."
+      "interpretation": "Source-versus-local-install drift only; the release commits are merged to main, so remote availability is immediate on marketplace refresh."
     },
     {
       "plugin": "clownware-go-tools",
@@ -718,7 +718,7 @@
       "installed_claude_versions": [
         "0.2.0"
       ],
-      "interpretation": "Source-versus-local-install drift only; the release commits are on an unpushed branch, so remote availability is pending."
+      "interpretation": "Source-versus-local-install drift only; the release commits are merged to main, so remote availability is immediate on marketplace refresh."
     },
     {
       "plugin": "pezza-design-system",
@@ -726,7 +726,7 @@
       "installed_claude_versions": [
         "0.5.1"
       ],
-      "interpretation": "Source-versus-local-install drift only; the release commits are on an unpushed branch, so remote availability is pending."
+      "interpretation": "Source-versus-local-install drift only; the release commits are merged to main, so remote availability is immediate on marketplace refresh."
     },
     {
       "plugin": "clownware-rust-tools",
@@ -734,7 +734,7 @@
       "installed_claude_versions": [
         "0.1.0"
       ],
-      "interpretation": "Source-versus-local-install drift only; the release commits are on an unpushed branch, so remote availability is pending."
+      "interpretation": "Source-versus-local-install drift only; the release commits are merged to main, so remote availability is immediate on marketplace refresh."
     },
     {
       "plugin": "product-dev",
@@ -742,7 +742,7 @@
       "installed_claude_versions": [
         "0.1.0"
       ],
-      "interpretation": "Source-versus-local-install drift only; the release commits are on an unpushed branch, so remote availability is pending."
+      "interpretation": "Source-versus-local-install drift only; the release commits are merged to main, so remote availability is immediate on marketplace refresh."
     }
   ],
   "evidence": {
@@ -756,14 +756,19 @@
     "yaml_parse_total": 33,
     "regression_tests_passed": 8,
     "regression_tests_total": 8,
-    "reproductions": "reproductions.json: guard command forms, astro/templ surface probe (bash+zsh), cargo check vs cargo test --no-run fixture; release dry-run not re-executed",
+    "reproductions": "reproductions.json: guard command forms, astro/templ surface probe (bash+zsh), security-audit surface probe under a piped stdin (bash+zsh), cargo check vs cargo test --no-run fixture; release dry-run not re-executed",
     "blind_sample": {
       "repeated": false,
       "note": "Baseline sample (code-tools test-scaffold, 4/4 artifact criteria) not repeated; the F06 description change is unvalidated behaviorally."
-    }
+    },
+    "observation_resolved": "security-audit pathless rg probe fixed in 04900fca4d4db37902f9bd4b576d2ee47b9c5698 (code-tools 0.15.4); with a piped stdin the probe now returns the matching file instead of searching stdin"
   },
   "publication": {
     "status": "pending",
     "endpoint": "https://ops.chris-d8c.workers.dev/ingest"
+  },
+  "supersedes": {
+    "report_sha256": "62c37a0bbc83d6c8d2d4906a4a20e43bfc7057d52b2dc7367da7e20bd1f45cae",
+    "reason": "Branch revisions were rewritten by the rebase-merge of clownware/plugins#17 and product-dev#58; this record pins revisions that exist on main and includes the code-tools 0.15.4 probe fix."
   }
 }

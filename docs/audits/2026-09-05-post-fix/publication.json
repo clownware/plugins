@@ -1,14 +1,18 @@
 {
   "status": "accepted",
-  "published_at": 1788921643,
+  "published_at": 1788928403,
   "endpoint": "https://ops.chris-d8c.workers.dev/ingest",
-  "report_sha256": "62c37a0bbc83d6c8d2d4906a4a20e43bfc7057d52b2dc7367da7e20bd1f45cae",
-  "dedupe_key": "owned-skills-2026-09-05-post-fix:62c37a0bbc83d6c8d2d4906a4a20e43bfc7057d52b2dc7367da7e20bd1f45cae",
+  "report_sha256": "096696ce7d9cf7d247902428d1232dfd4296ee43175335e5a42bbdc10943bd01",
+  "dedupe_key": "owned-skills-2026-09-05-post-fix:096696ce7d9cf7d247902428d1232dfd4296ee43175335e5a42bbdc10943bd01",
   "response": {
     "ok": true,
     "entities": 39,
     "signals": 195
   },
   "verification": "HTTP 202 and exact entity/signal counts acknowledged; dashboard readback requires authenticated UI.",
-  "note": "First two attempts on 2026-09-08 blocked on 1Password desktop-app session setup (app-side HTTP client failure); succeeded after the app was relaunched."
+  "supersedes": {
+    "report_sha256": "62c37a0bbc83d6c8d2d4906a4a20e43bfc7057d52b2dc7367da7e20bd1f45cae",
+    "published_at": 1788921643,
+    "reason": "Branch revisions were rewritten by the rebase-merge of clownware/plugins#17 and product-dev#58; this record pins revisions that exist on main and includes the code-tools 0.15.4 probe fix."
+  }
 }

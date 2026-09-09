@@ -10,7 +10,7 @@ Security-audit this repository. Focus, if given: $ARGUMENTS
 
 **Toolchain:** !`out=$(ls go.mod package.json pyproject.toml requirements.txt Cargo.toml pom.xml build.gradle Gemfile composer.json 2>/dev/null); echo "${out:-unrecognized — infer from source extensions}"`
 **Dependency scanners available:** !`out=$(command -v govulncheck npm pip-audit cargo-audit osv-scanner trivy snyk bundler-audit 2>/dev/null); echo "${out:-none on PATH — audit deps by reading lockfiles + advisories}"`
-**Auth/session/security-relevant files:** !`out=$(rg -l -i "cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\.|SetCookie|Authorization" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/null | head -20); echo "${out:-none matched — locate auth by reading routing/middleware}"`
+**Auth/session/security-relevant files:** !`out=$(rg -l -i "cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\.|SetCookie|Authorization" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/null | head -20); echo "${out:-none matched — locate auth by reading routing/middleware}"`
 **Prior security decisions:** !`out=$(rg -l -i "threat model|security|owasp|rls|csrf|xss" docs/ CLAUDE.md CONTRIBUTING.md SECURITY.md 2>/dev/null | head -8); echo "${out:-none found — no written threat model (note it)}"`
 **Env/secret surface:** !`out=$(ls .env .env.example .env.local docker-compose.yml Dockerfile 2>/dev/null; ls .github/workflows/ 2>/dev/null); echo "${out:-none}"`
 **Secrets ever committed (name check):** !`out=$(git log --all --diff-filter=A --name-only --format= -- '*.env' '.env*' '*.pem' '*.key' '*_rsa' 2>/dev/null | grep -v '\.env\.example$' | sort -u | head); echo "${out:-none — no obvious secret files in history (still grep contents)}"`

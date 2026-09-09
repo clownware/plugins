@@ -114,7 +114,7 @@ jobs:
           node-version: '22'
 
       - name: Install official Claude plugin validator
-        run: npm install -g @anthropic-ai/claude-code@2.1.258
+        run: npm install -g @anthropic-ai/claude-code@2.1.266
 
       - name: Validate plugins with the target host
         env:

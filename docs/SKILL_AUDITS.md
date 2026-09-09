@@ -65,8 +65,11 @@ domain. `/health` continues to describe pollers, not skill effectiveness.
 
 ## Repeat the review
 
-1. Pin the source revision and content hash before reviewing. Inventory installed
-   copies separately; local source versions do not prove release availability.
+1. Pin the source revision and content hash before reviewing. Record revisions that
+   are already on `main`; this marketplace rebase-merges, so branch commits are
+   rewritten and their SHAs stop resolving after merge. Content hashes survive
+   either way. Inventory installed copies separately; local source versions do not
+   prove release availability.
 2. Read every entrypoint in scope, parse real YAML, run the host plugin validator,
    and inspect references and executable dependencies relevant to the task.
 3. Execute reviewed probes in empty, matching, and unrelated contexts. Check their

@@ -85,7 +85,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
@@ -102,70 +102,10 @@
    "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
    "shell": "zsh",
    "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
-   "shell": "zsh",
-   "context": "marketplace-repo",
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
    "seconds": 0.03
-  },
-  {
-   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.04
-  },
-  {
-   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
   },
   {
    "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
@@ -185,6 +125,66 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
+   "seconds": 0.03
+  },
+  {
+   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.03
+  },
+  {
+   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify develop >/dev/null 2>&1 && echo develop || { git rev-parse -q --verify main >/dev/null 2>&1 && echo main || echo master; }); ou",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
    "seconds": 0.02
   },
   {
@@ -205,7 +205,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.06
+   "seconds": 0.02
   },
   {
    "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
@@ -225,7 +225,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.02
+   "seconds": 0.03
   },
   {
    "skill": "plugins/astro-tools/skills/astro-pr-description/SKILL.md",
@@ -245,7 +245,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.02
+   "seconds": 0.03
   },
   {
    "skill": "plugins/astro-tools/skills/component-scaffold/SKILL.md",
@@ -265,7 +265,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/astro-tools/skills/component-scaffold/SKILL.md",
@@ -275,7 +275,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/astro-tools/skills/component-scaffold/SKILL.md",
@@ -355,7 +355,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/astro-tools/skills/perf-budget-check/SKILL.md",
@@ -365,7 +365,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/astro-tools/skills/perf-budget-check/SKILL.md",
@@ -565,7 +565,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.02
+   "seconds": 0.03
   },
   {
    "skill": "plugins/code-tools/skills/a11y-audit/SKILL.md",
@@ -675,7 +675,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/a11y-audit/SKILL.md",
@@ -745,7 +745,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/adr/SKILL.md",
@@ -755,7 +755,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/adr/SKILL.md",
@@ -855,7 +855,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/adr/SKILL.md",
@@ -865,7 +865,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/adr/SKILL.md",
@@ -875,7 +875,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/adr/SKILL.md",
@@ -975,7 +975,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/arch-audit/SKILL.md",
@@ -1045,7 +1045,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/arch-audit/SKILL.md",
@@ -1145,7 +1145,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/arch-audit/SKILL.md",
@@ -1315,7 +1315,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/arch-audit/SKILL.md",
@@ -1575,7 +1575,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.11
+   "seconds": 0.08
   },
   {
    "skill": "plugins/code-tools/skills/deps-audit/SKILL.md",
@@ -1585,7 +1585,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.1
+   "seconds": 0.09
   },
   {
    "skill": "plugins/code-tools/skills/deps-audit/SKILL.md",
@@ -1595,23 +1595,13 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.1
+   "seconds": 0.12
   },
   {
    "skill": "plugins/code-tools/skills/deps-audit/SKILL.md",
    "command": "if curl -s -m 4 -o /dev/null -w \"%{http_code}\" https://registry.npmjs.org/ 2>/dev/null | grep -q \"200\"; then echo \"available \u2014 registry freshness + OSV advisori",
    "shell": "zsh",
    "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.1
-  },
-  {
-   "skill": "plugins/code-tools/skills/deps-audit/SKILL.md",
-   "command": "if curl -s -m 4 -o /dev/null -w \"%{http_code}\" https://registry.npmjs.org/ 2>/dev/null | grep -q \"200\"; then echo \"available \u2014 registry freshness + OSV advisori",
-   "shell": "zsh",
-   "context": "marketplace-repo",
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
@@ -1621,11 +1611,21 @@
    "skill": "plugins/code-tools/skills/deps-audit/SKILL.md",
    "command": "if curl -s -m 4 -o /dev/null -w \"%{http_code}\" https://registry.npmjs.org/ 2>/dev/null | grep -q \"200\"; then echo \"available \u2014 registry freshness + OSV advisori",
    "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.1
+  },
+  {
+   "skill": "plugins/code-tools/skills/deps-audit/SKILL.md",
+   "command": "if curl -s -m 4 -o /dev/null -w \"%{http_code}\" https://registry.npmjs.org/ 2>/dev/null | grep -q \"200\"; then echo \"available \u2014 registry freshness + OSV advisori",
+   "shell": "zsh",
    "context": "unrelated",
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.11
+   "seconds": 0.09
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1635,7 +1635,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.02
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1645,7 +1645,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.27
+   "seconds": 0.28
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1675,7 +1675,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.19
+   "seconds": 0.17
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1695,7 +1695,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1815,7 +1815,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1875,7 +1875,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -1895,7 +1895,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/design-audit/SKILL.md",
@@ -2295,7 +2295,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/perf-audit/SKILL.md",
@@ -2455,7 +2455,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/plugin-release/SKILL.md",
@@ -2515,7 +2515,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.11
+   "seconds": 0.09
   },
   {
    "skill": "plugins/code-tools/skills/plugin-release/SKILL.md",
@@ -2655,7 +2655,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2665,7 +2665,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2675,7 +2675,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2785,7 +2785,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2815,7 +2815,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2845,7 +2845,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.06
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2855,7 +2855,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2865,7 +2865,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2875,7 +2875,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.04
+   "seconds": 0.02
   },
   {
    "skill": "plugins/code-tools/skills/pr-description/SKILL.md",
@@ -2965,7 +2965,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.13
+   "seconds": 0.14
   },
   {
    "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
@@ -2975,7 +2975,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.13
+   "seconds": 0.14
   },
   {
    "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
@@ -2985,7 +2985,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.13
+   "seconds": 0.14
   },
   {
    "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
@@ -3005,7 +3005,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.13
+   "seconds": 0.14
   },
   {
    "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
@@ -3040,72 +3040,72 @@
   {
    "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
    "command": "uname -s",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-   "command": "uname -s",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-   "command": "uname -s",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-   "command": "uname -m",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-   "command": "uname -m",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-   "command": "uname -m",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
-   "command": "uname -m",
    "shell": "zsh",
    "context": "empty",
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
    "seconds": 0.01
+  },
+  {
+   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
+   "command": "uname -s",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
+   "command": "uname -s",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
+   "command": "uname -m",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
+   "command": "uname -m",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
+   "command": "uname -m",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
+   "command": "uname -m",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/root-cause-debug/SKILL.md",
@@ -3255,7 +3255,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
@@ -3265,7 +3265,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
@@ -3275,7 +3275,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
@@ -3345,7 +3345,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
@@ -3355,7 +3355,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
@@ -3369,9 +3369,49 @@
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
-   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/n",
+   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev",
    "shell": "bash",
    "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
+   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
+   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
+   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
+   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev",
+   "shell": "zsh",
+   "context": "marketplace-repo",
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
@@ -3379,47 +3419,7 @@
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
-   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/n",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
-   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/n",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
-   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/n",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
-   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/n",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
-   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" --iglob '!*_test.*' --iglob '!node_modules' 2>/dev/n",
+   "command": "out=$(rg -l -i \"cookie|jwt|session|password|csrf|oauth|bcrypt|crypto/rand|subtle\\.|SetCookie|Authorization\" . --iglob '!*_test.*' --iglob '!node_modules' 2>/dev",
    "shell": "zsh",
    "context": "unrelated",
    "exit": 0,
@@ -3615,7 +3615,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/security-audit/SKILL.md",
@@ -3815,7 +3815,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/skill-audit/SKILL.md",
@@ -3865,7 +3865,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/skill-audit/SKILL.md",
@@ -3895,7 +3895,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/skill-audit/SKILL.md",
@@ -3915,7 +3915,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/code-tools/skills/skill-validate/SKILL.md",
@@ -4095,7 +4095,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.0
+   "seconds": 0.01
   },
   {
    "skill": "plugins/code-tools/skills/test-audit/SKILL.md",
@@ -4695,7 +4695,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.02
+   "seconds": 0.01
   },
   {
    "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
@@ -4715,7 +4715,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.02
   },
   {
    "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
@@ -4751,6 +4751,1416 @@
    "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
    "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
    "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
+   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
+   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
+   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
+   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.0
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
+   "shell": "zsh",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
+   "shell": "zsh",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
+   "shell": "zsh",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.01
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
+   "shell": "bash",
+   "context": "empty",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.06
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
+   "shell": "bash",
+   "context": "marketplace-repo",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
+   "shell": "bash",
+   "context": "unrelated",
+   "exit": 0,
+   "stdout_nonempty": true,
+   "stderr": "",
+   "seconds": 0.02
+  },
+  {
+   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
+   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
+   "shell": "zsh",
    "context": "empty",
    "exit": 0,
    "stdout_nonempty": true,
@@ -4758,1416 +6168,6 @@
    "seconds": 0.03
   },
   {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); out",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.05
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.03
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "BASE=$(git rev-parse -q --verify main >/dev/null 2>&1 && echo main || { git rev-parse -q --verify master >/dev/null 2>&1 && echo master || echo develop; }); d=$",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/go-pr-description/SKILL.md",
-   "command": "out=$(ls .github/PULL_REQUEST_TEMPLATE.md .github/pull_request_template.md 2>/dev/null | head -1); echo \"${out:-none \u2014 use the default format below}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(grep -Eo \"^\\s+(test:performance|test:binary-size|test:asset-budgets):\" Taskfile.yml 2>/dev/null | sed -E \"s/^[[:space:]]+//; s/:$//\" | tr \"\\n\" \" \"); echo ",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(find internal/performance -name \"*.go\" 2>/dev/null | head -5); echo \"${out:-no internal/performance package \u2014 the budget constants live elsewhere or are a",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "out=$(ls -l dist/app 2>/dev/null); echo \"${out:-no dist/app yet \u2014 a stripped build is required before the binary gate means anything}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/perf-budget-check/SKILL.md",
-   "command": "b=$(git branch --show-current 2>/dev/null); echo \"${b:-detached or not a git repo}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(ls sqlc.yaml sqlc.yml sqlc.json 2>/dev/null | head -1); echo \"${out:-no sqlc config found \u2014 this repo does not use sqlc; hand-written SQL in handlers is a",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/queries -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/queries/*.sql \u2014 read the sqlc config queries path before scaffolding}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find sql/schema sql/migrations -name \"*.sql\" 2>/dev/null | sort | head -20); echo \"${out:-no sql/schema or sql/migrations \u2014 locate the schema so column na",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"db:generate\" Taskfile.yml 2>/dev/null && echo \"task db:generate\"; } || { command -v sqlc >/dev/null 2>&1 && echo \"sqlc generate\"; } ); echo \"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/sqlc-query-scaffold/SKILL.md",
-   "command": "out=$(find internal/repository -maxdepth 1 -name \"*.go\" 2>/dev/null | sort | head -20); echo \"${out:-no internal/repository \u2014 the generated querier may be used ",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(find internal/view -type f -name \"*.templ\" 2>/dev/null | sort | head -40); echo \"${out:-no internal/view/*.templ found \u2014 this repo is not laid out like th",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$(ls internal/view/props.go internal/view/render.go 2>/dev/null); echo \"${out:-no internal/view/props.go or render.go \u2014 read the repo layout for the props/r",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/templ-component-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"templ:generate\" Taskfile.yml 2>/dev/null && echo \"task templ:generate\"; } || { command -v templ >/dev/null 2>&1 && echo \"templ generate\"; } )",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(sed -n \"s/^module //p\" go.mod 2>/dev/null | head -1); echo \"${out:-no go.mod found \u2014 is this a Go module? confirm before scaffolding}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Rqs \"github.com/stretchr/testify\" go.mod 2>/dev/null && echo \"testify present in go.mod (check the target package's existing tests for whether th",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$(find . -name \"*_test.go\" -not -path \"./vendor/*\" 2>/dev/null | head -8); echo \"${out:-no _test.go files yet \u2014 this will be the first}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/go-tools/skills/test-scaffold/SKILL.md",
-   "command": "out=$( { grep -Eq \"^\\s*test:\" Taskfile.yml 2>/dev/null && echo \"task test\"; } || echo \"go test ./...\" ); echo \"${out}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(find .github/workflows -maxdepth 1 -name \"*.yml\" -exec grep -hoE \"cargo [a-z-]+( [^\\\"]*)?\" {} + 2>/dev/null | sort -u | head -10); echo \"${out:-no CI work",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls deny.toml 2>/dev/null); echo \"${out:-none \u2014 skip the cargo-deny leg (note its absence in the report)}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.0
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
-   "shell": "zsh",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(ls fuzz/fuzz_targets 2>/dev/null | head -5); echo \"${out:-none}\"",
-   "shell": "zsh",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.01
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
-   "shell": "bash",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.05
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
-   "shell": "bash",
-   "context": "marketplace-repo",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
-   "shell": "bash",
-   "context": "unrelated",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
-   "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
-   "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
-   "shell": "zsh",
-   "context": "empty",
-   "exit": 0,
-   "stdout_nonempty": true,
-   "stderr": "",
-   "seconds": 0.02
-  },
-  {
    "skill": "plugins/rust-tools/skills/gate-check/SKILL.md",
    "command": "out=$(command -v cargo >/dev/null 2>&1 && cargo --version 2>/dev/null); echo \"${out:-cargo not on PATH \u2014 report every gate as unrunnable; do not guess verdicts}",
    "shell": "zsh",
@@ -6195,7 +6195,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/rust-tools/skills/test-scaffold/SKILL.md",
@@ -6205,7 +6205,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/rust-tools/skills/test-scaffold/SKILL.md",
@@ -6235,7 +6235,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/rust-tools/skills/test-scaffold/SKILL.md",
@@ -6245,7 +6245,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/rust-tools/skills/test-scaffold/SKILL.md",
@@ -6315,7 +6315,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/rust-tools/skills/test-scaffold/SKILL.md",
@@ -6375,7 +6375,7 @@
    "exit": 0,
    "stdout_nonempty": true,
    "stderr": "",
-   "seconds": 0.01
+   "seconds": 0.0
   },
   {
    "skill": "plugins/rust-tools/skills/test-scaffold/SKILL.md",

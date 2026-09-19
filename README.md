@@ -7,7 +7,7 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 | Plugin | What it is | Source |
 |--------|------------|--------|
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`product-dev/plugin`](https://github.com/clownware/product-dev/tree/main/plugin) |
-| `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. Ships a git guard hook (blocks `--no-verify`, secret-scans commits). | [`plugins/code-tools`](plugins/code-tools) |
+| `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. Ships a git guard hook (blocks `--no-verify`, secret-scans commits) and the format-on-edit dispatcher for every stack. | [`plugins/code-tools`](plugins/code-tools) |
 | `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/astro-tools`](plugins/astro-tools) |
 | `clownware-go-tools` | Go + templ + sqlc stack skills following go-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/go-tools`](plugins/go-tools) |
 | `clownware-rust-tools` | Rust stack skills following the tunes_protocol/gittunes workspace conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/rust-tools`](plugins/rust-tools) |
@@ -41,6 +41,12 @@ ranked, `file:line`-cited findings and leaves fixes to you.
 Hook: a `PreToolUse` git guard on every Bash call — denies `git commit`/`git push
 --no-verify` (the repo's hooks are the quality gate), and secret-scans staged changes
 before any commit (gitleaks when installed, high-confidence token patterns otherwise).
+
+Hook: a `PostToolUse` format dispatcher — after Claude edits or writes a file, one
+process routes by extension: Biome for JS/TS/JSON/CSS/Astro (gated on a `biome.json`
+at or above the file), goimports/gofmt for `.go`, `templ fmt` for `.templ`, rustfmt
+for `.rs` (edition-detected from the nearest Cargo.toml). Replaces the three per-stack
+hooks; silent no-op everywhere else.
 
 **clownware-astro-tools**
 

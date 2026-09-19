@@ -9,7 +9,7 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`product-dev/plugin`](https://github.com/clownware/product-dev/tree/main/plugin) |
 | `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. Ships a git guard hook (blocks `--no-verify`, secret-scans commits). | [`plugins/code-tools`](plugins/code-tools) |
 | `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/astro-tools`](plugins/astro-tools) |
-| `clownware-go-tools` | Go + templ + sqlc stack skills following go-performance-starter conventions. Ships a goimports/templ format-on-edit hook. | [`plugins/go-tools`](plugins/go-tools) |
+| `clownware-go-tools` | Go + templ + sqlc stack skills following go-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/go-tools`](plugins/go-tools) |
 | `clownware-rust-tools` | Rust stack skills following the tunes_protocol/gittunes workspace conventions. Ships a rustfmt format-on-edit hook. | [`plugins/rust-tools`](plugins/rust-tools) |
 | `pezza-design-system` | The Pezza brand design system as a skill: guidelines, HSL-channel tokens, animatable brand SVGs, prose layer, motion system, React primitives, two UI kits. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
 
@@ -62,8 +62,7 @@ Hook: none. Formatting on edit is handled by the `clownware-code-tools` dispatch
 | `/perf-budget-check` | Runs the starter's `task test:performance` gates and interprets the verdicts |
 | `/go-pr-description` | PR descriptions aware of the `task ci` quality gate and the ADR constitution |
 
-Hook: a `PostToolUse` formatter — after Claude edits or writes a `.go` or `.templ`
-file, runs goimports/gofmt or `templ fmt` on just that file.
+Hook: none. Formatting on edit is handled by the `clownware-code-tools` dispatcher hook; install that plugin alongside this one.
 
 **clownware-rust-tools**
 

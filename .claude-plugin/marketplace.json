@@ -26,7 +26,7 @@
     {
       "name": "clownware-go-tools",
       "source": "./plugins/go-tools",
-      "description": "Go + templ + sqlc stack skills \u2014 templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions \u2014 following go-performance-starter conventions with fallbacks for other Go projects. Plus a format-on-edit hook that runs goimports/gofmt and templ fmt on files Claude edits."
+      "description": "Go + templ + sqlc stack skills \u2014 templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions \u2014 following go-performance-starter conventions with fallbacks for other Go projects. Formatting on edit moved to the clownware-code-tools dispatcher hook."
     },
     {
       "name": "clownware-rust-tools",

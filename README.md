@@ -10,7 +10,7 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 | `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. Ships a git guard hook (blocks `--no-verify`, secret-scans commits). | [`plugins/code-tools`](plugins/code-tools) |
 | `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/astro-tools`](plugins/astro-tools) |
 | `clownware-go-tools` | Go + templ + sqlc stack skills following go-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/go-tools`](plugins/go-tools) |
-| `clownware-rust-tools` | Rust stack skills following the tunes_protocol/gittunes workspace conventions. Ships a rustfmt format-on-edit hook. | [`plugins/rust-tools`](plugins/rust-tools) |
+| `clownware-rust-tools` | Rust stack skills following the tunes_protocol/gittunes workspace conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/rust-tools`](plugins/rust-tools) |
 | `pezza-design-system` | The Pezza brand design system as a skill: guidelines, HSL-channel tokens, animatable brand SVGs, prose layer, motion system, React primitives, two UI kits. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
 
 ## Skills at a glance
@@ -71,9 +71,7 @@ Hook: none. Formatting on edit is handled by the `clownware-code-tools` dispatch
 | `/test-scaffold` | Table-driven `#[cfg(test)]` stubs (`#[ignore]`d so the suite stays green), vector-aware for protocol crates |
 | `/gate-check` | Runs the repo's own gates exactly as CI defines them (fmt/clippy/test/deny + special legs) and interprets each verdict |
 
-Hook: a `PostToolUse` formatter — after Claude edits or writes a `.rs` file, runs
-rustfmt on just that file, edition-detected from the nearest Cargo.toml (including
-`[workspace.package]`).
+Hook: none. Formatting on edit is handled by the `clownware-code-tools` dispatcher hook; install that plugin alongside this one.
 
 **pezza-design-system**
 

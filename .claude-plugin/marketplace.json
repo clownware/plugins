@@ -21,7 +21,7 @@
     {
       "name": "clownware-astro-tools",
       "source": "./plugins/astro-tools",
-      "description": "Astro + Preact stack skills \u2014 component scaffolding, template-aware PR descriptions, and performance-budget gate checks (/perf-budget-check) \u2014 following astro-performance-starter conventions with fallbacks for other Astro projects. Plus a format-on-edit hook that runs Biome on every file Claude edits in Biome-configured projects."
+      "description": "Astro + Preact stack skills \u2014 component scaffolding, template-aware PR descriptions, and performance-budget gate checks (/perf-budget-check) \u2014 following astro-performance-starter conventions with fallbacks for other Astro projects. Formatting on edit moved to the clownware-code-tools dispatcher hook."
     },
     {
       "name": "clownware-go-tools",

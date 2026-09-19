@@ -8,7 +8,7 @@ A [Claude Code plugin marketplace](https://code.claude.com/docs/en/plugin-market
 |--------|------------|--------|
 | `product-dev` | AI-assisted product development framework: idea → technical spec via UX research, hypothesis, and prototype planning. | [`product-dev/plugin`](https://github.com/clownware/product-dev/tree/main/plugin) |
 | `clownware-code-tools` | Universal dev workflow skills — an audit suite plus authoring and debugging tools. Probes the repo it runs in; degrades gracefully. Ships a git guard hook (blocks `--no-verify`, secret-scans commits). | [`plugins/code-tools`](plugins/code-tools) |
-| `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. Ships a Biome format-on-edit hook. | [`plugins/astro-tools`](plugins/astro-tools) |
+| `clownware-astro-tools` | Astro + Preact stack skills following astro-performance-starter conventions. Format-on-edit lives in `clownware-code-tools`. | [`plugins/astro-tools`](plugins/astro-tools) |
 | `clownware-go-tools` | Go + templ + sqlc stack skills following go-performance-starter conventions. Ships a goimports/templ format-on-edit hook. | [`plugins/go-tools`](plugins/go-tools) |
 | `clownware-rust-tools` | Rust stack skills following the tunes_protocol/gittunes workspace conventions. Ships a rustfmt format-on-edit hook. | [`plugins/rust-tools`](plugins/rust-tools) |
 | `pezza-design-system` | The Pezza brand design system as a skill: guidelines, HSL-channel tokens, animatable brand SVGs, prose layer, motion system, React primitives, two UI kits. | [`plugins/pezza-design-system`](plugins/pezza-design-system) |
@@ -50,9 +50,7 @@ before any commit (gitleaks when installed, high-confidence token patterns other
 | `/astro-pr-description` | PR descriptions for astro-performance-starter template repos |
 | `/perf-budget-check` | Runs the starter's own budget gates (sizes, overrides, images) and interprets the verdicts |
 
-Hook: a `PostToolUse` formatter — after Claude edits or writes a file, runs Biome on
-just that file (gated on a `biome.json` at or above it), so diffs never fail the
-project's format gate.
+Hook: none. Formatting on edit is handled by the `clownware-code-tools` dispatcher hook; install that plugin alongside this one.
 
 **clownware-go-tools**
 

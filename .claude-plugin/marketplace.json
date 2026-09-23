@@ -11,22 +11,22 @@
         "url": "https://github.com/clownware/product-dev",
         "path": "plugin"
       },
-      "description": "AI-assisted product development framework \u2014 vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning, plus a reverse pass (/optimize) that audits existing products: extracts problem/personas/journeys/value-props from the repo, validates with the owner, verifies with optional live-site browser and build-and-run runtime audits, and produces a prioritized optimization spec with an owner scope walk (accepted/deferred/skipped, deferred items filed as GitHub issues). v0.5.0 adds rigor throughout the forward pass: forcing-question interrogation gates, premise challenges and candidate solution directions before commitment, computable artifact staleness via input-version provenance, adversarial spec-review loops with decision logs, and per-project process learnings that persist across sessions. Ships the /idea, /problem, /spec, /compile, /summary and /optimize commands, plus skills and the tech-spec-writer and ux-extractor subagents."
+      "description": "AI-assisted product development framework — vague idea to technical spec through structured UX research, hypothesis formation, and prototype planning, plus a reverse pass (/optimize) that audits existing products: extracts problem/personas/journeys/value-props from the repo, validates with the owner, verifies with optional live-site browser and build-and-run runtime audits, and produces a prioritized optimization spec with an owner scope walk (accepted/deferred/skipped, deferred items filed as GitHub issues). v0.5.0 adds rigor throughout the forward pass: forcing-question interrogation gates, premise challenges and candidate solution directions before commitment, computable artifact staleness via input-version provenance, adversarial spec-review loops with decision logs, and per-project process learnings that persist across sessions. Ships the /idea, /problem, /spec, /compile, /summary and /optimize commands, plus skills and the tech-spec-writer and ux-extractor subagents."
     },
     {
       "name": "clownware-code-tools",
       "source": "./plugins/code-tools",
-      "description": "Universal dev workflow skills \u2014 architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), accessibility auditing (/a11y-audit), dependency auditing (/deps-audit), performance auditing (/perf-audit), devops/CI-CD auditing (/devops-audit), audit-fix application (/audit-fix), plugin releasing (/plugin-release), skill validation (/skill-validate), ADR authoring, PR descriptions, root-cause debugging, test scaffolding, and GitHits OSS research conventions (githits-research) \u2014 that probe the repo they run in and degrade gracefully. Plus a git guard hook: blocks --no-verify and secret-scans staged changes before every commit. And a format-on-edit dispatcher hook: Biome (biome.json-gated), goimports/gofmt, templ fmt or rustfmt, routed by extension."
+      "description": "Universal dev workflow skills — architecture/deployment-readiness auditing (/arch-audit), security auditing (/security-audit), test-suite auditing (/test-audit), Claude Code skill auditing (/skill-audit), design-system auditing (/design-audit), accessibility auditing (/a11y-audit), dependency auditing (/deps-audit), performance auditing (/perf-audit), devops/CI-CD auditing (/devops-audit), audit-fix application (/audit-fix), plugin releasing (/plugin-release), skill validation (/skill-validate), ADR authoring, PR descriptions, root-cause debugging, test scaffolding, and GitHits OSS research conventions (githits-research) — that probe the repo they run in and degrade gracefully. Plus a git guard hook: blocks --no-verify and secret-scans staged changes before every commit. And a format-on-edit dispatcher hook: Biome (biome.json-gated), goimports/gofmt, templ fmt or rustfmt, routed by extension."
     },
     {
       "name": "clownware-astro-tools",
       "source": "./plugins/astro-tools",
-      "description": "Astro + Preact stack skills \u2014 component scaffolding, template-aware PR descriptions, and performance-budget gate checks (/perf-budget-check) \u2014 following astro-performance-starter conventions with fallbacks for other Astro projects. Formatting on edit moved to the clownware-code-tools dispatcher hook."
+      "description": "Astro + Preact stack skills — component scaffolding, template-aware PR descriptions, and performance-budget gate checks (/perf-budget-check) — following astro-performance-starter conventions with fallbacks for other Astro projects. Formatting on edit moved to the clownware-code-tools dispatcher hook."
     },
     {
       "name": "clownware-go-tools",
       "source": "./plugins/go-tools",
-      "description": "Go + templ + sqlc stack skills \u2014 templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions \u2014 following go-performance-starter conventions with fallbacks for other Go projects. Formatting on edit moved to the clownware-code-tools dispatcher hook."
+      "description": "Go + templ + sqlc stack skills — templ component scaffolding, table-driven test scaffolding, sqlc query scaffolding (/sqlc-query-scaffold), performance-budget gate checks (/perf-budget-check), and task-ci-aware PR descriptions — following go-performance-starter conventions with fallbacks for other Go projects. Formatting on edit moved to the clownware-code-tools dispatcher hook."
     },
     {
       "name": "clownware-rust-tools",
@@ -36,7 +36,15 @@
     {
       "name": "pezza-design-system",
       "source": "./plugins/pezza-design-system",
-      "description": "The Pezza brand design system as a skill \u2014 design guidelines, color/type/spacing tokens, logo and photography assets, React component primitives, and two UI kit starters (web-app shell and DJ/producer site) \u2014 for generating on-brand interfaces, artifacts, and production code."
+      "description": "The Pezza brand design system as a skill — design guidelines, color/type/spacing tokens, logo and photography assets, React component primitives, and two UI kit starters (web-app shell and DJ/producer site) — for generating on-brand interfaces, artifacts, and production code."
+    },
+    {
+      "name": "bouncer",
+      "source": {
+        "source": "github",
+        "repo": "clownware/bouncer"
+      },
+      "description": "A judgment layer for Claude Code — a PreToolUse hook that scores every tool call against a YAML policy you own using a fast judgment model (TypeSafe Jev) instead of a frontier LLM: deterministic fast-path and hard rules decide the edges, the judge decides the middle, and it ships observing so you read its decision log before it is allowed to say no. Modes for prompted sessions (guard, full) and for --dangerously-skip-permissions (seatbelt: zero prompts plus a floor). Calibration is a release gate: /bouncer:calibrate prints a pass/fail row per question from a live run."
     }
   ]
 }

@@ -54,6 +54,10 @@ def payload_for(report):
         add("skill_audit.provenance", json.dumps({"run": report["run_id"], "rubric": report["rubric_version"],
             "revision": row["revision"], "sha256": row["sha256"], "source_path": row["source_path"],
             "reviewer": report["reviewer"], "scope": row["review_scope"]}, separators=(",", ":")))
+        # Ops expects audit.finding_count on every plugin_skill entity (its
+        # EXPECTED_METRICS); skill_audit.* is unknown to it. Severity stays 0:
+        # audit.* is advisory and skill_audit.findings already carries the rank.
+        add("audit.finding_count", "Findings from the static skill audit.", len(linked))
         add("skill_audit.behavior", row["behavior"])
         add("skill_audit.portability", row["portability"])
     if not entities or len(entities) > 500 or len(signals) > 500:

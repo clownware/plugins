@@ -38,11 +38,12 @@ does not run skill instructions or alter the audited packages.
 
 ## Signal contract
 
-All five metrics are state snapshots. Each record is associated with the existing
+All six metrics are state snapshots. Each record is associated with the existing
 `skill:<plugin>:<skill>` or `plugin:clownware/<plugin>` inventory ID:
 
 | Metric | Meaning |
 |---|---|
+| `audit.finding_count` | Finding count at severity 0; Ops expects it for every `plugin_skill` entity, so its absence raises a finding |
 | `skill_audit.review_score` | Review index, 0–100; never a capability percentage |
 | `skill_audit.findings` | Full finding summary and count; maximum finding severity drives triage |
 | `skill_audit.provenance` | Run, rubric, reviewer, source revision, content hash, and coverage |

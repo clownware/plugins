@@ -36,6 +36,16 @@ class AuditPayloadTests(unittest.TestCase):
         self.assertEqual(finding["severity"], 3)
         self.assertEqual(finding["valueNum"], 1)
 
+    def test_emits_the_finding_count_ops_expects_for_every_entity(self):
+        self.report["findings"] = [{"id": "F1", "severity": 3, "detail": "fixture"}]
+        self.report["entities"][0]["finding_ids"] = ["F1"]
+        count = next(s for s in payload_for(self.report)["signals"] if s["metric"] == "audit.finding_count")
+        self.assertEqual((count["valueNum"], count["severity"]), (1, 0))
+        self.report["entities"][0]["finding_ids"] = []
+        self.report["findings"] = []
+        count = next(s for s in payload_for(self.report)["signals"] if s["metric"] == "audit.finding_count")
+        self.assertEqual(count["valueNum"], 0)
+
     def test_rejects_duplicate_and_invalid_scores(self):
         self.report["entities"].append(copy.deepcopy(self.report["entities"][0]))
         with self.assertRaises(ValueError): payload_for(self.report)

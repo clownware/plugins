@@ -26,7 +26,7 @@ Brand files:
 - `assets/logo/brand-contact-sheet.webp` — the original brand board showing the mark over desert / water / galaxy / smoke / ice photography.
 - `assets/img/bg-*.jpg` — photographic backgrounds (galaxy, desert, sunset, smoke) cropped from the contact sheet.
 
-> **FLAG — font substitution:** No brand font files were supplied. Per the brand brief, the system uses **Space Grotesk** (wordmark/display/UI) and **Space Mono** (metadata) loaded from Google Fonts — both libre/OFL, so they travel everywhere with zero licensing friction. If you intend a premium pairing instead (Neue Montréal / Söhne), supply the files and I'll swap them in.
+> **DECISION — fonts (2026-10-11):** No brand font files were supplied, and the stand-ins are blessed as the permanent pairing: **Space Grotesk** (wordmark/display/UI) and **Space Mono** (metadata), loaded from Google Fonts — both libre/OFL, so they travel everywhere with zero licensing friction. A premium pairing (Neue Montréal / Söhne) is not planned; reopen only if licensed font files are supplied. Self-hosting via `@font-face` remains the production-hardening step for removing the remote Google Fonts dependency.
 
 ---
 

@@ -15,6 +15,10 @@ Audit this repository's test suite and testing infrastructure. Focus, if given: 
 **Coverage config:** !`out=$(ls codecov.yml .codecov.yml .coveragerc 2>/dev/null; grep -ril "coverage" .github/workflows/ 2>/dev/null | head -3); echo "${out:-none found}"`
 **Stated conventions:** !`out=$(grep -ril "test" CLAUDE.md CONTRIBUTING.md docs/adr/ docs/decisions/ .claude/ 2>/dev/null | head -5); echo "${out:-none — no written testing conventions (itself a finding)}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Pipeline
 
 Scale to repo size: for large repos, fan out parallel read-only agents (one per lens below); for small repos (<50 source files) work inline.

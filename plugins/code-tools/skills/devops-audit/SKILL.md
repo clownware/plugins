@@ -13,6 +13,10 @@ Audit this repository's CI/CD and deploy surface. Focus, if given: $ARGUMENTS
 **Update automation:** !`out=$(ls .github/dependabot.yml .github/dependabot.yaml renovate.json .github/renovate.json 2>/dev/null | head -2); echo "${out:-none — no dependency-update automation (finding candidate, severity by repo activity)}"`
 **Local gates:** !`out=$({ [ -d .husky ] && echo ".husky/ present"; ls Taskfile.yml Makefile 2>/dev/null; grep -oE "\"(quality|ci|check)[^\"]*\"[[:space:]]*:" package.json 2>/dev/null | head -4; } | head -6); echo "${out:-none found — no local gate surface to compare CI against}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Scope
 
 Everything here reads; nothing edits a workflow, config, or secret. The workflow

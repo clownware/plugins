@@ -13,6 +13,10 @@ Audit this repository's performance posture. Focus, if given: $ARGUMENTS
 **Build output present:** !`out=$(ls -d dist build .next out public 2>/dev/null | head -3); echo "${out:-no build output on disk — size checks need a build or are skipped (say which)}"`
 **CI workflows:** !`out=$(ls .github/workflows/ 2>/dev/null | head -6); echo "${out:-none}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## The organizing question
 
 Not "is it fast?" — that needs a lab. The auditable question is: **does anything

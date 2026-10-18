@@ -17,6 +17,10 @@ Security-audit this repository. Focus, if given: $ARGUMENTS
 **Secret files on disk vs gitignore:** !`out=$(present=$(find . -maxdepth 1 -type f \( -name ".env" -o -name ".env.*" \) ! -name "*.example" ! -name "*.tpl" ! -name "*.sample" ! -name "*.template" 2>/dev/null); if [ -z "$present" ]; then echo "none present on disk (templates only or absent)"; else printf "%s\n" "$present" | while IFS= read -r f; do if git check-ignore -q "$f" 2>/dev/null; then echo "${f#./} gitignored"; else echo "${f#./} NOT gitignored — one commit from a leak"; fi; done; fi); echo "${out:-secret-file check produced no output}"`
 **Secret delivery mechanism:** !`out=$(rg -l -i "op run|op://|op inject|sops|vault kv|doppler|aws secretsmanager|gcp secret|azure keyvault|1password" .env.tpl .env.example Taskfile.yml Makefile justfile docker-compose.yml .github/workflows 2>/dev/null | head -5); echo "${out:-no secrets-manager references — plaintext env is likely the only mechanism (hardening opportunity, not a vuln)}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Pipeline
 
 Scale to repo size: fan out parallel read-only agents (one per lens) for anything non-trivial; work inline only for a small diff or single-package repo. If $ARGUMENTS scopes to a diff or PR, audit that surface but still check what it *reaches* (a handler change pulls in its middleware chain).

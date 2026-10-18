@@ -12,6 +12,10 @@ Audit this repository's dependencies. Focus, if given: $ARGUMENTS
 **Lockfiles:** !`out=$(find . -maxdepth 3 \( -name package-lock.json -o -name pnpm-lock.yaml -o -name yarn.lock -o -name bun.lockb -o -name poetry.lock -o -name uv.lock -o -name go.sum -o -name Cargo.lock -o -name Gemfile.lock \) -not -path "*/node_modules/*" -not -path "*/.git/*" 2>/dev/null | head -8); echo "${out:-none — every manifest is unpinned (itself a finding)}"`
 **Network:** !`if curl -s -m 4 -o /dev/null -w "%{http_code}" https://registry.npmjs.org/ 2>/dev/null | grep -q "200"; then echo "available — registry freshness + OSV advisories in scope"; else echo "unavailable — freshness/advisories become unverified coverage, not findings"; fi`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Scope
 
 Everything here reads; nothing installs, updates, or removes. Findings must hold

@@ -15,6 +15,10 @@ Audit this repository's architecture decisions and readiness. Focus, if given: $
 **Default branch:** !`b=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's|.*/||'); [ -n "$b" ] || b=$(git branch --show-current 2>/dev/null); echo "${b:-unknown}"`
 **Deploy config:** !`ls Dockerfile docker-compose.yml fly.toml render.yaml wrangler.toml vercel.json 2>/dev/null || echo "none"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Pipeline
 
 ### 1. Three-lens fan-out

@@ -12,6 +12,10 @@ Audit this repository's functional accessibility. Focus, if given: $ARGUMENTS
 **Framework hints:** !`out=$(grep -lE '"react"|"preact"|"vue"|"svelte"' package.json 2>/dev/null; find . -maxdepth 2 -name "*.jsx" -o -maxdepth 2 -name "*.vue" 2>/dev/null | head -1); echo "${out:-plain HTML or undetected — sweep both attribute spellings}"`
 **Interactive-handler density:** !`out=$(grep -rlE 'onClick|onclick=|@click|on:click' --include='*.html' --include='*.jsx' --include='*.tsx' --include='*.vue' --include='*.svelte' --include='*.astro' --include='*.templ' . 2>/dev/null | grep -v node_modules | head -8); echo "${out:-none found}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Scope
 
 This skill owns **functional** accessibility. Color contrast is design-audit's job —

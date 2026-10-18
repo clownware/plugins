@@ -12,6 +12,10 @@ Audit the Claude Code skills in this repository. Focus, if given: $ARGUMENTS
 **Plugin manifests:** !`out=$(find . -name plugin.json -path "*/.claude-plugin/*" -not -path "*/node_modules/*" 2>/dev/null | sort); echo "${out:-none}"`
 **Marketplace manifest:** !`out=$(ls .claude-plugin/marketplace.json 2>/dev/null); echo "${out:-none}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Pipeline
 
 Read every SKILL.md in full before reporting anything — findings about collisions and consistency only emerge from seeing the whole set.

@@ -14,6 +14,10 @@ Audit the design system in this repository. Focus, if given: $ARGUMENTS
 **Theme scopes:** !`out=$(grep -rlE 'data-theme|prefers-color-scheme|\.dark\b|\.light\b|\.on-dark\b' --include='*.css' . 2>/dev/null | grep -v node_modules | head -5); echo "${out:-single theme}"`
 **Specimen/preview pages:** !`out=$(find . \( -name "*.card.html" -o -name "*.stories.*" -o -iname "*specimen*" \) -not -path "*/node_modules/*" 2>/dev/null | head -8); echo "${out:-none found}"`
 
+The pre-fetch above ran in the session's working directory. If the focus names a different
+repo or directory, it describes the wrong tree: rerun those probes from that path and audit
+that tree instead.
+
 ## Pipeline
 
 ### 1. Learn the system's own laws
